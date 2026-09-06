@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "project.root",
+  "contour": "project",
+  "title": "Project Root Context",
+  "summary": "Recursive navigation for the project contour at ..",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "project.content.contour-md",
+      "kind": "content",
+      "path": "contour.md",
+      "summary": "Project Contour",
+      "selectors": {
+        "path_terms": [
+          "contour"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 529,
+      "content_digest": "sha256:83feb177c4745db8abb2e324a3e33a654adea2162ba8ca1baf0326df3a4491f4"
+    },
+    {
+      "id": "project.content.delivery-policy-md",
+      "kind": "content",
+      "path": "delivery-policy.md",
+      "summary": "Delivery Policy",
+      "selectors": {
+        "path_terms": [
+          "delivery",
+          "policy"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 208,
+      "content_digest": "sha256:3ec444fd6097eca3c1630db9c17472d7aafffaad88902e6daee006e07140a170"
+    },
+    {
+      "id": "project.content.development-evidence-json",
+      "kind": "content",
+      "path": "development-evidence.json",
+      "summary": "Development Evidence",
+      "selectors": {
+        "path_terms": [
+          "development",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 45,
+      "content_digest": "sha256:af0d3943e06b37297ba96c037c22b298912627f5670c237ca180d7ef1b9c1560"
+    },
+    {
+      "id": "project.content.privacy-policy-md",
+      "kind": "content",
+      "path": "privacy-policy.md",
+      "summary": "Workspace Privacy And Retention Policy",
+      "selectors": {
+        "path_terms": [
+          "privacy",
+          "policy"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 277,
+      "content_digest": "sha256:3f48b2ef1094db100c5093ab92c0b0526436bde1096b597b22d8a37156f06c2b"
+    },
+    {
+      "id": "project.content.product-context-md",
+      "kind": "content",
+      "path": "product-context.md",
+      "summary": "prommer.net Product Context",
+      "selectors": {
+        "path_terms": [
+          "product"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 215,
+      "content_digest": "sha256:82f17e2fc73aa8a3331e67de2a31f11f780321beb3b68a8c7516179ecf2cca26"
+    },
+    {
+      "id": "project.content.source-of-truth-registry-md",
+      "kind": "content",
+      "path": "source-of-truth-registry.md",
+      "summary": "Source Of Truth Registry",
+      "selectors": {
+        "path_terms": [
+          "source",
+          "truth",
+          "registry"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 562,
+      "content_digest": "sha256:6e9736adc9e587b41b4b35f3051fd797436ec6d8bc80c1e42d4bc974b2918582"
+    },
+    {
+      "id": "project.content.support-policy-json",
+      "kind": "content",
+      "path": "support-policy.json",
+      "summary": "Support Policy",
+      "selectors": {
+        "path_terms": [
+          "support",
+          "policy"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 95,
+      "content_digest": "sha256:df4deae31521bcb7f2e9c74e4e5fc3ed5fea5da5fd5c38303531c1da5b69057b"
+    },
+    {
+      "id": "project.section.architecture",
+      "kind": "index",
+      "path": "architecture/context-index.json",
+      "summary": "Architecture section",
+      "selectors": {
+        "path_terms": [
+          "architecture"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 130,
+      "content_digest": "sha256:3cdc8adf44ec7df6431cdb9a7b009b44391635ddc3556918b49ef57693248dc2"
+    },
+    {
+      "id": "project.section.debug",
+      "kind": "index",
+      "path": "debug/context-index.json",
+      "summary": "Debug section",
+      "selectors": {
+        "path_terms": [
+          "debug"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 143,
+      "content_digest": "sha256:4934a11d858bcebec8657f9c33fab80921a6b4dc1d558147cde30971d80b7d2d"
+    },
+    {
+      "id": "project.section.engineering-evidence",
+      "kind": "index",
+      "path": "engineering-evidence/context-index.json",
+      "summary": "Engineering Evidence section",
+      "selectors": {
+        "path_terms": [
+          "engineering-evidence"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 146,
+      "content_digest": "sha256:daad0c0dbf84836ecd8b3af3c2f0529ec7e4a4fa3e89774b2a6760e2b95fa611"
+    },
+    {
+      "id": "project.section.knowledge",
+      "kind": "index",
+      "path": "knowledge/context-index.json",
+      "summary": "Knowledge section",
+      "selectors": {
+        "path_terms": [
+          "knowledge"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 181,
+      "content_digest": "sha256:c1924c8b7db77e8dbc6be101b4018f2002600449f2e8f860c3e172a5dadab068"
+    }
+  ]
+}

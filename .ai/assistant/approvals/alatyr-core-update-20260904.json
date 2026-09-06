@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "record_kind": "alatyr-approval-record",
+  "evidence_classification": "historical-record",
+  "approval_id": "alatyr-core-update-20260904",
+  "operation": {
+    "id": "update-alatyr-core-alpha52",
+    "type": "framework-and-target-adapter-update"
+  },
+  "plan": {
+    "version": "1",
+    "sha256": "not available; the bounded migration plan is represented by the upstream impact report and this normalized approval scope",
+    "file": "not available; transient execution planning is excluded from durable records by project privacy policy"
+  },
+  "diff": {
+    "base": "not available; the workspace has no Git repository metadata or commits",
+    "patch_sha256": "not available; no target Git diff base exists",
+    "repository_revision_at_approval": "not available; the workspace has no Git repository metadata or commits"
+  },
+  "scope": {
+    "allowed_protected_changes": [
+      "update the installed Alatyr Core framework baseline from 0.1.0-alpha.50 to 0.1.0-alpha.52",
+      "migrate the adapter contract from schema 41 to 42 and template 45 to 47",
+      "add provider-neutral context-caching evidence and context-packet schema version 2 without claiming unsupported cache behavior",
+      "regenerate Alatyr-owned indexes, bootstrap, entry packet, and support state"
+    ],
+    "allowed_changed_fact_ids": [
+      "alatyr-framework-baseline",
+      "alatyr-adapter-schema",
+      "alatyr-template-version",
+      "assistant-context-caching-capability",
+      "context-packet-contract"
+    ],
+    "allowed_architecture_areas": [
+      "none; no product architecture decision is included"
+    ],
+    "allowed_behavior_categories": [
+      "Alatyr adapter routing, validation, and assistant capability evidence only"
+    ],
+    "excluded_semantic_effects": [
+      "changes to product behavior, product facts, architecture selections, privacy boundaries, module enablement, or module disablement",
+      "claims that provider caching is supported, that a cache hit occurred, that exact savings were measured, or that cached input reduces the context window"
+    ],
+    "permitted_external_effects": [
+      "read-only fetch and validation of the user-selected upstream Alatyr Core repository"
+    ],
+    "allowed_files_or_surfaces": [
+      ".ai/alatyr.yaml",
+      ".ai/README.md",
+      ".ai/framework/**",
+      ".ai/assistant/assistant-capabilities.json",
+      ".ai/assistant/assistant-capabilities/**",
+      ".ai/assistant/bootstrap-index.json",
+      ".ai/assistant/bridge-capability-matrix.md",
+      ".ai/assistant/context-index.json",
+      ".ai/assistant/context-router.json",
+      ".ai/assistant/entry-packet.json",
+      ".ai/assistant/flows/adapter-health.flow.md",
+      ".ai/assistant/flows/context-index.json",
+      ".ai/assistant/templates/context-index.json",
+      ".ai/assistant/templates/context-packet.json",
+      ".ai/assistant/installation-state.json",
+      ".ai/assistant/migrations/**",
+      ".ai/assistant/approvals/**",
+      ".ai/support-state.json"
+    ],
+    "excluded_files_or_surfaces": [
+      "all product source, project facts, project evidence records, tests, deployment files, and non-Alatyr configuration"
+    ],
+    "excluded_actions": [
+      "commit",
+      "push",
+      "publish",
+      "deploy",
+      "live-external product action",
+      "dependency installation"
+    ],
+    "allowed_actions_mode": "full-with-approval",
+    "invalidation_rule": "invalidate immediately if the migration changes project facts, module choices, privacy policy, product architecture or behavior, adds unsupported capability claims, or writes outside the allowed surfaces"
+  },
+  "approval": {
+    "requested_by": "primary repository maintainer",
+    "approved_by": "current user acting as repository maintainer",
+    "approved_at": "2026-09-04T12:12:32+03:00",
+    "source_or_message": "explicit current-scope request to update Alatyr and complete all post-update checks",
+    "expires_at_or_reuse_policy": "single use for update-alatyr-core-alpha52; no reuse"
+  },
+  "use_result": {
+    "used_by": "update-alatyr-core-alpha52",
+    "patch_changed_after_approval": "no semantic scope expansion; a normalized migration record was added within the approved framework-maintenance purpose",
+    "implementation_within_scope": "yes; changes are limited to the Alatyr framework, adapter capability and routing contracts, migration evidence, installation state, and generated support surfaces",
+    "declared_semantic_scope_within_approval": "yes; no project facts, product behavior, architecture selections, module choices, privacy rules, or external effects changed",
+    "validation": "migration-staging and strict acceptance validation passed with 0 errors and 0 blocking warnings; final derived-artifact consistency rerun required after evidence finalization",
+    "result_evidence": ".ai/assistant/installation-state.json",
+    "residual_risk": "Git-bound diff and patch-hash enforcement remain unavailable until the workspace has repository history; shared-workspace delegation still requires disjoint write scopes and no target-local checker exists before project code arrives"
+  }
+}

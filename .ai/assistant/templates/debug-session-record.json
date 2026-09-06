@@ -1,0 +1,156 @@
+{
+  "schema_version": 6,
+  "record_kind": "alatyr-debug-session",
+  "evidence_classification": "non-canonical-observability",
+  "debug_id": "request-specific",
+  "status": "active",
+  "authority": "non-canonical",
+  "owner": "request-specific",
+  "task": {
+    "summary": "request-specific",
+    "references": ["request-specific"],
+    "scope_kind": "task",
+    "scope_id": "request-specific",
+    "operation_ids": ["request-specific"],
+    "task_class": "request-specific"
+  },
+  "activation": {
+    "enabled_by": "explicit-user-request",
+    "request_reference": "request-specific",
+    "enabled_at": {"value": null, "evidence_kind": "unknown"},
+    "initial_revision": "request-specific",
+    "expires_on": "task-completion",
+    "ended_by": "active"
+  },
+  "continuation": {
+    "kind": "initial",
+    "previous_debug_id": "not-applicable",
+    "reason": "This activation starts a new logical Debug scope."
+  },
+  "timing": {
+    "started_at": {"value": null, "evidence_kind": "unknown"},
+    "completed_at": {"value": null, "evidence_kind": "unknown"},
+    "elapsed_seconds": {"value": null, "evidence_kind": "unknown"},
+    "active_work_seconds": {"value": null, "evidence_kind": "unknown"}
+  },
+  "capture_quality": {
+    "event_coverage": "unknown",
+    "missing_intervals": [],
+    "observer_effect": "unknown",
+    "estimated_overhead_seconds": {"value": null, "evidence_kind": "unknown"}
+  },
+  "events": [],
+  "metrics": {
+    "human_interventions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "human_architectural_interventions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "executor_independent_findings": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "executor_derived_findings_after_human": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "executor_independent_dependency_checks": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "human_requested_dependency_checks": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "executor_derived_dependency_expansions_after_human": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "hypotheses_tested": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "hypotheses_rejected": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "implementation_revisions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "implementation_corrections_after_human": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "validation_expansions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "regression_scenarios_added": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "maintainer_corrections": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "post_review_rework": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "new_guidance_candidates": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "known_guidance_routing_failures": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "known_guidance_compliance_failures": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "task_local_corrections": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "scope_changes": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
+    "validation_requests": {"value": null, "evidence_kind": "unavailable", "event_ids": []}
+  },
+  "final_result": {
+    "summary": "request-specific",
+    "repository_binding": {
+      "kind": "unverified",
+      "binding_state": "provisional",
+      "base_revision": "request-specific",
+      "result_revision": "request-specific",
+      "review_reference": "request-specific",
+      "selected_paths": [],
+      "snapshot_sha256": "request-specific",
+      "prior_bindings": []
+    },
+    "implementation_surfaces": [],
+    "validation": {"results": [], "skipped": []},
+    "claim_validation": {
+      "fidelity": "unavailable",
+      "claims": [],
+      "evidence": [],
+      "limitation": "The active task has not reached a final validation claim."
+    },
+    "lifecycle_coverage": {
+      "completion_scope": "active",
+      "covered_phases": [],
+      "omitted_phases": ["analysis", "implementation", "validation", "finalization"],
+      "continuation_expected": false,
+      "next_phase": "analysis",
+      "reason": "The active Debug scope has not finalized lifecycle coverage."
+    },
+    "repository_lifecycle": {
+      "state": "active",
+      "completed_transitions": [],
+      "last_verified_revision": "request-specific",
+      "last_verified_at": {"value": null, "evidence_kind": "unknown"},
+      "commit_evidence": [],
+      "publish_evidence": [],
+      "finalization_evidence": [],
+      "next_permitted_action": "Continue the authorized current task phase or finalize/abandon this Debug record before leaving scope."
+    },
+    "engineering_evidence_ids": [],
+    "engineering_evidence_decision": {
+      "status": "pending",
+      "event_links": [],
+      "materiality_evaluations": [
+        {"kind": "undocumented-invariant", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "rejected-hypothesis", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "non-obvious-dependency", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "cross-area-impact", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "broad-regression-matrix", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "compatibility-or-public-contract", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "reviewer-correction", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "direction-change", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "expensive-to-reconstruct", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
+        {"kind": "unresolved-authority-or-contract", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."}
+      ],
+      "knowledge_preserved_by": [],
+      "reason": "Durable engineering evidence is assessed when the Debug session is finalized.",
+      "next_safe_action": "Complete the evidence decision before marking this record completed."
+    },
+    "project_knowledge_candidates": [],
+    "upstream_projection": {
+      "kind": "unknown",
+      "included_debug_files": false,
+      "projected_paths": [],
+      "evidence": []
+    }
+  },
+  "publication": {
+    "storage_mode": "request-specific",
+    "visibility": "request-specific",
+    "included_in_external_patch": false,
+    "policy_evidence": ".ai/project/debug/README.md"
+  },
+  "privacy": {
+    "raw_ai_conversation_stored": false,
+    "raw_human_conversation_stored": false,
+    "chain_of_thought_stored": false,
+    "prompts_stored": false,
+    "secrets_stored": false,
+    "credentials_stored": false,
+    "unrelated_personal_data_stored": false,
+    "unrelated_session_history_stored": false,
+    "unused_speculation_stored": false,
+    "complete_diffs_stored": false,
+    "verbose_logs_stored": false,
+    "redactions": []
+  },
+  "residual_uncertainty": [],
+  "limitations": [
+    "Debug evidence cannot prove event completeness attribution correctness or engineering quality."
+  ]
+}

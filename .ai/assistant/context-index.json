@@ -1,0 +1,579 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.root",
+  "contour": "assistant",
+  "title": "Assistant Root Context",
+  "summary": "Recursive navigation for the assistant contour at ..",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.ai-infrastructure-router-json",
+      "kind": "content",
+      "path": "ai-infrastructure-router.json",
+      "summary": "Ai Infrastructure Router",
+      "selectors": {
+        "path_terms": [
+          "infrastructure",
+          "router"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-SAFETY-002"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:untrusted-instructions-are-data@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-SAFETY-002"
+      ],
+      "estimated_words": 748,
+      "content_digest": "sha256:fe2790256e2484017c69afe648b93872bde47ced9f76ce85ed189d637474d7f4"
+    },
+    {
+      "id": "assistant.content.assistant-capabilities-json",
+      "kind": "content",
+      "path": "assistant-capabilities.json",
+      "summary": "Assistant Capabilities",
+      "selectors": {
+        "path_terms": [
+          "assistant",
+          "capabilities"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 52,
+      "content_digest": "sha256:9281c543df2dbc7af74a010f396334b934174a18f71d9da70c5698637451f791"
+    },
+    {
+      "id": "assistant.content.bootstrap-integrity-json",
+      "kind": "content",
+      "path": "bootstrap-integrity.json",
+      "summary": "Bootstrap Integrity",
+      "selectors": {
+        "path_terms": [
+          "bootstrap",
+          "integrity"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-INTEGRITY-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:logical-integrity@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-INTEGRITY-001"
+      ],
+      "estimated_words": 329,
+      "content_digest": "sha256:a7e04350b2033272527facc2ca0f139c19573bae806767b6ff578f3e99c96a3e"
+    },
+    {
+      "id": "assistant.content.bridge-capability-matrix-md",
+      "kind": "content",
+      "path": "bridge-capability-matrix.md",
+      "summary": "Assistant Capability Matrix",
+      "selectors": {
+        "path_terms": [
+          "bridge",
+          "capability",
+          "matrix"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 300,
+      "content_digest": "sha256:2c513a2b606ab32059a03d59e19f59103978429b1e9ab25c1813e5c60196cf18"
+    },
+    {
+      "id": "assistant.content.context-profiles-md",
+      "kind": "content",
+      "path": "context-profiles.md",
+      "summary": "Alatyr Context Profiles",
+      "selectors": {
+        "path_terms": [
+          "profiles"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 3373,
+      "content_digest": "sha256:e9e1f676aaf7a36508c33feefe7ab7cdcecebfb155a0ec1b49aea90bc49c5714"
+    },
+    {
+      "id": "assistant.content.context-router-json",
+      "kind": "content",
+      "path": "context-router.json",
+      "summary": "Context Router",
+      "selectors": {
+        "path_terms": [
+          "router"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 1383,
+      "content_digest": "sha256:014e0a0dd1b5e2d5958d57d1c6ba74002076276d8863c5071529effcf6ecd71d"
+    },
+    {
+      "id": "assistant.content.contour-md",
+      "kind": "content",
+      "path": "contour.md",
+      "summary": "Repository AI Adapter Contour",
+      "selectors": {
+        "path_terms": [
+          "contour"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 679,
+      "content_digest": "sha256:9fc9391bcc28b797d6ba012fe0514a29d879d9c9f3ea0cf8238a3a5bd1200b4d"
+    },
+    {
+      "id": "assistant.content.delegation-policy-json",
+      "kind": "content",
+      "path": "delegation-policy.json",
+      "summary": "Delegation Policy",
+      "selectors": {
+        "path_terms": [
+          "delegation",
+          "policy"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-DELEGATION-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:bounded-delegation@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-DELEGATION-001"
+      ],
+      "estimated_words": 300,
+      "content_digest": "sha256:26dd014311c04fc28a404daa633bd35675e0f7289057d3e25c4bf6fbd3cd5555"
+    },
+    {
+      "id": "assistant.content.entry-packet-json",
+      "kind": "content",
+      "path": "entry-packet.json",
+      "summary": "Entry Packet",
+      "selectors": {
+        "path_terms": [
+          "entry",
+          "packet"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 300,
+      "content_digest": "sha256:8798253130c5a0ed57bd04dfc22090377bab24e9168724a3d38479955541fe3b"
+    },
+    {
+      "id": "assistant.content.help-md",
+      "kind": "content",
+      "path": "help.md",
+      "summary": "Alatyr Help",
+      "selectors": {
+        "path_terms": [
+          "help"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 610,
+      "content_digest": "sha256:a90e77c2ed08c410f8117b3106f2c8b95bb5b98007360f1c5b3f5e3a781c227a"
+    },
+    {
+      "id": "assistant.content.help-reference-md",
+      "kind": "content",
+      "path": "help-reference.md",
+      "summary": "Alatyr Help Reference",
+      "selectors": {
+        "path_terms": [
+          "help",
+          "reference"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 3535,
+      "content_digest": "sha256:5e9eda40c60e1a8740d7bad8a004025d64dc604833725e543444fae52e70d598"
+    },
+    {
+      "id": "assistant.content.installation-state-json",
+      "kind": "content",
+      "path": "installation-state.json",
+      "summary": "Installation State",
+      "selectors": {
+        "path_terms": [
+          "installation",
+          "state"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 1304,
+      "content_digest": "sha256:524acf06abf5d67883c5cf4c9b3021f17f6d335ebad09090f7fe6460de63adb5"
+    },
+    {
+      "id": "assistant.content.maturity-profile-md",
+      "kind": "content",
+      "path": "maturity-profile.md",
+      "summary": "Adapter Maturity Profile",
+      "selectors": {
+        "path_terms": [
+          "maturity",
+          "profile"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 378,
+      "content_digest": "sha256:91d6f91998bd0ae696e05ee8bdae6eff61205d775fa489cbde19b93f86ac61a0"
+    },
+    {
+      "id": "assistant.content.module-profile-md",
+      "kind": "content",
+      "path": "module-profile.md",
+      "summary": "Alatyr Module Profile",
+      "selectors": {
+        "path_terms": [
+          "module",
+          "profile"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 621,
+      "content_digest": "sha256:570742cc75537eb4bfccab6edbcf4ac18e57719af6a87a6ea46dcf09c172e795"
+    },
+    {
+      "id": "assistant.content.operation-catalog-json",
+      "kind": "content",
+      "path": "operation-catalog.json",
+      "summary": "Operation Catalog",
+      "selectors": {
+        "path_terms": [
+          "operation",
+          "catalog"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 1519,
+      "content_digest": "sha256:3ff0ca022ec2f5d06a7c9d24dd4aeae2ea5f5c4d842b1ffb6c2ca8ec9e8e67f6"
+    },
+    {
+      "id": "assistant.content.operation-index-json",
+      "kind": "content",
+      "path": "operation-index.json",
+      "summary": "Operation Index",
+      "selectors": {
+        "path_terms": [
+          "operation"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 318,
+      "content_digest": "sha256:7e647f753ea82c2acd7461c9cdb9d174d946a9d6e127df4b41b2007aabc811ae"
+    },
+    {
+      "id": "assistant.content.task-decomposition-json",
+      "kind": "content",
+      "path": "task-decomposition.json",
+      "summary": "Task Decomposition",
+      "selectors": {
+        "path_terms": [
+          "task",
+          "decomposition"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-DECOMPOSITION-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-DECOMPOSITION-001"
+      ],
+      "estimated_words": 625,
+      "content_digest": "sha256:b64325c400e15669384418f107aec272d8b7b005403a61f25a724127ee53228e"
+    },
+    {
+      "id": "assistant.section.approvals",
+      "kind": "index",
+      "path": "approvals/context-index.json",
+      "summary": "Approvals section",
+      "selectors": {
+        "path_terms": [
+          "approvals"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 239,
+      "content_digest": "sha256:80c5895ae207d6930a7294f24ca824c44342d5298967e0b8729e87cce489307d"
+    },
+    {
+      "id": "assistant.section.assistant-capabilities",
+      "kind": "index",
+      "path": "assistant-capabilities/context-index.json",
+      "summary": "Assistant Capabilities section",
+      "selectors": {
+        "path_terms": [
+          "assistant-capabilities"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 85,
+      "content_digest": "sha256:3d40b3eef82b3f83dbbaf26923b82c5e306aa556bf44e754b74d50b0abdaa927"
+    },
+    {
+      "id": "assistant.section.checklists",
+      "kind": "index",
+      "path": "checklists/context-index.json",
+      "summary": "Checklists section",
+      "selectors": {
+        "path_terms": [
+          "checklists"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 86,
+      "content_digest": "sha256:01bc266e879d58fc5356a05c7ac4fb481456845f88d81e2e36e78108efb21fb5"
+    },
+    {
+      "id": "assistant.section.context",
+      "kind": "index",
+      "path": "context/context-index.json",
+      "summary": "Context section",
+      "selectors": {
+        "path_terms": [
+          "context"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 241,
+      "content_digest": "sha256:ea285d6cc04e300850a8bb63eedae0e7eeeec90b811cf488555533f8bd2b5bea"
+    },
+    {
+      "id": "assistant.section.flows",
+      "kind": "index",
+      "path": "flows/context-index.json",
+      "summary": "Flows section",
+      "selectors": {
+        "path_terms": [
+          "flows"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 735,
+      "content_digest": "sha256:b047a79f8e48ecabf20fbf1339860a5dc00ef0e0e23eeae161f5255fd5958077"
+    },
+    {
+      "id": "assistant.section.gates",
+      "kind": "index",
+      "path": "gates/context-index.json",
+      "summary": "Gates section",
+      "selectors": {
+        "path_terms": [
+          "gates"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 467,
+      "content_digest": "sha256:0bdf5407ed66465ea2210bf25a0e71159f7cff41717992053ecd6a04efa305be"
+    },
+    {
+      "id": "assistant.section.migrations",
+      "kind": "index",
+      "path": "migrations/context-index.json",
+      "summary": "Migrations section",
+      "selectors": {
+        "path_terms": [
+          "migrations"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 127,
+      "content_digest": "sha256:9e646ff6e93c757ae1d69525c28524b0d8169c09092de10ff63b78a43d4b88cc"
+    },
+    {
+      "id": "assistant.section.policies",
+      "kind": "index",
+      "path": "policies/context-index.json",
+      "summary": "Policies section",
+      "selectors": {
+        "path_terms": [
+          "policies"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 174,
+      "content_digest": "sha256:cfe750108ca068e72b042e5868f204729af604c74f0cf5e63c145314f350e238"
+    },
+    {
+      "id": "assistant.section.prompts",
+      "kind": "index",
+      "path": "prompts/context-index.json",
+      "summary": "Prompts section",
+      "selectors": {
+        "path_terms": [
+          "prompts"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 89,
+      "content_digest": "sha256:c1c45039140e5b652379e345ce1277d74744f38e40c5df1dafdd38e2b699fec4"
+    },
+    {
+      "id": "assistant.section.templates",
+      "kind": "index",
+      "path": "templates/context-index.json",
+      "summary": "Templates section",
+      "selectors": {
+        "path_terms": [
+          "templates"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 1226,
+      "content_digest": "sha256:96eb8f98aea7f470718982acbeddf85b40a49b9e2dff77b80df48e40affc41cf"
+    },
+    {
+      "id": "assistant.section.workers",
+      "kind": "index",
+      "path": "workers/context-index.json",
+      "summary": "Workers section",
+      "selectors": {
+        "path_terms": [
+          "workers"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 114,
+      "content_digest": "sha256:9620f6e3ba96a41b91f1413489acf998d3ca57998dd4d32ebd519f3124718863"
+    }
+  ]
+}

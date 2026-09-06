@@ -1,0 +1,12 @@
+{
+  "schema_version": 6,
+  "index_kind": "target-alatyr-debug-index",
+  "project": "prommer.net workspace",
+  "owner": "repository maintainers",
+  "storage_mode": "repository-internal",
+  "visibility": "repository maintainers",
+  "retention_policy": "retain finalized records until superseded or removed by a maintainer",
+  "redaction_policy": "exclude prompts transcripts timing details drafts private reasoning credentials and non-product contextual metadata",
+  "external_patch_policy": "exclude-from-external-patch",
+  "records": []
+}

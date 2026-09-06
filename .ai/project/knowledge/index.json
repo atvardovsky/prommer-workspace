@@ -1,0 +1,44 @@
+{
+  "schema_version": 3,
+  "index_kind": "target-project-knowledge-routing-index",
+  "project": "prommer.net workspace",
+  "owner": "repository maintainers",
+  "review_policy": "maintainer review is required before candidate guidance becomes accepted",
+  "retention_policy": "retain accepted guidance and supersession lineage until a maintainer removes it",
+  "redaction_policy": "store reusable project guidance only; exclude prompts transcripts timing drafts private reasoning credentials and non-product contextual metadata",
+  "routing_policy": {
+    "max_initial_items": 6,
+    "max_refined_items": 8,
+    "max_summary_words": 60,
+    "current_constraint_states": [
+      "accepted",
+      "current"
+    ],
+    "warning_freshness_states": [
+      "revalidation-required"
+    ],
+    "blocking_freshness_states": [
+      "contradicted"
+    ],
+    "selection_order": [
+      "task-profile",
+      "project-area",
+      "subsystem-or-architecture-item",
+      "dependency-or-contract",
+      "changed-fact",
+      "path-or-symbol",
+      "issue-lineage"
+    ],
+    "profile_only_match_allowed": false
+  },
+  "promotion_records": [],
+  "coverage": {
+    "areas": [],
+    "fact_types": []
+  },
+  "adoption": {
+    "state": "enabled-empty",
+    "reuse_evidence": []
+  },
+  "shards": []
+}

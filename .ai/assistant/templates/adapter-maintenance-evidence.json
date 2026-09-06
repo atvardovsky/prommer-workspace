@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "record_kind": "alatyr-adapter-maintenance-evidence",
+  "evidence_classification": "historical-record",
+  "maintenance_id": "request-specific",
+  "operation_id": "request-specific",
+  "recorded_at": "request-specific",
+  "target_revision": "request-specific",
+  "maintenance_scope": "request-specific",
+  "metrics": {
+    "files_touched": {
+      "value": "request-specific",
+      "evidence_state": "request-specific",
+      "evidence_reference": "request-specific"
+    },
+    "manual_corrections": {
+      "value": "request-specific",
+      "evidence_state": "request-specific",
+      "evidence_reference": "request-specific"
+    },
+    "stale_claims": {
+      "value": "request-specific",
+      "evidence_state": "request-specific",
+      "evidence_reference": "request-specific"
+    },
+    "routing_changes": {
+      "value": "request-specific",
+      "evidence_state": "request-specific",
+      "evidence_reference": "request-specific"
+    },
+    "validation_time_seconds": {
+      "value": "request-specific",
+      "evidence_state": "request-specific",
+      "evidence_reference": "request-specific"
+    },
+    "local_deviations": {
+      "value": "request-specific",
+      "evidence_state": "request-specific",
+      "evidence_reference": "request-specific"
+    }
+  },
+  "validation": {
+    "status": "request-specific",
+    "evidence": [
+      "request-specific"
+    ]
+  },
+  "limitations": [
+    "request-specific"
+  ]
+}

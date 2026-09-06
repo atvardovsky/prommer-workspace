@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "record_kind": "alatyr-project-knowledge-promotion",
+  "promotion_id": "request-specific",
+  "created_at": "request-specific",
+  "candidate": {
+    "candidate_id": "request-specific",
+    "origin": "request-specific",
+    "statement": "request-specific",
+    "guidance_kind": "request-specific",
+    "knowledge_kind": "request-specific",
+    "reuse_rationale": "request-specific",
+    "source_engineering_evidence_ids": [],
+    "repository_evidence": [
+      "request-specific"
+    ],
+    "proposed_fact_type": "request-specific",
+    "proposed_fact_ids": [
+      "request-specific"
+    ],
+    "proposed_canonical_owner": "request-specific",
+    "proposed_decision_owner": "request-specific",
+    "route_hints": {
+      "task_profiles": [
+        "request-specific"
+      ],
+      "project_areas": [
+        "request-specific"
+      ],
+      "subsystems": [],
+      "architecture_item_ids": [],
+      "dependency_coordinates": [],
+      "path_globs": [],
+      "symbols": [],
+      "contract_ids": [],
+      "issue_lineage": [],
+      "conditions": []
+    }
+  },
+  "human_review": {
+    "disposition": "pending-review",
+    "decision_owner": "request-specific",
+    "decision_reference": "request-specific",
+    "decided_at": "request-specific",
+    "decision_rationale": "request-specific",
+    "accepted_statement": "",
+    "canonical_update": {
+      "state": "pending",
+      "owner_path": "request-specific",
+      "content_sha256": "unknown",
+      "fact_ids": []
+    },
+    "route_entry_ids": []
+  },
+  "privacy": {
+    "raw_chat_stored": false,
+    "chain_of_thought_stored": false,
+    "secrets_stored": false,
+    "personal_data_stored": false,
+    "redactions": []
+  }
+}

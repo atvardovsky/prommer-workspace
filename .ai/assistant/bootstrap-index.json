@@ -1,0 +1,239 @@
+{
+  "schema_version": 2,
+  "index_kind": "target-bootstrap-index",
+  "integrity": {
+    "path": ".ai/assistant/bootstrap-integrity.json",
+    "on_failure": "load integrity evidence and canonical sources; do not trust compact routing"
+  },
+  "installation": {
+    "framework_version": "0.1.0-alpha.58",
+    "adapter_schema_version": "48",
+    "template_version": "53",
+    "support_profile": "core",
+    "framework_pack": "complete"
+  },
+  "project_map": ".ai/README.md",
+  "context_router": ".ai/assistant/context-router.json",
+  "recursive_context": {
+    "contour_indexes": {
+      "framework": ".ai/framework/context-index.json",
+      "project": ".ai/project/context-index.json",
+      "assistant": ".ai/assistant/context-index.json"
+    },
+    "max_depth": 8,
+    "on_failure": "stop compact interpretation, load the named canonical owner when safe, and report index drift; never load the complete contour by default"
+  },
+  "semantic_preload": {
+    "index": ".ai/framework/semantics/index.json",
+    "codebook_schema_version": 2,
+    "terms": [
+      {
+        "id": "alatyr:current-scope-authorization@1",
+        "version": 1,
+        "definition": "Inspect, modify, commit, publish, and live-external actions are separate authorization phases for the current logical task. A completed, redirected, ambiguous, discussion-only, or analysis-only request does not authorize a later state-changing phase.",
+        "canonical_owner": ".ai/framework/action-authorization.md"
+      },
+      {
+        "id": "alatyr:canonical-owner@1",
+        "version": 1,
+        "definition": "Use the target-registered canonical owner for a fact type, preserve its conflict resolver and synchronization direction, and treat routing records, summaries, evidence, frequency, and recency as non-authoritative unless that owner says otherwise.",
+        "canonical_owner": ".ai/framework/source-of-truth-registry.md"
+      },
+      {
+        "id": "alatyr:risk-by-fact@1",
+        "version": 1,
+        "definition": "Classify risk from changed facts, affected boundaries, reversibility, external effects, and target policy rather than from file count or apparent patch size; expand to the applicable owner, approval, safety, and validation evidence before acting.",
+        "canonical_owner": ".ai/framework/change-risk-model.md"
+      },
+      {
+        "id": "alatyr:protected-change@1",
+        "version": 1,
+        "definition": "A change that crosses a target-recorded protected category requires a current scoped approval whose semantic and path surfaces cover the actual change; changing the plan or scope invalidates approval as defined by the target policy.",
+        "canonical_owner": ".ai/framework/approval-records.md"
+      },
+      {
+        "id": "alatyr:logical-integrity@1",
+        "version": 1,
+        "definition": "Name changed semantic facts, re-derive their invariants, identify canonical owners and directly dependent surfaces, reconcile related findings as one repair set, validate the result, and report unresolved relationships and residual risk.",
+        "canonical_owner": ".ai/framework/logical-integrity.md"
+      },
+      {
+        "id": "alatyr:bounded-context-expansion@1",
+        "version": 1,
+        "definition": "Start from the smallest matching profile and selected index branch. Expand only for an applicable owner, safety or approval boundary, named dependency, changed-fact relationship, conflict, failed validation, or explicit broader audit, and record why the expansion occurred.",
+        "canonical_owner": ".ai/framework/context-profiles.md"
+      }
+    ],
+    "fallback": "load the referenced canonical owner and do not infer a missing stale conflicting cyclic or unsupported compact term"
+  },
+  "rule_selector": ".ai/framework/rule-registry.json",
+  "context_packet": {
+    "schema_version": 3,
+    "template": ".ai/assistant/templates/context-packet.json",
+    "receipt_required_for": [
+      "budget exceeded",
+      "multiple project areas",
+      "cross-boundary work",
+      "semantic codebook fallback",
+      "material or protected change",
+      "token or cost claim"
+    ]
+  },
+  "recovery_entry_packet": ".ai/assistant/entry-packet.json",
+  "routing_order": [
+    "docs-local",
+    "code-local",
+    "business-change",
+    "architecture-change",
+    "data-change",
+    "security-sensitive",
+    "ai-infrastructure",
+    "framework-upgrade"
+  ],
+  "profiles": {
+    "docs-local": {
+      "selector": "docs-local",
+      "descriptor": ".ai/assistant/context/profiles/docs-local.json",
+      "operations": [
+        "documentation-sync",
+        "drift-review",
+        "logical-integrity-review",
+        "project-knowledge"
+      ]
+    },
+    "code-local": {
+      "selector": "code-local",
+      "descriptor": ".ai/assistant/context/profiles/code-local.json",
+      "operations": [
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "drift-review",
+        "failure-analysis",
+        "product-change"
+      ]
+    },
+    "business-change": {
+      "selector": "business-change",
+      "descriptor": ".ai/assistant/context/profiles/business-change.json",
+      "operations": [
+        "create-project-blueprint",
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge"
+      ]
+    },
+    "architecture-change": {
+      "selector": "architecture-change",
+      "descriptor": ".ai/assistant/context/profiles/architecture-change.json",
+      "operations": [
+        "create-project-blueprint",
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "failure-analysis"
+      ]
+    },
+    "data-change": {
+      "selector": "data-change",
+      "descriptor": ".ai/assistant/context/profiles/data-change.json",
+      "operations": [
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "drift-review"
+      ]
+    },
+    "security-sensitive": {
+      "selector": "security-sensitive",
+      "descriptor": ".ai/assistant/context/profiles/security-sensitive.json",
+      "operations": [
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "skill-adaptation",
+        "failure-analysis",
+        "drift-review"
+      ]
+    },
+    "ai-infrastructure": {
+      "selector": "ai-infrastructure",
+      "descriptor": ".ai/assistant/context/profiles/ai-infrastructure.json",
+      "operations": [
+        "ai-infrastructure-inventory",
+        "ai-infrastructure-recommendation",
+        "skill-adaptation"
+      ]
+    },
+    "framework-upgrade": {
+      "selector": "framework-upgrade",
+      "descriptor": ".ai/assistant/context/profiles/framework-upgrade.json",
+      "operations": [
+        "adapter-health",
+        "drift-review"
+      ]
+    }
+  },
+  "intent_index": ".ai/assistant/context/intents/context-index.json",
+  "task_scale_overlays": {
+    "small-task": {
+      "selector": "small-task",
+      "descriptor": ".ai/assistant/context/task-scales/small-task.json"
+    },
+    "delegated-execution": {
+      "selector": "delegated-execution",
+      "descriptor": ".ai/assistant/context/task-scales/delegated-execution.json"
+    },
+    "engineering-evidence": {
+      "selector": "engineering-evidence",
+      "descriptor": ".ai/assistant/context/task-scales/engineering-evidence.json"
+    },
+    "debug-mode": {
+      "selector": "debug-mode",
+      "descriptor": ".ai/assistant/context/task-scales/debug-mode.json"
+    }
+  },
+  "task_classification": {
+    "order": [
+      "protected-or-sensitive",
+      "large-or-resumable",
+      "small-task",
+      "standard-task"
+    ],
+    "default": "standard-task",
+    "ambiguity": "inspect-only"
+  },
+  "area_overlays": {
+    "prommer-public-site": {
+      "selector": "prommer-public-site"
+    }
+  },
+  "project_knowledge_routing": ".ai/assistant/context/project-knowledge-routing.json",
+  "operation_index": ".ai/assistant/operation-index.json",
+  "operation_catalog": ".ai/assistant/operation-catalog.json",
+  "gate_index": ".ai/assistant/gates/index.json",
+  "enabled_modules": [
+    "ai-infrastructure",
+    "architecture-knowledge",
+    "assistant-runtime-capabilities",
+    "blueprint-change",
+    "debug-mode",
+    "effectiveness-metrics",
+    "installed-operations",
+    "multi-assistant-bridges",
+    "subagent-delegation"
+  ],
+  "known_gaps": [
+    "The target contains no implementation brief, product source, package metadata, tests, CI, or project validation commands.",
+    "Named human owner identities are not available; repository-maintainer roles are used.",
+    "The workspace exposes no usable Git revision, so installation evidence cannot be revision-bound until the repository has a commit.",
+    "Codex loading is configured through AGENTS.md but has not been independently observed in a later session.",
+    "Runtime, input/output contract, provider requirements, delivery format, and deployment expectations are not established.",
+    "Optional modules other than AI infrastructure, architecture knowledge, blueprint change, Debug Mode, effectiveness metrics, installed operations, multi-assistant bridges, and subagent delegation remain deferred until target evidence justifies them."
+  ],
+  "expansion_policy": "load required safety and owner evidence, record expansion reason, measured context, and intentionally omitted context"
+}

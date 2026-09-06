@@ -1,0 +1,101 @@
+{
+  "schema_version": 3,
+  "record_kind": "alatyr-engineering-evidence",
+  "evidence_classification": "historical-record",
+  "evidence_id": "request-specific",
+  "status": "request-specific",
+  "owner": "request-specific",
+  "captured_at": "request-specific",
+  "task": {
+    "summary": "request-specific",
+    "references": ["request-specific"],
+    "operation_id": "request-specific"
+  },
+  "repository_binding": {
+    "kind": "request-specific",
+    "binding_state": "request-specific",
+    "base_revision": "request-specific",
+    "result_revision": "request-specific",
+    "review_reference": "request-specific",
+    "selected_paths": ["request-specific"],
+    "snapshot_sha256": "request-specific",
+    "prior_bindings": []
+  },
+  "observed_failure": "request-specific",
+  "affected_architecture": [
+    {
+      "area": "request-specific",
+      "owner_or_source": "request-specific",
+      "effect": "request-specific"
+    }
+  ],
+  "invariants": [
+    {
+      "statement": "request-specific",
+      "status": "request-specific",
+      "canonical_owner": "request-specific",
+      "evidence": ["request-specific"]
+    }
+  ],
+  "hypotheses": [
+    {
+      "statement": "request-specific",
+      "outcome": "request-specific",
+      "evidence": ["request-specific"],
+      "decision_impact": "request-specific"
+    }
+  ],
+  "root_cause": {
+    "statement": "request-specific",
+    "evidence": ["request-specific"]
+  },
+  "chosen_solution": {
+    "summary": "request-specific",
+    "rationale": "request-specific",
+    "material_rejected_alternatives": [
+      {
+        "alternative": "request-specific",
+        "reason": "request-specific"
+      }
+    ]
+  },
+  "impact": {
+    "changed_fact_ids": ["request-specific"],
+    "code_and_test_surfaces": ["request-specific"],
+    "companion_surfaces": ["request-specific"],
+    "canonical_knowledge_updates": ["request-specific"]
+  },
+  "regression_matrix": [
+    {
+      "case": "request-specific",
+      "protects": "request-specific",
+      "expected_result": "request-specific",
+      "validation_evidence": "request-specific"
+    }
+  ],
+  "validation": {
+    "results": ["request-specific"],
+    "skipped": ["request-specific"]
+  },
+  "residual_uncertainty": ["request-specific"],
+  "related_records": {
+    "change_package_ids": ["request-specific"],
+    "approval_records": ["request-specific"],
+    "architecture_decisions": ["request-specific"],
+    "development_evidence_pattern_ids": ["request-specific"],
+    "debug_session_ids": ["request-specific"]
+  },
+  "publication": {
+    "storage_mode": "request-specific",
+    "included_in_external_patch": false,
+    "visibility": "request-specific",
+    "policy_evidence": "request-specific"
+  },
+  "privacy": {
+    "raw_chat_stored": false,
+    "chain_of_thought_stored": false,
+    "secrets_stored": false,
+    "unrelated_session_history_stored": false,
+    "redactions": ["request-specific"]
+  }
+}

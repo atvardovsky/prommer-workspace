@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.gates",
+  "contour": "assistant",
+  "title": "Assistant Gates Context",
+  "summary": "Recursive navigation for the assistant contour at gates.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.gates-checklist-md",
+      "kind": "content",
+      "path": "gates/checklist.md",
+      "summary": "AI Acceptance Gates",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "checklist"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 1327,
+      "content_digest": "sha256:85ab731a9637c8645344c77f76879561a33bb0445166b7522e637dfaa5339f4c"
+    },
+    {
+      "id": "assistant.content.gates-code-and-tests-md",
+      "kind": "content",
+      "path": "gates/code-and-tests.md",
+      "summary": "Code And Tests Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "code",
+          "and",
+          "tests"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 221,
+      "content_digest": "sha256:414c1c11e9480bd5616acf1c77d2cbbebd5b6b6f72d878d1b47efada5ce1eb27"
+    },
+    {
+      "id": "assistant.content.gates-core-md",
+      "kind": "content",
+      "path": "gates/core.md",
+      "summary": "Core Task Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "core"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 167,
+      "content_digest": "sha256:98e72208b952c3f5f9e932bec46de04cdc7545c6fc569c4c7aae658e16f1ad11"
+    },
+    {
+      "id": "assistant.content.gates-debug-mode-md",
+      "kind": "content",
+      "path": "gates/debug-mode.md",
+      "summary": "Debug Mode Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "debug",
+          "mode"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 618,
+      "content_digest": "sha256:e726045d73b02f67696baf519c0023c596053ad40df628763ab1d0cd3f6c609c"
+    },
+    {
+      "id": "assistant.content.gates-documentation-md",
+      "kind": "content",
+      "path": "gates/documentation.md",
+      "summary": "Documentation Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "documentation"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 73,
+      "content_digest": "sha256:dcf194d1fd49de18c75f7e4e1e90146e1b2068f4347819e9ee482be2ef056385"
+    },
+    {
+      "id": "assistant.content.gates-engineering-evidence-md",
+      "kind": "content",
+      "path": "gates/engineering-evidence.md",
+      "summary": "Durable Engineering Evidence Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "engineering",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 288,
+      "content_digest": "sha256:9cf99c92cf4d2f995a2251f2d8b76183976e98e4b61282607a65711d991260d9"
+    },
+    {
+      "id": "assistant.content.gates-final-evidence-md",
+      "kind": "content",
+      "path": "gates/final-evidence.md",
+      "summary": "Final Evidence Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "final",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 226,
+      "content_digest": "sha256:044358d36dedcc5934c9c317c9be33de417f967cd6a9e36ae0ad900284114dee"
+    },
+    {
+      "id": "assistant.content.gates-index-json",
+      "kind": "content",
+      "path": "gates/index.json",
+      "summary": "Index",
+      "selectors": {
+        "path_terms": [
+          "gates"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 141,
+      "content_digest": "sha256:99660d012a9adaae2f5566cd48774bbeb72cf5802c31684bc343e8090477c583"
+    },
+    {
+      "id": "assistant.content.gates-project-knowledge-md",
+      "kind": "content",
+      "path": "gates/project-knowledge.md",
+      "summary": "Project Knowledge Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "project",
+          "knowledge"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 272,
+      "content_digest": "sha256:6e9b911bac52585440e3d7aee1451547837f0ed7002d94dbefdf3d4d27a9cf0a"
+    },
+    {
+      "id": "assistant.content.gates-security-approval-md",
+      "kind": "content",
+      "path": "gates/security-approval.md",
+      "summary": "Security And Approval Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "security",
+          "approval"
+        ],
+        "rule_ids": [
+          "ALATYR-APPROVAL-001",
+          "ALATYR-AUTHORIZATION-001",
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:current-scope-authorization@1",
+        "alatyr:protected-change@1"
+      ],
+      "owner_refs": [
+        "ALATYR-APPROVAL-001",
+        "ALATYR-AUTHORIZATION-001",
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 82,
+      "content_digest": "sha256:eb221af211deacea60853f6b7370b19c5668e905a65b9933e8cd5e3ed3ddf3f1"
+    },
+    {
+      "id": "assistant.content.gates-semantic-integrity-md",
+      "kind": "content",
+      "path": "gates/semantic-integrity.md",
+      "summary": "Semantic Integrity Gate",
+      "selectors": {
+        "path_terms": [
+          "gates",
+          "semantic",
+          "integrity"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-INTEGRITY-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:logical-integrity@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-INTEGRITY-001"
+      ],
+      "estimated_words": 77,
+      "content_digest": "sha256:b635c816c3768e2c4f010186161d7214ef5d51de0bd0c7a9ee12f6188db99941"
+    }
+  ]
+}

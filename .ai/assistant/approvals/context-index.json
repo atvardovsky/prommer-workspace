@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.approvals",
+  "contour": "assistant",
+  "title": "Assistant Approvals Context",
+  "summary": "Recursive navigation for the assistant contour at approvals.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.approvals-alatyr-core-update-20260904-json",
+      "kind": "content",
+      "path": "approvals/alatyr-core-update-20260904.json",
+      "summary": "Alatyr Core Update 20260904",
+      "selectors": {
+        "path_terms": [
+          "approvals",
+          "alatyr",
+          "core",
+          "update",
+          "20260904"
+        ],
+        "rule_ids": [
+          "ALATYR-APPROVAL-001",
+          "ALATYR-AUTHORIZATION-001",
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:current-scope-authorization@1",
+        "alatyr:protected-change@1"
+      ],
+      "owner_refs": [
+        "ALATYR-APPROVAL-001",
+        "ALATYR-AUTHORIZATION-001",
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 460,
+      "content_digest": "sha256:b39de6b013b2c92f2a613ab7d37ec9e579a0ea5ed5a0932f490d39ad34187259"
+    },
+    {
+      "id": "assistant.content.approvals-alatyr-core-update-20260906-json",
+      "kind": "content",
+      "path": "approvals/alatyr-core-update-20260906.json",
+      "summary": "Alatyr Core Update 20260906",
+      "selectors": {
+        "path_terms": [
+          "approvals",
+          "alatyr",
+          "core",
+          "update",
+          "20260906"
+        ],
+        "rule_ids": [
+          "ALATYR-APPROVAL-001",
+          "ALATYR-AUTHORIZATION-001",
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:current-scope-authorization@1",
+        "alatyr:protected-change@1"
+      ],
+      "owner_refs": [
+        "ALATYR-APPROVAL-001",
+        "ALATYR-AUTHORIZATION-001",
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 507,
+      "content_digest": "sha256:428bb8d87149d109d3ac7f657a6526c47d603eb4ba353bb350b6a066761913ac"
+    },
+    {
+      "id": "assistant.content.approvals-architecture-contour-settings-20260903-json",
+      "kind": "content",
+      "path": "approvals/architecture-contour-settings-20260903.json",
+      "summary": "Architecture Contour Settings 20260903",
+      "selectors": {
+        "path_terms": [
+          "approvals",
+          "architecture",
+          "contour",
+          "settings",
+          "20260903"
+        ],
+        "rule_ids": [
+          "ALATYR-APPROVAL-001",
+          "ALATYR-AUTHORIZATION-001",
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:current-scope-authorization@1",
+        "alatyr:observed-is-not-accepted@1",
+        "alatyr:protected-change@1"
+      ],
+      "owner_refs": [
+        "ALATYR-APPROVAL-001",
+        "ALATYR-AUTHORIZATION-001",
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 352,
+      "content_digest": "sha256:0b3e0eac1782794ae8b0c49f4aacea9bfd71a85e03e0974098dcec29e74c793b"
+    },
+    {
+      "id": "assistant.content.approvals-recursive-subagent-policy-20260906-json",
+      "kind": "content",
+      "path": "approvals/recursive-subagent-policy-20260906.json",
+      "summary": "Recursive Subagent Policy 20260906",
+      "selectors": {
+        "path_terms": [
+          "approvals",
+          "recursive",
+          "subagent",
+          "policy",
+          "20260906"
+        ],
+        "rule_ids": [
+          "ALATYR-APPROVAL-001",
+          "ALATYR-AUTHORIZATION-001",
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:current-scope-authorization@1",
+        "alatyr:protected-change@1"
+      ],
+      "owner_refs": [
+        "ALATYR-APPROVAL-001",
+        "ALATYR-AUTHORIZATION-001",
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 342,
+      "content_digest": "sha256:3d780ba77ac03af6fc0231d1d0b26ef5838795401ee5ba4f1e747275179b489e"
+    }
+  ]
+}

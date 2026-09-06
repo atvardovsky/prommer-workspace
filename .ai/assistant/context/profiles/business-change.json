@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "descriptor_kind": "target-context-profile",
+  "profile": "business-change",
+  "use_when": [
+    "accepted behavior change",
+    "domain rule change",
+    "product policy change",
+    "workflow or public contract change"
+  ],
+  "operation_candidates": [
+    "create-project-blueprint",
+    "product-change",
+    "logical-integrity-review",
+    "engineering-evidence",
+    "project-knowledge"
+  ],
+  "required_context": [
+    ".ai/project/source-of-truth-registry.md",
+    ".ai/assistant/gates/core.md",
+    ".ai/assistant/gates/semantic-integrity.md",
+    ".ai/assistant/gates/final-evidence.md",
+    ".ai/project/contour.md"
+  ],
+  "conditional_context": [
+    {
+      "path": ".ai/framework/context-discovery.md",
+      "when": "context selection expansion or missing-context handling is disputed"
+    },
+    {
+      "path": ".ai/framework/change-risk-model.md",
+      "when": "changed-fact risk classification or escalation is disputed"
+    },
+    {
+      "path": ".ai/framework/logical-integrity.md",
+      "when": "invariant derivation repair-set selection or semantic closure is ambiguous"
+    },
+    {
+      "path": ".ai/framework/source-of-truth-registry.md",
+      "when": "registry ownership semantics are disputed or the target registry requires repair"
+    },
+    {
+      "path": ".ai/framework/approval-records.md",
+      "when": "accepted behavior or another protected category changes"
+    },
+    {
+      "path": ".ai/assistant/gates/security-approval.md",
+      "when": "the change reaches a protected approval or security boundary"
+    }
+  ],
+  "expand_when": [
+    "architecture_boundary_changes",
+    "data_contract_changes",
+    "security_or_privacy_changes",
+    "diagram_changes",
+    "prompt_gate_or_bridge_changes"
+  ],
+  "approval_gates": [
+    "accepted_business_behavior_change"
+  ],
+  "validation": [
+    "manual target review; product behavior sources and automated checks are not yet available"
+  ],
+  "final_evidence": [
+    "changed_fact",
+    "re_derived_invariants",
+    "review_item_reconciliation",
+    "owning_blueprint_or_source_of_truth",
+    "implementation_test_doc_sync",
+    "contract_artifact_result",
+    "approvals",
+    "logical_integrity_result"
+  ]
+}

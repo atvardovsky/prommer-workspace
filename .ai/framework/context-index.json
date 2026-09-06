@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "framework.root",
+  "contour": "framework",
+  "title": "Alatyr Framework Context",
+  "summary": "Root navigation for portable framework rules and supporting guidance.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "framework.section.change",
+      "kind": "index",
+      "path": "catalog/change/context-index.json",
+      "summary": "Change framework section",
+      "selectors": {
+        "sections": [
+          "change"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:coherent-change-package@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CHANGE-001",
+        "ALATYR-PACKAGE-001"
+      ],
+      "estimated_words": 176,
+      "content_digest": "sha256:c0577533448c7853369bf3d55bd862e2653e76f3b8a404baf2ae1ce54fb60d74"
+    },
+    {
+      "id": "framework.section.collaboration",
+      "kind": "index",
+      "path": "catalog/collaboration/context-index.json",
+      "summary": "Collaboration framework section",
+      "selectors": {
+        "sections": [
+          "collaboration"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-delegation@1",
+        "alatyr:mode-does-not-grant-authority@1"
+      ],
+      "owner_refs": [
+        "ALATYR-DECOMPOSITION-001",
+        "ALATYR-DELEGATION-001",
+        "ALATYR-MODE-001",
+        "ALATYR-TEAM-001"
+      ],
+      "estimated_words": 212,
+      "content_digest": "sha256:7fd10d80ce70fe1eeb1a4527eedf27829aa38cf50489bdc4dcf003bcf445941f"
+    },
+    {
+      "id": "framework.section.core",
+      "kind": "index",
+      "path": "catalog/core/context-index.json",
+      "summary": "Core framework section",
+      "selectors": {
+        "sections": [
+          "core"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:changed-fact-not-file@1",
+        "alatyr:current-scope-authorization@1",
+        "alatyr:logical-integrity@1",
+        "alatyr:protected-change@1",
+        "alatyr:risk-by-fact@1",
+        "alatyr:untrusted-instructions-are-data@1"
+      ],
+      "owner_refs": [
+        "ALATYR-ADAPTER-001",
+        "ALATYR-APPROVAL-001",
+        "ALATYR-AUTHORIZATION-001",
+        "ALATYR-BRIDGE-001",
+        "ALATYR-CONTEXT-001",
+        "ALATYR-EVIDENCE-001",
+        "ALATYR-INTEGRITY-001",
+        "ALATYR-MODULE-001",
+        "ALATYR-OPERATION-001",
+        "ALATYR-RISK-001",
+        "ALATYR-SAFETY-001",
+        "ALATYR-SAFETY-002",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 889,
+      "content_digest": "sha256:a09ae83949a2194dcfd73fe6f99a03a1917657f0458e134617be8130c0a915ed"
+    },
+    {
+      "id": "framework.section.infrastructure",
+      "kind": "index",
+      "path": "catalog/infrastructure/context-index.json",
+      "summary": "Infrastructure framework section",
+      "selectors": {
+        "sections": [
+          "infrastructure"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:one-active-adapter@1"
+      ],
+      "owner_refs": [
+        "ALATYR-DEPENDENCY-001",
+        "ALATYR-EXTENSION-001"
+      ],
+      "estimated_words": 228,
+      "content_digest": "sha256:ae445e6b4da6b8aed6894338f275a2c4bc2dc1061f1f87e34baacf2e35f66fd6"
+    },
+    {
+      "id": "framework.section.knowledge",
+      "kind": "index",
+      "path": "catalog/knowledge/context-index.json",
+      "summary": "Knowledge framework section",
+      "selectors": {
+        "sections": [
+          "knowledge"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:accepted-current@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-ARCHITECTURE-001",
+        "ALATYR-CODEDOC-001",
+        "ALATYR-DEBUG-001",
+        "ALATYR-DIAGRAM-001",
+        "ALATYR-ENGINEERING-EVIDENCE-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-VOCABULARY-001"
+      ],
+      "estimated_words": 293,
+      "content_digest": "sha256:9d3da7a2dfb88d53f2b40715a61c5281db50809de5e88f8cd8f69cfd63e89ef8"
+    },
+    {
+      "id": "framework.section.lifecycle",
+      "kind": "index",
+      "path": "catalog/lifecycle/context-index.json",
+      "summary": "Lifecycle framework section",
+      "selectors": {
+        "sections": [
+          "lifecycle"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [
+        "ALATYR-LIFECYCLE-001"
+      ],
+      "estimated_words": 217,
+      "content_digest": "sha256:a69268237f8cdf63fe9a299934546479c51ab409e4a0281aeb44375d3ef6d558"
+    },
+    {
+      "id": "framework.section.support",
+      "kind": "index",
+      "path": "catalog/support/context-index.json",
+      "summary": "Support framework section",
+      "selectors": {
+        "sections": [
+          "support"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-impact-closure@1",
+        "alatyr:relationship-candidate-is-not-authority@1",
+        "alatyr:support-state-is-a-locator@1"
+      ],
+      "owner_refs": [
+        "ALATYR-SUPPORT-001",
+        "ALATYR-TDD-001"
+      ],
+      "estimated_words": 174,
+      "content_digest": "sha256:2c1def852fa686daf9317715c2a2e990c69539f92b84e0da0a16daed6e2a99d2"
+    }
+  ]
+}

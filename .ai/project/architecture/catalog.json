@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "catalog_kind": "target-architecture-knowledge-catalog",
+  "project": "prommer.net workspace",
+  "module_state": "enabled",
+  "human_index": ".ai/project/architecture/README.md",
+  "architecture_owner": "repository maintainers",
+  "decision_authority": "repository maintainer acting on explicit current-scope approval",
+  "canonical_sources": [
+    ".ai/project/architecture/README.md",
+    ".ai/project/source-of-truth-registry.md"
+  ],
+  "decision_sources": [
+    ".ai/project/architecture/catalog.json",
+    ".ai/project/architecture/README.md"
+  ],
+  "last_reviewed": "2026-09-03",
+  "evidence_revision": "no Git revision is available; evidence is bound to the current validated workspace files",
+  "areas": [],
+  "patterns": [],
+  "known_gaps": [
+    "The implementation requirements, codebase, runtime, dependency graph, data boundaries, validation commands, and deployment topology are not established.",
+    "No concrete architecture area, pattern, or solution decision is selected."
+  ]
+}

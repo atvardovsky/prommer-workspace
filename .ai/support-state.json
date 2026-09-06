@@ -1,0 +1,2097 @@
+{
+  "schema_version": 1,
+  "state_kind": "target-support-state",
+  "digest_contract": "alatyr-support-state-v1",
+  "generated_by": {
+    "schema_version": 1,
+    "tool": "snapshot_target_support.py",
+    "source_revision": "112382767a2974bd8199ceb2d570c010a217456c",
+    "source_worktree_state": "clean",
+    "source_dirty_paths": [],
+    "target_manifest": ".ai/alatyr.yaml",
+    "target_manifest_digest": "sha256:defdcbd73165b91ec97a14b8fdb9f24768837b20896dfb0134fb7457f297d3db",
+    "target_worktree_state": "dirty",
+    "target_dirty_paths": [
+      "<git-state-unavailable>"
+    ],
+    "framework_version": "0.1.0-alpha.58",
+    "adapter_schema_version": "48",
+    "template_version": "53"
+  },
+  "policy": ".ai/project/support-policy.json",
+  "policy_digest": "sha256:df4deae31521bcb7f2e9c74e4e5fc3ed5fea5da5fd5c38303531c1da5b69057b",
+  "source_revision": "unavailable",
+  "groups": [
+    {
+      "id": "adapter-root",
+      "file_count": 2,
+      "digest": "sha256:5ad44312d32faeed1bac27456aa16fea04164904d018a17bfb6427353fb14f26"
+    },
+    {
+      "id": "assistant",
+      "file_count": 127,
+      "digest": "sha256:c7f26699594f640a91303ecf143752c5472a6b3c29f555a412a5233b467c81aa"
+    },
+    {
+      "id": "entrypoints",
+      "file_count": 2,
+      "digest": "sha256:ebb4a6f2a6d616f0a4e5d37c8f5e03e1d5bf06be389d430f785dcc4e45ea3200"
+    },
+    {
+      "id": "framework",
+      "file_count": 68,
+      "digest": "sha256:fe6b24fb313b5ddfc73febd4c15770a9f4f68590319a816d9c347ef354cc9968"
+    },
+    {
+      "id": "project",
+      "file_count": 28,
+      "digest": "sha256:0f618841354bc23972832da9438e9134f80307211a55de94662b52888cfe3ebd"
+    }
+  ],
+  "files": [
+    {
+      "path": ".ai/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "adapter-root",
+      "digest": "sha256:dc8a1617797ea491aca5f1d391d24cd2bd689104a58a7f9206222febd97255b0",
+      "canonical_size": 8385
+    },
+    {
+      "path": ".ai/alatyr.yaml",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "adapter-root",
+      "digest": "sha256:defdcbd73165b91ec97a14b8fdb9f24768837b20896dfb0134fb7457f297d3db",
+      "canonical_size": 11340
+    },
+    {
+      "path": ".ai/assistant/ai-infrastructure-router.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:fe2790256e2484017c69afe648b93872bde47ced9f76ce85ed189d637474d7f4",
+      "canonical_size": 9553
+    },
+    {
+      "path": ".ai/assistant/approvals/alatyr-core-update-20260904.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b39de6b013b2c92f2a613ab7d37ec9e579a0ea5ed5a0932f490d39ad34187259",
+      "canonical_size": 5151
+    },
+    {
+      "path": ".ai/assistant/approvals/alatyr-core-update-20260906.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:428bb8d87149d109d3ac7f657a6526c47d603eb4ba353bb350b6a066761913ac",
+      "canonical_size": 5310
+    },
+    {
+      "path": ".ai/assistant/approvals/architecture-contour-settings-20260903.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:0b3e0eac1782794ae8b0c49f4aacea9bfd71a85e03e0974098dcec29e74c793b",
+      "canonical_size": 4372
+    },
+    {
+      "path": ".ai/assistant/approvals/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:80c5895ae207d6930a7294f24ca824c44342d5298967e0b8729e87cce489307d",
+      "canonical_size": 4496
+    },
+    {
+      "path": ".ai/assistant/approvals/recursive-subagent-policy-20260906.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:3d780ba77ac03af6fc0231d1d0b26ef5838795401ee5ba4f1e747275179b489e",
+      "canonical_size": 3727
+    },
+    {
+      "path": ".ai/assistant/assistant-capabilities.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:9281c543df2dbc7af74a010f396334b934174a18f71d9da70c5698637451f791",
+      "canonical_size": 752
+    },
+    {
+      "path": ".ai/assistant/assistant-capabilities/codex.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:5fced709ff9247d0095b26f433353039f5399f64bf3acb4172368e8aefc6b38a",
+      "canonical_size": 8375
+    },
+    {
+      "path": ".ai/assistant/assistant-capabilities/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:3d40b3eef82b3f83dbbaf26923b82c5e306aa556bf44e754b74d50b0abdaa927",
+      "canonical_size": 1132
+    },
+    {
+      "path": ".ai/assistant/bootstrap-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:4eeef0210508bfc8edd107d4bdfb6b16d8d46451bbc7430c52f48bb39ba7c1a8",
+      "canonical_size": 9507
+    },
+    {
+      "path": ".ai/assistant/bootstrap-integrity.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:d6491b0d73b7ca1991362b0b79c8cdb12ee8ceb3b360fe97a69abc44f3314771",
+      "canonical_size": 6327
+    },
+    {
+      "path": ".ai/assistant/bridge-capability-matrix.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:2c513a2b606ab32059a03d59e19f59103978429b1e9ab25c1813e5c60196cf18",
+      "canonical_size": 2428
+    },
+    {
+      "path": ".ai/assistant/checklists/change-impact.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:a53c034ae443dfc8cdaf737c952f82be3b3c0befbc71d14be01ef607e906841b",
+      "canonical_size": 1652
+    },
+    {
+      "path": ".ai/assistant/checklists/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:01bc266e879d58fc5356a05c7ac4fb481456845f88d81e2e36e78108efb21fb5",
+      "canonical_size": 1098
+    },
+    {
+      "path": ".ai/assistant/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:92abb862f10d0e3e9b739e978821b721f826f6261d507e8b3edd0e16a2b17b3c",
+      "canonical_size": 15792
+    },
+    {
+      "path": ".ai/assistant/context-profiles.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:e9e1f676aaf7a36508c33feefe7ab7cdcecebfb155a0ec1b49aea90bc49c5714",
+      "canonical_size": 30641
+    },
+    {
+      "path": ".ai/assistant/context-router.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:014e0a0dd1b5e2d5958d57d1c6ba74002076276d8863c5071529effcf6ecd71d",
+      "canonical_size": 16979
+    },
+    {
+      "path": ".ai/assistant/context/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:ea285d6cc04e300850a8bb63eedae0e7eeeec90b811cf488555533f8bd2b5bea",
+      "canonical_size": 3888
+    },
+    {
+      "path": ".ai/assistant/context/cost-scenarios.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:db24664caf5f773872e25a4bbfc03c1b83d8f8c9a461f7fdeedf4fa140779765",
+      "canonical_size": 1866
+    },
+    {
+      "path": ".ai/assistant/context/intents/architecture-request.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:ae7cd67c51dff49020c5ed7a25b9149463d0eee57561504a929e5f81d5ab261e",
+      "canonical_size": 1583
+    },
+    {
+      "path": ".ai/assistant/context/intents/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:ec7581d420b28ec2ad4e4515b6fc8863d75d61bdf71b12b1078457d93955c117",
+      "canonical_size": 1341
+    },
+    {
+      "path": ".ai/assistant/context/migration-routing.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1ad4c873c357eba0571204b61830df4bb4d0fcd9f95264781061d1616cb53115",
+      "canonical_size": 2365
+    },
+    {
+      "path": ".ai/assistant/context/profiles/ai-infrastructure.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:afeeb074abdee6998b076282bd8dfcb8106e5f7ab3f60822c66ff2a5d8ea8d92",
+      "canonical_size": 1772
+    },
+    {
+      "path": ".ai/assistant/context/profiles/architecture-change.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:45c61314923b3ca75d928f7f73daeae1f6cd389dbafa78ba9508f6808985d835",
+      "canonical_size": 2513
+    },
+    {
+      "path": ".ai/assistant/context/profiles/business-change.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:f1911e3348fc68534f997edf0edd05fd6ef18589c8fa04226d4d5a56fc924c9e",
+      "canonical_size": 2227
+    },
+    {
+      "path": ".ai/assistant/context/profiles/code-local.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:869db8efdf06edb550d5ebe09a64c223a87f15b96e4b02ab660c94ad26e02436",
+      "canonical_size": 2378
+    },
+    {
+      "path": ".ai/assistant/context/profiles/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:6a73dd096bbcacfee90b464cfe28dc829f9c0e01da61d26757828039c1515e48",
+      "canonical_size": 6756
+    },
+    {
+      "path": ".ai/assistant/context/profiles/data-change.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:0c7d257c8ca3e7f200cb2fa19dfc6c186e837c14dfeeadebce0fd06ac50449b1",
+      "canonical_size": 2354
+    },
+    {
+      "path": ".ai/assistant/context/profiles/docs-local.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:3ae8f471f058e38f2dd9df3f5d5f5aa4d726a2d2745a181fad3dab729358d824",
+      "canonical_size": 1422
+    },
+    {
+      "path": ".ai/assistant/context/profiles/framework-upgrade.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:014c98391cae8b2000b57430a067ff006b011189c803a2c41a461139314a2da3",
+      "canonical_size": 2253
+    },
+    {
+      "path": ".ai/assistant/context/profiles/security-sensitive.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:497cd7e4dac58b916c3bb8e6a6af9252efa6e8aefc51d9550414abe82cb6d312",
+      "canonical_size": 1869
+    },
+    {
+      "path": ".ai/assistant/context/project-knowledge-routing.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:2eb7f1b84cd7e41e1143445bb25c9af78cbcb008a8c7dc301f4542267ec34d6b",
+      "canonical_size": 2850
+    },
+    {
+      "path": ".ai/assistant/context/task-scales/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:821f543f2967380d5932946da976a6d86d8dcd50c1fddcf09f14ef749857a26b",
+      "canonical_size": 3169
+    },
+    {
+      "path": ".ai/assistant/context/task-scales/debug-mode.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:0516dfac94184319e68124789e144f0e2de4d314282ad8d76dc8de7c82f97da3",
+      "canonical_size": 3209
+    },
+    {
+      "path": ".ai/assistant/context/task-scales/delegated-execution.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:611aa59951caa386dc5dd5c9b96c2c4292976eb5b738acf128c30bd865ab9ac4",
+      "canonical_size": 1850
+    },
+    {
+      "path": ".ai/assistant/context/task-scales/engineering-evidence.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b11b954d021f59881c9fdd9e28f52ee5dc51887243615c5109cadf125a84de82",
+      "canonical_size": 1705
+    },
+    {
+      "path": ".ai/assistant/context/task-scales/small-task.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:60ae1cfa6df1143baaa2059e54d9f04d2984191675afbd803f1fb9d125404075",
+      "canonical_size": 2165
+    },
+    {
+      "path": ".ai/assistant/contour.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:9fc9391bcc28b797d6ba012fe0514a29d879d9c9f3ea0cf8238a3a5bd1200b4d",
+      "canonical_size": 6001
+    },
+    {
+      "path": ".ai/assistant/delegation-policy.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:26dd014311c04fc28a404daa633bd35675e0f7289057d3e25c4bf6fbd3cd5555",
+      "canonical_size": 3976
+    },
+    {
+      "path": ".ai/assistant/entry-packet.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:696be522318d8055db708859a9ce68d26829c9c6e158e397ea97aeb0695b42c1",
+      "canonical_size": 6320
+    },
+    {
+      "path": ".ai/assistant/flows/adapter-health.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:640e5fa5432d3f4d509078486431553f145e2698c6c8653c1b87ee4048c3c78c",
+      "canonical_size": 4905
+    },
+    {
+      "path": ".ai/assistant/flows/ai-infrastructure-inventory.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:7b000ef36cbc118a66e0770cae569dadef875a89c3326132df7f2bf661bb1302",
+      "canonical_size": 4980
+    },
+    {
+      "path": ".ai/assistant/flows/ai-infrastructure-recommendation.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:8f6e003c8bcdb133cc9df560d950fc6a3abd87adf95000e0bdc18ba046ffd3f4",
+      "canonical_size": 6653
+    },
+    {
+      "path": ".ai/assistant/flows/architecture-assistance.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:522557805548e8f63f450de0daf2acb68b858a7d4b990767be3565795a15b854",
+      "canonical_size": 5539
+    },
+    {
+      "path": ".ai/assistant/flows/blueprint-driven-change.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:ad5fc625fe36e782c7818c78f6ac2b6a5631663f68cf65afd647ba70f7a80b12",
+      "canonical_size": 5490
+    },
+    {
+      "path": ".ai/assistant/flows/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b047a79f8e48ecabf20fbf1339860a5dc00ef0e0e23eeae161f5255fd5958077",
+      "canonical_size": 13043
+    },
+    {
+      "path": ".ai/assistant/flows/debug-mode.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:232894ace7c1faae4b5928ac0462077d14dbc276e34ac800d2fa0aa8b8b27d7a",
+      "canonical_size": 8121
+    },
+    {
+      "path": ".ai/assistant/flows/development-evidence-capture.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:edadcbd62c47f182a8dc998ccd466e591594c8b38ca6c7d5f7ce687778579f48",
+      "canonical_size": 4133
+    },
+    {
+      "path": ".ai/assistant/flows/diagram-discussion.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:2207ccccb7466bfbcf1fc10297cf35b437e6683373523053212b27729028a31d",
+      "canonical_size": 6740
+    },
+    {
+      "path": ".ai/assistant/flows/documentation-sync.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:8333820b350fd7b5a6ab18f7fd3637e2896f1d4ec7fe49ee90eff1ef6ff6bac4",
+      "canonical_size": 5885
+    },
+    {
+      "path": ".ai/assistant/flows/engineering-evidence-capture.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:2145e6e32094252fdc23f4459807f4f32af13f5c09c39d00a509e778124e7ad5",
+      "canonical_size": 3914
+    },
+    {
+      "path": ".ai/assistant/flows/failure-analysis.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b7704be041ba9d5fee67e73d25531e882d31403fa2ea04bff47b6f26f9d7f301",
+      "canonical_size": 1567
+    },
+    {
+      "path": ".ai/assistant/flows/logical-integrity-review.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:c248a139496ebc21e4c44e2ce3bad6cdc456b1466fac91ace0bd31f95ecf7b2f",
+      "canonical_size": 4423
+    },
+    {
+      "path": ".ai/assistant/flows/operation-routing.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:6b4dc90119d3fe8c7ec8435fe04fd4cf6396b034b1b29bc28937de7c812f33f4",
+      "canonical_size": 12243
+    },
+    {
+      "path": ".ai/assistant/flows/project-blueprint-creation.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:a469c37ac1034c65f692860d8e7e9197a90e033c7bb57b98406595467748edde",
+      "canonical_size": 2099
+    },
+    {
+      "path": ".ai/assistant/flows/project-knowledge.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:ce833394f419811ad763d52146f7c704f78368022932ca743f629659c4746c65",
+      "canonical_size": 5245
+    },
+    {
+      "path": ".ai/assistant/flows/skill-adaptation.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:82e22b280a0903278ed45e2f9029ee42f0d421797023fe9c779affb4f46f9090",
+      "canonical_size": 5789
+    },
+    {
+      "path": ".ai/assistant/flows/subagent-delegation.flow.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:f43a48f40817488488a92c46f7573f1d57f42da88ef902bf9e0f2cef35851ff8",
+      "canonical_size": 8031
+    },
+    {
+      "path": ".ai/assistant/gates/checklist.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:85ab731a9637c8645344c77f76879561a33bb0445166b7522e637dfaa5339f4c",
+      "canonical_size": 10975
+    },
+    {
+      "path": ".ai/assistant/gates/code-and-tests.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:414c1c11e9480bd5616acf1c77d2cbbebd5b6b6f72d878d1b47efada5ce1eb27",
+      "canonical_size": 1660
+    },
+    {
+      "path": ".ai/assistant/gates/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:0bdf5407ed66465ea2210bf25a0e71159f7cff41717992053ecd6a04efa305be",
+      "canonical_size": 7810
+    },
+    {
+      "path": ".ai/assistant/gates/core.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:98e72208b952c3f5f9e932bec46de04cdc7545c6fc569c4c7aae658e16f1ad11",
+      "canonical_size": 1271
+    },
+    {
+      "path": ".ai/assistant/gates/debug-mode.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:e726045d73b02f67696baf519c0023c596053ad40df628763ab1d0cd3f6c609c",
+      "canonical_size": 4790
+    },
+    {
+      "path": ".ai/assistant/gates/documentation.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:dcf194d1fd49de18c75f7e4e1e90146e1b2068f4347819e9ee482be2ef056385",
+      "canonical_size": 540
+    },
+    {
+      "path": ".ai/assistant/gates/engineering-evidence.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:9cf99c92cf4d2f995a2251f2d8b76183976e98e4b61282607a65711d991260d9",
+      "canonical_size": 2225
+    },
+    {
+      "path": ".ai/assistant/gates/final-evidence.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:044358d36dedcc5934c9c317c9be33de417f967cd6a9e36ae0ad900284114dee",
+      "canonical_size": 1922
+    },
+    {
+      "path": ".ai/assistant/gates/index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:99660d012a9adaae2f5566cd48774bbeb72cf5802c31684bc343e8090477c583",
+      "canonical_size": 1923
+    },
+    {
+      "path": ".ai/assistant/gates/project-knowledge.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:6e9b911bac52585440e3d7aee1451547837f0ed7002d94dbefdf3d4d27a9cf0a",
+      "canonical_size": 2039
+    },
+    {
+      "path": ".ai/assistant/gates/security-approval.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:eb221af211deacea60853f6b7370b19c5668e905a65b9933e8cd5e3ed3ddf3f1",
+      "canonical_size": 668
+    },
+    {
+      "path": ".ai/assistant/gates/semantic-integrity.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b635c816c3768e2c4f010186161d7214ef5d51de0bd0c7a9ee12f6188db99941",
+      "canonical_size": 555
+    },
+    {
+      "path": ".ai/assistant/help-reference.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:5e9eda40c60e1a8740d7bad8a004025d64dc604833725e543444fae52e70d598",
+      "canonical_size": 31312
+    },
+    {
+      "path": ".ai/assistant/help.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:a90e77c2ed08c410f8117b3106f2c8b95bb5b98007360f1c5b3f5e3a781c227a",
+      "canonical_size": 4785
+    },
+    {
+      "path": ".ai/assistant/installation-state.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:524acf06abf5d67883c5cf4c9b3021f17f6d335ebad09090f7fe6460de63adb5",
+      "canonical_size": 14909
+    },
+    {
+      "path": ".ai/assistant/maturity-profile.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:91d6f91998bd0ae696e05ee8bdae6eff61205d775fa489cbde19b93f86ac61a0",
+      "canonical_size": 3121
+    },
+    {
+      "path": ".ai/assistant/migrations/alatyr-core-alpha52.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:784b7c5a8571e2c17830281594a75405de8ced8640f5fa30401ee2fbff6d228d",
+      "canonical_size": 2375
+    },
+    {
+      "path": ".ai/assistant/migrations/alatyr-core-alpha58.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:e93d4586cc5e9d06771276196e4cb5a6d72ce59d8fb099ca76e4c0380a2cbd17",
+      "canonical_size": 4536
+    },
+    {
+      "path": ".ai/assistant/migrations/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:9e646ff6e93c757ae1d69525c28524b0d8169c09092de10ff63b78a43d4b88cc",
+      "canonical_size": 1810
+    },
+    {
+      "path": ".ai/assistant/module-profile.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:570742cc75537eb4bfccab6edbcf4ac18e57719af6a87a6ea46dcf09c172e795",
+      "canonical_size": 5858
+    },
+    {
+      "path": ".ai/assistant/operation-catalog.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:3ff0ca022ec2f5d06a7c9d24dd4aeae2ea5f5c4d842b1ffb6c2ca8ec9e8e67f6",
+      "canonical_size": 19017
+    },
+    {
+      "path": ".ai/assistant/operation-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:7e647f753ea82c2acd7461c9cdb9d174d946a9d6e127df4b41b2007aabc811ae",
+      "canonical_size": 5519
+    },
+    {
+      "path": ".ai/assistant/policies/action-authorization.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:de908ca79c427057ff96331ec469c7e8e94876fd58cf6375ef06e89bae69c5c0",
+      "canonical_size": 3859
+    },
+    {
+      "path": ".ai/assistant/policies/ai-infrastructure-source-access.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1d50153f771e201cb4d5b38d3e8477578a7b21d6fec664f5f48f3e1580c04d5c",
+      "canonical_size": 3893
+    },
+    {
+      "path": ".ai/assistant/policies/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:cfe750108ca068e72b042e5868f204729af604c74f0cf5e63c145314f350e238",
+      "canonical_size": 2923
+    },
+    {
+      "path": ".ai/assistant/policies/prompt-injection.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1465f48832919d60b063dbcf8a0402cf9c689c184fe560360e36c41c35dc7fcc",
+      "canonical_size": 2652
+    },
+    {
+      "path": ".ai/assistant/prompts/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:c1c45039140e5b652379e345ce1277d74744f38e40c5df1dafdd38e2b699fec4",
+      "canonical_size": 1212
+    },
+    {
+      "path": ".ai/assistant/prompts/worker-orchestration.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:cb70e3a6ff418c9f79895f61d1a8d9205bc345151947095e441401bfd498bedb",
+      "canonical_size": 2318
+    },
+    {
+      "path": ".ai/assistant/task-decomposition.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b64325c400e15669384418f107aec272d8b7b005403a61f25a724127ee53228e",
+      "canonical_size": 7189
+    },
+    {
+      "path": ".ai/assistant/templates/adapter-maintenance-evidence.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:7aeeb6f0cc3cb97020f706d03324bfa4e074f7184b0b5a7b4421b5a6bb5be67d",
+      "canonical_size": 1458
+    },
+    {
+      "path": ".ai/assistant/templates/adapter-output-contracts.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1121dbf69defac0bdf0b83820e880565b6a421d5310a00ff301e67c0e3e3fd9e",
+      "canonical_size": 17586
+    },
+    {
+      "path": ".ai/assistant/templates/ai-infrastructure-adaptation-record.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:519b808f81af0dbc45120f9f4613aa72ec0d88c7413f65bbbab84b6f538072cc",
+      "canonical_size": 2444
+    },
+    {
+      "path": ".ai/assistant/templates/ai-infrastructure-inventory.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:5972c3a1bfd76c63765a2f5195edadf1445260c9109121d0f195c68a9ba72ab8",
+      "canonical_size": 2688
+    },
+    {
+      "path": ".ai/assistant/templates/ai-infrastructure-recommendation.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:c1cb4185eb2b36898eec7b81a15d6cebcaa03cf791b9a5a70185c9805ea7474a",
+      "canonical_size": 3096
+    },
+    {
+      "path": ".ai/assistant/templates/architecture-area.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:91ffad496281e2f6a6db35820a12d849043bb83ed3fd336734b784e1f93d0345",
+      "canonical_size": 1236
+    },
+    {
+      "path": ".ai/assistant/templates/architecture-discussion-result.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:e55b66d70f9413fea1d61b598e12a70f2c2833a2ad125102e80aec3060608daf",
+      "canonical_size": 1692
+    },
+    {
+      "path": ".ai/assistant/templates/architecture-pattern.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:99570fbc32f562c41894705183b0d45dbdca707e1a93515bec1e61a7e00f14dc",
+      "canonical_size": 1725
+    },
+    {
+      "path": ".ai/assistant/templates/ascii-diagram.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:db89f29418b4e6f4daa497c1340b9061e3bb84108027f14fe633a54625933e04",
+      "canonical_size": 1173
+    },
+    {
+      "path": ".ai/assistant/templates/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:96eb8f98aea7f470718982acbeddf85b40a49b9e2dff77b80df48e40affc41cf",
+      "canonical_size": 22533
+    },
+    {
+      "path": ".ai/assistant/templates/context-packet.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:9ba2baa702b3d5a51f78a5156ef3ce4c2871828c97b5caf17c28167ceabe085a",
+      "canonical_size": 4479
+    },
+    {
+      "path": ".ai/assistant/templates/debug-session-record.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:51bf476fce1894803d15a8e7afbfd78de2e5036452c3d5eace3352c86ebb626f",
+      "canonical_size": 7800
+    },
+    {
+      "path": ".ai/assistant/templates/debug-summary.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:273a277feec4f94b5d41940b914d18355b8d05e5827e2481cd003793fb58ce84",
+      "canonical_size": 1541
+    },
+    {
+      "path": ".ai/assistant/templates/delayed-outcome-evidence.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:d416023d15944680b709b1cb2f1f6c26e34f017ebeab076d3a9a19714e2a0097",
+      "canonical_size": 900
+    },
+    {
+      "path": ".ai/assistant/templates/diagram-presentation.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b52341baaf9a23f14bf79ba60452da460da920abd893e959cba7fddcbdd5edc5",
+      "canonical_size": 2438
+    },
+    {
+      "path": ".ai/assistant/templates/effectiveness-report.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:905fc3c3eec379c2b306b9b9ef570b1de48350b1e5b15407d3ec5e5de4750573",
+      "canonical_size": 3370
+    },
+    {
+      "path": ".ai/assistant/templates/engineering-evidence-record.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:b4b3e48a4c7f88ae0082731d42eea3c1ed06eafeb0b6ef89694e59d8a95feba1",
+      "canonical_size": 2908
+    },
+    {
+      "path": ".ai/assistant/templates/failure-analysis.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:395c782dc184120c9ebbba4eab13a97d17e730512fce134e7d1b87fcaea3ad77",
+      "canonical_size": 838
+    },
+    {
+      "path": ".ai/assistant/templates/installation-note.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:4f80e6981823bd62ae6f893167940085fdc0d54b65468c78f5fa6edf48eb0879",
+      "canonical_size": 8988
+    },
+    {
+      "path": ".ai/assistant/templates/native-worker-binding.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:ff12852dfb86a7f45a386f43590d41e622a03966e30fea8171fe4a324cd4f7d5",
+      "canonical_size": 1651
+    },
+    {
+      "path": ".ai/assistant/templates/operation-request.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:4d72c333627964ab3d6058ed65fee5b2d021b253f67238b72f40fc4842fce7fc",
+      "canonical_size": 14476
+    },
+    {
+      "path": ".ai/assistant/templates/post-install-message.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1289d8f57c2ab36b7319e6efce4291ef80757eae65ae30059b28b7f951c2adb6",
+      "canonical_size": 8094
+    },
+    {
+      "path": ".ai/assistant/templates/post-update-message.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:9e701ac26255ab317626312ad3d50bbaa9f2f67566230f2ae84436d717042dba",
+      "canonical_size": 7947
+    },
+    {
+      "path": ".ai/assistant/templates/pre-change-preview.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:8972eb9c3b7e54b6dfb53faad42ac47b3a0e891070737cd67d7e7f589e94c235",
+      "canonical_size": 1613
+    },
+    {
+      "path": ".ai/assistant/templates/project-knowledge-promotion.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:6572ab890610089c4acb2bf1f9f62a1f22ce198273e4dbb17b9b3d2e1d76a8b7",
+      "canonical_size": 1709
+    },
+    {
+      "path": ".ai/assistant/templates/project-knowledge-route-shard.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:00304c7f17c76480de741606da2a9ac15a0494eb3c631c9cade113fa4f10a643",
+      "canonical_size": 339
+    },
+    {
+      "path": ".ai/assistant/templates/small-task-evidence.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1e411c1972f61a7bd87c7b53b448badd6bc9e2aaf2667ed93e50fe0709a7bbd5",
+      "canonical_size": 1316
+    },
+    {
+      "path": ".ai/assistant/templates/subagent-task-packet.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:48d0530879f864665a11c859c0abaa02b55bf71dfaf182003c7b921d64f5f508",
+      "canonical_size": 2996
+    },
+    {
+      "path": ".ai/assistant/templates/task-decomposition.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:dc54c255e650ffd848da5f11be41f0e4261f212cecb6e7106e4249bbda1f22b0",
+      "canonical_size": 3247
+    },
+    {
+      "path": ".ai/assistant/templates/worker-execution-plan.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:e52e4ef6325856aef50624191b6ce96100e9c0b5174ed963658c9fc71d8b3431",
+      "canonical_size": 2109
+    },
+    {
+      "path": ".ai/assistant/templates/worker-result.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:e79c8eace853f7832cf251fb1c1b4ed8e4397948224327c64f9a3176e299fb6d",
+      "canonical_size": 1211
+    },
+    {
+      "path": ".ai/assistant/workers/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:9620f6e3ba96a41b91f1413489acf998d3ca57998dd4d32ebd519f3124718863",
+      "canonical_size": 1605
+    },
+    {
+      "path": ".ai/assistant/workers/role-catalog.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:a230d4042e1411801d0f7def58aacc0c90aadde9052d7b0c98d14036c90986ec",
+      "canonical_size": 3994
+    },
+    {
+      "path": ".ai/assistant/workers/roles/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:2c1ecc2a31035cf3d83e087ea118cee5c73c13ba0e02e0577b668bb64b72bb14",
+      "canonical_size": 5035
+    },
+    {
+      "path": ".ai/assistant/workers/roles/documentation-worker.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:c5561572ac594ac7b9efecfaf6373a9b3d1497c6ec4311fd7c937968aa5ece6e",
+      "canonical_size": 392
+    },
+    {
+      "path": ".ai/assistant/workers/roles/explorer.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1375922be6899a411f8aed57dd9df63bf8f966508d03a5cce9c0fa80034a0b2e",
+      "canonical_size": 451
+    },
+    {
+      "path": ".ai/assistant/workers/roles/fast-focused-worker.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:ebfef09dc330eca51e8e4c3a6e2de7c603db72ae043bec4407cc9cd1110da8fa",
+      "canonical_size": 458
+    },
+    {
+      "path": ".ai/assistant/workers/roles/implementer.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:5b908c0d9a28fd2d11d69e17dd40b47ad4c6a1ca64101513896e3e32dbe46d1f",
+      "canonical_size": 501
+    },
+    {
+      "path": ".ai/assistant/workers/roles/reviewer.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:556f8a05bf26e34d0b32783f903c3449952b19bab36ff41b893b539c92c4298b",
+      "canonical_size": 392
+    },
+    {
+      "path": ".ai/assistant/workers/roles/test-runner.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "assistant",
+      "digest": "sha256:1397d7f6e12810bb86c823bc3e7c3c0ce6bae15298f50a1be387f116c2735001",
+      "canonical_size": 421
+    },
+    {
+      "path": ".ai/framework/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:f501ab9c926256cd902e9cebe429554a3d71c4d1b242b44092340e79948bf9e9",
+      "canonical_size": 15109
+    },
+    {
+      "path": ".ai/framework/action-authorization.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:2b4383460725aea574a7c0c271b81bf51c0e6888249513df8f4a706411108160",
+      "canonical_size": 7510
+    },
+    {
+      "path": ".ai/framework/adapter-maturity.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:7191c0384308af1032b6ef13817881837267a1e6e5341c25210d9130bd1f25c0",
+      "canonical_size": 7983
+    },
+    {
+      "path": ".ai/framework/ai-infrastructure-recommendations.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:18a84d8c27d5b45a813759463026b3ff0c6ba8c4f8334186f4ad996e083d0892",
+      "canonical_size": 11761
+    },
+    {
+      "path": ".ai/framework/ai-infrastructure-routing.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:015a9ef3b1092962eca28af96abc1abdfa884cae4ecb2edf159c87a109fe192e",
+      "canonical_size": 7326
+    },
+    {
+      "path": ".ai/framework/approval-records.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:45b9d377710693fa0711015ebfb4f4f17bc768fe2af71c6be6946181a7300427",
+      "canonical_size": 7875
+    },
+    {
+      "path": ".ai/framework/architecture-knowledge.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:ca52641fca946c087b63e77d3fd9187cef0f74a0ead70f2e80a98a960030504c",
+      "canonical_size": 9519
+    },
+    {
+      "path": ".ai/framework/ascii-diagrams.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:5ca399d6bcddd74b7ff14ef9cca70b256730fc912aecc2fc274ca79a62bcc5f8",
+      "canonical_size": 5263
+    },
+    {
+      "path": ".ai/framework/blueprint-driven-change.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:6b3f19cc18bbf7905ded90051ac258066a5cca29a3b4f7417bdef4aaa3a1c89a",
+      "canonical_size": 5940
+    },
+    {
+      "path": ".ai/framework/bridge-capability-matrix.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:fb8fa61369be2e2462369620c08b87929a0b2082cabe9cf14d8bb0a972a70f2c",
+      "canonical_size": 16597
+    },
+    {
+      "path": ".ai/framework/capabilities.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:92def4206c994288d07f42be0c24fc0c94b215a918edbe4f6df165d883676bd8",
+      "canonical_size": 20124
+    },
+    {
+      "path": ".ai/framework/catalog/change/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:c0577533448c7853369bf3d55bd862e2653e76f3b8a404baf2ae1ce54fb60d74",
+      "canonical_size": 2563
+    },
+    {
+      "path": ".ai/framework/catalog/collaboration/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:7fd10d80ce70fe1eeb1a4527eedf27829aa38cf50489bdc4dcf003bcf445941f",
+      "canonical_size": 3320
+    },
+    {
+      "path": ".ai/framework/catalog/core/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:a09ae83949a2194dcfd73fe6f99a03a1917657f0458e134617be8130c0a915ed",
+      "canonical_size": 14325
+    },
+    {
+      "path": ".ai/framework/catalog/infrastructure/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:ae445e6b4da6b8aed6894338f275a2c4bc2dc1061f1f87e34baacf2e35f66fd6",
+      "canonical_size": 3564
+    },
+    {
+      "path": ".ai/framework/catalog/knowledge/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:9d3da7a2dfb88d53f2b40715a61c5281db50809de5e88f8cd8f69cfd63e89ef8",
+      "canonical_size": 4571
+    },
+    {
+      "path": ".ai/framework/catalog/lifecycle/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:a69268237f8cdf63fe9a299934546479c51ab409e4a0281aeb44375d3ef6d558",
+      "canonical_size": 3197
+    },
+    {
+      "path": ".ai/framework/catalog/support/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:2c1def852fa686daf9317715c2a2e990c69539f92b84e0da0a16daed6e2a99d2",
+      "canonical_size": 2662
+    },
+    {
+      "path": ".ai/framework/change-packages.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:cb9cd1037d27cf67f609db309e230b8d871d65fefbf763b9f97a021e4523a1fd",
+      "canonical_size": 9246
+    },
+    {
+      "path": ".ai/framework/change-risk-model.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:5291465239946e3916f0c7da4c74d5e67db5977f813d7097e930c515dec4c145",
+      "canonical_size": 4825
+    },
+    {
+      "path": ".ai/framework/code-documentation.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:3995f21616fb44304bf15080cc681271e1b686c678636398a04ad75c0b11acdc",
+      "canonical_size": 11979
+    },
+    {
+      "path": ".ai/framework/consistency-model.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:9770fb0b5ac01543d06c4b18f483542e647662db79f63ff4817ed509dd48e650",
+      "canonical_size": 6196
+    },
+    {
+      "path": ".ai/framework/context-discovery.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:1e80ed312865f2e32e2ce130af279eee601744e0dc0e39ccaddf323a232d6ff8",
+      "canonical_size": 5675
+    },
+    {
+      "path": ".ai/framework/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:547d9fae87b2f35717d4f06d997b0758288bbd70a1a9c1b1068ddcabc7b7b5d7",
+      "canonical_size": 5328
+    },
+    {
+      "path": ".ai/framework/context-profiles.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:7125b68f8c3792dcba0e09036884f0c0c0b387644b708ac221dfdfa678233940",
+      "canonical_size": 24939
+    },
+    {
+      "path": ".ai/framework/context-router.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:b55920a1bb298923e6f85eb67d2f2824ba6a9d0147675d18b7b1e5d33b4e1cd9",
+      "canonical_size": 21603
+    },
+    {
+      "path": ".ai/framework/contour.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:eac1b5d58ccf8035e4fdd6a2589d286a23aa87914a1f93dc7a8e618326e9c380",
+      "canonical_size": 5700
+    },
+    {
+      "path": ".ai/framework/debug-mode.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:290b99df87baebe2701124647bb069eb479b68ed9eba7db861fc666ec8d0b69a",
+      "canonical_size": 25308
+    },
+    {
+      "path": ".ai/framework/dependency-knowledge.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:166f1fa32229bbc8455b6edfa4a629a25b93bc321839a78034c6ef0fbf4d58cf",
+      "canonical_size": 14478
+    },
+    {
+      "path": ".ai/framework/diagram-guidance.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:017c40d26ee1889ec09d29bbef4ed02dda84960b6ce461dfda0113316dec626f",
+      "canonical_size": 10245
+    },
+    {
+      "path": ".ai/framework/effectiveness-metrics.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:1b40dfe7964b099a2d37a4e395bf429c92b963f22bb3e2035180e877ecab5758",
+      "canonical_size": 9820
+    },
+    {
+      "path": ".ai/framework/engineering-evidence.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:7163c63e3eb66a0b5314d68388b45d87f9218e913abf2287179b40b6c40da208",
+      "canonical_size": 10405
+    },
+    {
+      "path": ".ai/framework/extensions.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:f256c58309605c0553729d5df1f4a5f16e80ee36f95cd665ac62732cce33d38f",
+      "canonical_size": 11394
+    },
+    {
+      "path": ".ai/framework/file-inventory.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:ecfcf45124b9208d379260936006ea4954d310773a547d02688f29bdc7a96f9b",
+      "canonical_size": 12585
+    },
+    {
+      "path": ".ai/framework/framework-packs.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:6fb0994c8403aabe244087f1b543cc8fb590cff01c283709e770c624a27b468b",
+      "canonical_size": 2544
+    },
+    {
+      "path": ".ai/framework/guarantees.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:e3e6d7379d3cbe2fcd471fd6887118da21a242bb5932bfdb00b3c283fc307dfa",
+      "canonical_size": 26244
+    },
+    {
+      "path": ".ai/framework/installed-operations.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:2a66d55286a105ff671a91f033d58ddd98f15cea50f7e312876a7c01dcc1579b",
+      "canonical_size": 32093
+    },
+    {
+      "path": ".ai/framework/large-task-orchestration.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:3f7a2370163471f1ab43bc264075b57e0415b6c4184f2fc3b7436a01ea2300eb",
+      "canonical_size": 10343
+    },
+    {
+      "path": ".ai/framework/lifecycle.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:af092ae687c5bdeebf7f0c29a6e1dca711181fd00ef4549b26ff59b1369854bf",
+      "canonical_size": 24840
+    },
+    {
+      "path": ".ai/framework/logical-integrity.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:2d9660b8dc0e989de6d1c8d8ebe9e0c51dfc84b0dd0d5bdb419c02ebce637555",
+      "canonical_size": 8819
+    },
+    {
+      "path": ".ai/framework/migration-diff.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:4895b5a115637622b2cf83c06c8c795a95a3e1066497e0ca88db9e221eb9634f",
+      "canonical_size": 4217
+    },
+    {
+      "path": ".ai/framework/module-profile.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:431a318589ec5436a52fce9188979642364f5cf7c67644ca196840bf76f58cdf",
+      "canonical_size": 18635
+    },
+    {
+      "path": ".ai/framework/operation-help.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:e6ddb13e89e7632ad2a52bba6bef105cea0b656149856201fb47149af1f1165f",
+      "canonical_size": 26081
+    },
+    {
+      "path": ".ai/framework/portability.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:b409b7b8b7dfef955db3eefd1804bc7a8e748d7263c83650085881e6fe098863",
+      "canonical_size": 6804
+    },
+    {
+      "path": ".ai/framework/project-adapter-contract.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:3bfd28f39c0405db60d2e9c0401d064cf36468cc8bc785d8fe10a0e35b02c6c0",
+      "canonical_size": 8356
+    },
+    {
+      "path": ".ai/framework/project-knowledge.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:47b4849783a12149d80ae900bf268edc123112fd41d0392035c36a2688cb17f6",
+      "canonical_size": 14713
+    },
+    {
+      "path": ".ai/framework/project-vocabulary.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:548d3ce86ed7df6a4874e69ffcbf74c14fbaedf744ecc2b3582253e7470cf11d",
+      "canonical_size": 9871
+    },
+    {
+      "path": ".ai/framework/prompt-injection.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:fa8b00d5547236cff264a36a3e240efc09bb89f6b29867d447038b9a5f77893e",
+      "canonical_size": 3721
+    },
+    {
+      "path": ".ai/framework/rule-ownership.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:f0ec1823a5f5530c0a8769190ab3263b31b765453aa637384dad5a7a562e8690",
+      "canonical_size": 19147
+    },
+    {
+      "path": ".ai/framework/rule-registry.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:72d54f0efb43fd0c3db5212a2e9b0c40e62224d32abc9d7988ea4c019bfe5671",
+      "canonical_size": 41961
+    },
+    {
+      "path": ".ai/framework/rule-registry.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:e981287d3cd54e53ab330e24d4b375a8a4505895521c276706e1e27fa2b490bb",
+      "canonical_size": 29372
+    },
+    {
+      "path": ".ai/framework/scaffolding.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:6d5abcc71b24e9ee1ca5888a9e61ee493ee55c99849479cd3dfe9133476ef35e",
+      "canonical_size": 5442
+    },
+    {
+      "path": ".ai/framework/security-safety-guidance.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:1b92d31d9b6fa0ebef92c256d2f0ab0c01427d494df9cc95c44d3600e2906c68",
+      "canonical_size": 3838
+    },
+    {
+      "path": ".ai/framework/semantics/change.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:5e0ac188c902ba8cb6514c94e7067f8097e74b47adcb0d1e5d39e35950c7922c",
+      "canonical_size": 3726
+    },
+    {
+      "path": ".ai/framework/semantics/collaboration.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:9f87b5f6c8e04dc279201a447224aae8e676d7568ce608e79cbd741440b19820",
+      "canonical_size": 1709
+    },
+    {
+      "path": ".ai/framework/semantics/core.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:c483c0badb5db983d135a2ae84913da1c6c17293b36d49179b367c76581ac3c3",
+      "canonical_size": 4924
+    },
+    {
+      "path": ".ai/framework/semantics/index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:eeafc7eb930a94dfce51734730e82032d7144bc38d97c5539e59b32c265d5ea5",
+      "canonical_size": 6080
+    },
+    {
+      "path": ".ai/framework/semantics/infrastructure.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:305e435c6cce0b0b0454727eff6184f71bf96b53cccd04eff082d3cd132a5877",
+      "canonical_size": 1893
+    },
+    {
+      "path": ".ai/framework/semantics/knowledge.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:df16defad839350502cefea040b689189cb7cf3481e7c8ac0948759249b3a783",
+      "canonical_size": 1738
+    },
+    {
+      "path": ".ai/framework/skill-adaptation.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:ce8efd3f52a04b83dbc500a7a1faa732d7a34555adfd8b66b0e924e6b3568d91",
+      "canonical_size": 10645
+    },
+    {
+      "path": ".ai/framework/source-of-truth-registry.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:4ed11289dd267551eafa9fea08edf04a4c06689c3780348a05c8dbe97917e1db",
+      "canonical_size": 8053
+    },
+    {
+      "path": ".ai/framework/subagent-delegation.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:d29f7f6b75389b4034351efb70ed53e43a93f4bdd95473bef2126e6ccfb13e9d",
+      "canonical_size": 15451
+    },
+    {
+      "path": ".ai/framework/support-information.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:ab068544649a46b302832536821be38356cf4d0d8cccdd5ef1fe7999f8d24182",
+      "canonical_size": 9391
+    },
+    {
+      "path": ".ai/framework/task-decomposition.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:291664204ee4eb14f9d2fb126b8e980461bba2a08350aeeb9f4e5b4e3619a6c8",
+      "canonical_size": 9433
+    },
+    {
+      "path": ".ai/framework/team-collaboration.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:00b87cfe999d03df063975370b725008125624d5df6b14a1db7d69e170e71f49",
+      "canonical_size": 18032
+    },
+    {
+      "path": ".ai/framework/test-first-development.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:0494df75ebb9c7f9eb1b6a633ff7e6d1d99f3ee47d0360ef9c860e3f1f7e02a7",
+      "canonical_size": 8337
+    },
+    {
+      "path": ".ai/framework/testing-guidance.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:20a08a0bce49ce71a4a2c9fac70f6d3f72bb5229fb6b36f77a89d0091f1ed242",
+      "canonical_size": 8516
+    },
+    {
+      "path": ".ai/framework/workspace-modes.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "framework",
+      "digest": "sha256:dc1b84f72ca465f735d51ee5de02d3c26fd8054688556b4f11c1663eddc239da",
+      "canonical_size": 10435
+    },
+    {
+      "path": ".ai/project/architecture/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:0dc9d760d50fa1f4d841fb0765429a96b63d86277d1261430d08fc7427d46204",
+      "canonical_size": 4749
+    },
+    {
+      "path": ".ai/project/architecture/catalog.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:b0f106c3161ccf7ac4b17dbebaba563bd5f89bbd32cd9d9e7c8ae31814e44f66",
+      "canonical_size": 1025
+    },
+    {
+      "path": ".ai/project/architecture/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:3cdc8adf44ec7df6431cdb9a7b009b44391635ddc3556918b49ef57693248dc2",
+      "canonical_size": 2073
+    },
+    {
+      "path": ".ai/project/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:1deb07e425d7ab1f27edbc779cef50591d50013f7b5f43ad13826e64472878e8",
+      "canonical_size": 6381
+    },
+    {
+      "path": ".ai/project/contour.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:83feb177c4745db8abb2e324a3e33a654adea2162ba8ca1baf0326df3a4491f4",
+      "canonical_size": 5036
+    },
+    {
+      "path": ".ai/project/debug/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:cf382a2504312e42d9185cb8ab9cda591f8f7ff108237d0f50c891077677a822",
+      "canonical_size": 2311
+    },
+    {
+      "path": ".ai/project/debug/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:4934a11d858bcebec8657f9c33fab80921a6b4dc1d558147cde30971d80b7d2d",
+      "canonical_size": 1989
+    },
+    {
+      "path": ".ai/project/debug/index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:9dc0a80d0ee377f5cdb17fffcb8085cc2d04c5bbaa720f3c83b83ff6f95a0c9d",
+      "canonical_size": 539
+    },
+    {
+      "path": ".ai/project/debug/records/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:7b7d4331927e62e3d5db35f8a1cc2050a48f880e441f81087b0a0b256dcba93e",
+      "canonical_size": 3294
+    },
+    {
+      "path": ".ai/project/debug/records/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:adffee152f53d67abd1d8b463dee644ea6c606bb988c181fa34231a576cb91b5",
+      "canonical_size": 1049
+    },
+    {
+      "path": ".ai/project/delivery-policy.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:3ec444fd6097eca3c1630db9c17472d7aafffaad88902e6daee006e07140a170",
+      "canonical_size": 1515
+    },
+    {
+      "path": ".ai/project/development-evidence.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:af0d3943e06b37297ba96c037c22b298912627f5670c237ca180d7ef1b9c1560",
+      "canonical_size": 460
+    },
+    {
+      "path": ".ai/project/engineering-evidence/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:23b44b4cd6d42ff4092c6a6813e9cfec64bbd77761905e7659be6b58b50b4578",
+      "canonical_size": 1367
+    },
+    {
+      "path": ".ai/project/engineering-evidence/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:daad0c0dbf84836ecd8b3af3c2f0529ec7e4a4fa3e89774b2a6760e2b95fa611",
+      "canonical_size": 2187
+    },
+    {
+      "path": ".ai/project/engineering-evidence/index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:3cad13cc11b7cf35fd82e875a04c20358ae8259fe0eae08663c07d8b7791ddd5",
+      "canonical_size": 530
+    },
+    {
+      "path": ".ai/project/engineering-evidence/records/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:9f5c3611414e5ae80c2ca85a09ccea95482c355d64b197719686e956fedf0634",
+      "canonical_size": 741
+    },
+    {
+      "path": ".ai/project/engineering-evidence/records/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:198609be5822ca050c2edae72625c2fe695de4136c5910f2a27c726dc5154a50",
+      "canonical_size": 1152
+    },
+    {
+      "path": ".ai/project/knowledge/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:c5fcb1b5d3d03ad2fac08a95f060261455a39bcd84ab89c5b357e8dbf1047274",
+      "canonical_size": 2198
+    },
+    {
+      "path": ".ai/project/knowledge/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:c1924c8b7db77e8dbc6be101b4018f2002600449f2e8f860c3e172a5dadab068",
+      "canonical_size": 2898
+    },
+    {
+      "path": ".ai/project/knowledge/index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:af38ce7ea44ceec3809394366acdcf7b65d5b700317f9b2ea5ca2d506752eb09",
+      "canonical_size": 1286
+    },
+    {
+      "path": ".ai/project/knowledge/promotions/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:5cc57a0915e90a49b44cf3813fca741575d16a84f7c5b19b2bbb82dd38fdd0d1",
+      "canonical_size": 539
+    },
+    {
+      "path": ".ai/project/knowledge/promotions/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:35268d65ff5fbe7b2018287e657a980e0af7f91054ab25214a4b0f35a702f947",
+      "canonical_size": 1315
+    },
+    {
+      "path": ".ai/project/knowledge/routes/README.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:516f019c82a1761fed3883008368ea9c740e69f403d0d47ca89df10b24f0299a",
+      "canonical_size": 600
+    },
+    {
+      "path": ".ai/project/knowledge/routes/context-index.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:13e0b3859f086aec982b9de6dfdf7ad9043f3864c7ff23b6b1144462e695cfaf",
+      "canonical_size": 1286
+    },
+    {
+      "path": ".ai/project/privacy-policy.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:3f48b2ef1094db100c5093ab92c0b0526436bde1096b597b22d8a37156f06c2b",
+      "canonical_size": 2149
+    },
+    {
+      "path": ".ai/project/product-context.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:82f17e2fc73aa8a3331e67de2a31f11f780321beb3b68a8c7516179ecf2cca26",
+      "canonical_size": 1618
+    },
+    {
+      "path": ".ai/project/source-of-truth-registry.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:6e9736adc9e587b41b4b35f3051fd797436ec6d8bc80c1e42d4bc974b2918582",
+      "canonical_size": 4655
+    },
+    {
+      "path": ".ai/project/support-policy.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:df4deae31521bcb7f2e9c74e4e5fc3ed5fea5da5fd5c38303531c1da5b69057b",
+      "canonical_size": 1533
+    },
+    {
+      "path": "AGENTS.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "assistant-entrypoints",
+      "group": "entrypoints",
+      "digest": "sha256:2ed9da1a12898cbe6f79e18cf51c9decf68c44b27f1413fd6423ff8f4ea090f5",
+      "canonical_size": 1503
+    },
+    {
+      "path": "AI_ASSISTANTS.md",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "assistant-entrypoints",
+      "group": "entrypoints",
+      "digest": "sha256:5d553800ebcf484625a6657bfe1842ad3115aed83da388dcd7b665baaab205ab",
+      "canonical_size": 1378
+    }
+  ],
+  "root_digest": "sha256:a0e6ba19a602544eda6c0c3ef72663f5c41f86f2f2a228c06ae4eca0f0e1e721"
+}

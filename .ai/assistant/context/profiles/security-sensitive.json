@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "descriptor_kind": "target-context-profile",
+  "profile": "security-sensitive",
+  "use_when": [
+    "secrets or credentials",
+    "permissions or authentication",
+    "network or external services",
+    "destructive actions",
+    "production or spend boundary"
+  ],
+  "operation_candidates": [
+    "product-change",
+    "logical-integrity-review",
+    "engineering-evidence",
+    "project-knowledge",
+    "skill-adaptation",
+    "failure-analysis",
+    "drift-review"
+  ],
+  "required_context": [
+    ".ai/framework/security-safety-guidance.md",
+    ".ai/project/source-of-truth-registry.md",
+    ".ai/assistant/gates/core.md",
+    ".ai/assistant/gates/semantic-integrity.md",
+    ".ai/assistant/gates/security-approval.md",
+    ".ai/assistant/gates/final-evidence.md",
+    ".ai/project/contour.md"
+  ],
+  "conditional_context": [
+    {
+      "path": ".ai/framework/logical-integrity.md",
+      "when": "invariant derivation repair-set selection or semantic closure is ambiguous"
+    },
+    {
+      "path": ".ai/framework/change-risk-model.md",
+      "when": "risk classification or escalation semantics are disputed"
+    },
+    {
+      "path": ".ai/framework/approval-records.md",
+      "when": "a protected change requires a scoped approval record"
+    }
+  ],
+  "expand_when": [
+    "live_external_action_possible",
+    "credential_or_private_data_surface",
+    "dependency_or_permission_change",
+    "imported_ai_infrastructure_involved"
+  ],
+  "approval_gates": [
+    "protected_security_change",
+    "destructive_action",
+    "live_service_access",
+    "permission_broadening"
+  ],
+  "validation": [
+    "manual target review; security policy sources and automated checks are not yet available"
+  ],
+  "final_evidence": [
+    "security_owner_evidence",
+    "actions_avoided",
+    "approvals",
+    "validation",
+    "residual_risk"
+  ]
+}

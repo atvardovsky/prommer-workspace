@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "capability_kind": "alatyr-optional-module-catalog",
+  "surfaces": {
+    ".ai/assistant/assistant-capabilities.json": {
+      "ownership": "target-adapter-shared",
+      "producers": [
+        "assistant-runtime-capabilities",
+        "diagrams",
+        "multi-assistant-bridges",
+        "subagent-delegation"
+      ],
+      "merge_strategy": "record-merge-by-assistant-id",
+      "preserve_on_disable": true
+    },
+    ".ai/assistant/bridge-capability-matrix.md": {
+      "ownership": "target-adapter-shared",
+      "producers": [
+        "assistant-runtime-capabilities",
+        "ai-infrastructure",
+        "diagrams",
+        "multi-assistant-bridges",
+        "subagent-delegation"
+      ],
+      "merge_strategy": "target-owned-section-merge",
+      "preserve_on_disable": true
+    }
+  },
+  "modules": {
+    "blueprint-change": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "standard",
+      "requires": ["installed-operations"],
+      "operation_ids": ["create-project-blueprint", "product-change"],
+      "rule_ids": ["ALATYR-CHANGE-001"],
+      "framework_files": ["blueprint-driven-change.md"],
+      "target_files": [
+        ".ai/assistant/flows/blueprint-driven-change.flow.md",
+        ".ai/assistant/flows/project-blueprint-creation.flow.md"
+      ],
+      "check_ids": ["operation-contracts"]
+    },
+    "consistency-map": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "core",
+      "requires": [],
+      "rule_ids": ["ALATYR-INTEGRITY-001", "ALATYR-SOURCE-001"],
+      "framework_files": ["logical-integrity.md", "source-of-truth-registry.md"],
+      "target_files": [
+        ".ai/project/source-of-truth-registry.md",
+        ".ai/project/consistency-map.json",
+        ".ai/project/consistency/areas/_template.json",
+        ".ai/project/consistency/relationship-candidates.json",
+        ".ai/assistant/consistency-reverse-index.json",
+        ".ai/assistant/context/consistency-routing.json",
+        ".ai/assistant/context/cost-scenarios.json"
+      ],
+      "check_ids": ["consistency-map", "source-of-truth-registry"]
+    },
+    "architecture-knowledge": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["installed-operations"],
+      "operation_ids": ["architecture-assistance"],
+      "rule_ids": ["ALATYR-ARCHITECTURE-001"],
+      "framework_files": ["architecture-knowledge.md"],
+      "target_files": [
+        ".ai/project/architecture/README.md",
+        ".ai/project/architecture/catalog.json",
+        ".ai/assistant/context/intents/architecture-request.json",
+        ".ai/assistant/flows/architecture-assistance.flow.md",
+        ".ai/assistant/templates/architecture-pattern.md",
+        ".ai/assistant/templates/architecture-area.md",
+        ".ai/assistant/templates/architecture-discussion-result.md"
+      ],
+      "check_ids": ["architecture-knowledge"]
+    },
+    "code-documentation": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["installed-operations"],
+      "rule_ids": ["ALATYR-CODEDOC-001"],
+      "framework_files": ["code-documentation.md"],
+      "target_files": [
+        ".ai/project/documentation/README.md",
+        ".ai/project/documentation/catalog.json",
+        ".ai/project/documentation/profiles.json",
+        ".ai/assistant/context/intents/code-documentation.json",
+        ".ai/assistant/flows/documentation-sync.flow.md",
+        ".ai/assistant/templates/code-documentation-profile-review.md",
+        ".ai/assistant/skills/code-documentation/SKILL.md"
+      ],
+      "check_ids": ["code-documentation"]
+    },
+    "project-vocabulary": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["installed-operations"],
+      "operation_ids": ["project-vocabulary"],
+      "rule_ids": ["ALATYR-VOCABULARY-001"],
+      "framework_files": ["project-vocabulary.md"],
+      "target_files": [
+        ".ai/project/vocabulary/README.md",
+        ".ai/project/vocabulary/catalog.json",
+        ".ai/project/vocabulary/terms.json",
+        ".ai/project/vocabulary/data-dictionary-links.json",
+        ".ai/assistant/context/intents/vocabulary-request.json",
+        ".ai/assistant/flows/project-vocabulary.flow.md",
+        ".ai/assistant/templates/vocabulary-term-review.md",
+        ".ai/assistant/skills/project-vocabulary/SKILL.md"
+      ],
+      "check_ids": ["project-vocabulary"]
+    },
+    "test-first-development": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["installed-operations"],
+      "operation_ids": ["test-first-change"],
+      "rule_ids": ["ALATYR-TDD-001"],
+      "framework_files": ["test-first-development.md"],
+      "target_files": [
+        ".ai/project/testing/README.md",
+        ".ai/project/testing/test-first-policy.json",
+        ".ai/assistant/context/intents/test-first-request.json",
+        ".ai/assistant/flows/test-first-configuration.flow.md",
+        ".ai/assistant/flows/test-first-change.flow.md",
+        ".ai/assistant/gates/test-first-development.md",
+        ".ai/assistant/templates/test-first-evidence.md",
+        ".ai/assistant/skills/test-first-development/SKILL.md"
+      ],
+      "check_ids": ["test-first-development"]
+    },
+    "extensions": {
+      "module_kind": "assistant-infrastructure",
+      "min_framework_pack": "complete",
+      "requires": ["ai-infrastructure"],
+      "rule_ids": ["ALATYR-EXTENSION-001", "ALATYR-SAFETY-002"],
+      "framework_files": ["extensions.md", "prompt-injection.md"],
+      "target_files": [
+        ".ai/assistant/extensions/README.md",
+        ".ai/assistant/extensions/catalog.json",
+        ".ai/assistant/extensions/lock.json",
+        ".ai/assistant/context/intents/extension-request.json",
+        ".ai/assistant/flows/extension-lifecycle.flow.md",
+        ".ai/assistant/gates/extensions.md",
+        ".ai/assistant/templates/extension-review.md",
+        ".ai/assistant/templates/extension-lifecycle-record.md"
+      ],
+      "check_ids": ["extensions"]
+    },
+    "dependency-knowledge": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["installed-operations"],
+      "operation_ids": ["dependency-knowledge"],
+      "rule_ids": ["ALATYR-DEPENDENCY-001", "ALATYR-SAFETY-002", "ALATYR-SOURCE-001"],
+      "framework_files": ["dependency-knowledge.md", "prompt-injection.md", "source-of-truth-registry.md"],
+      "target_files": [
+        ".ai/project/dependencies/README.md",
+        ".ai/project/dependencies/policy.json",
+        ".ai/project/dependencies/catalog.json",
+        ".ai/project/dependencies/knowledge-lock.json",
+        ".ai/project/dependencies/deviations.json",
+        ".ai/project/dependencies/snapshots/README.md",
+        ".ai/assistant/context/intents/dependency-knowledge-request.json",
+        ".ai/assistant/flows/dependency-knowledge-sync.flow.md",
+        ".ai/assistant/gates/dependency-knowledge.md",
+        ".ai/assistant/templates/dependency-knowledge-sync-report.md"
+      ],
+      "check_ids": ["dependency-knowledge"]
+    },
+    "workspace-modes": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["installed-operations"],
+      "operation_ids": ["workspace-mode"],
+      "rule_ids": ["ALATYR-MODE-001", "ALATYR-CONTEXT-001", "ALATYR-SOURCE-001"],
+      "framework_files": ["workspace-modes.md", "context-router.md", "source-of-truth-registry.md"],
+      "target_files": [
+        ".ai/project/workspace-modes/README.md",
+        ".ai/project/workspace-modes/catalog.json",
+        ".ai/project/workspace-modes/root/README.md",
+        ".ai/project/workspace-modes/root/context.json",
+        ".ai/project/workspace-modes/modes/_template/README.md",
+        ".ai/project/workspace-modes/modes/_template/mode.json",
+        ".ai/assistant/context/intents/workspace-mode-request.json",
+        ".ai/assistant/flows/workspace-mode.flow.md",
+        ".ai/assistant/gates/workspace-mode.md",
+        ".ai/assistant/templates/workspace-mode-suggestion.md",
+        ".ai/assistant/templates/workspace-mode-preflight.md"
+      ],
+      "check_ids": ["workspace-modes"]
+    },
+    "diagrams": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["assistant-runtime-capabilities", "installed-operations"],
+      "operation_ids": ["diagram-discussion"],
+      "rule_ids": ["ALATYR-DIAGRAM-001"],
+      "framework_files": ["diagram-guidance.md", "ascii-diagrams.md"],
+      "target_files": [
+        ".ai/assistant/context/intents/diagram-request.json",
+        ".ai/assistant/flows/diagram-discussion.flow.md",
+        ".ai/assistant/gates/visual-validation.md",
+        ".ai/assistant/templates/diagram-presentation.md",
+        ".ai/assistant/templates/ascii-diagram.md",
+        ".ai/assistant/templates/visual-validation-review.md",
+        ".ai/assistant/assistant-capabilities.json",
+        ".ai/assistant/bridge-capability-matrix.md"
+      ],
+      "check_ids": ["discussion-diagrams", "assistant-capability-index"]
+    },
+    "assistant-runtime-capabilities": {
+      "module_kind": "assistant-infrastructure",
+      "min_framework_pack": "core",
+      "requires": [],
+      "rule_ids": ["ALATYR-BRIDGE-001"],
+      "framework_files": ["bridge-capability-matrix.md"],
+      "target_files": [
+        ".ai/assistant/assistant-capabilities.json",
+        ".ai/assistant/bridge-capability-matrix.md"
+      ],
+      "check_ids": ["assistant-capability-index", "bridge-capability-matrix"]
+    },
+    "ai-infrastructure": {
+      "module_kind": "assistant-infrastructure",
+      "min_framework_pack": "core",
+      "requires": ["assistant-runtime-capabilities", "installed-operations"],
+      "operation_ids": ["ai-infrastructure-inventory", "ai-infrastructure-recommendation", "skill-adaptation"],
+      "rule_ids": ["ALATYR-SAFETY-002"],
+      "framework_files": ["ai-infrastructure-routing.md", "ai-infrastructure-recommendations.md", "prompt-injection.md", "skill-adaptation.md"],
+      "target_files": [
+        ".ai/assistant/ai-infrastructure-router.json",
+        ".ai/assistant/bridge-capability-matrix.md",
+        ".ai/assistant/context/profiles/ai-infrastructure.json",
+        ".ai/assistant/flows/ai-infrastructure-inventory.flow.md",
+        ".ai/assistant/flows/ai-infrastructure-recommendation.flow.md",
+        ".ai/assistant/flows/development-evidence-capture.flow.md",
+        ".ai/assistant/flows/skill-adaptation.flow.md",
+        ".ai/assistant/policies/ai-infrastructure-source-access.md",
+        ".ai/assistant/policies/prompt-injection.md",
+        ".ai/assistant/templates/ai-infrastructure-inventory.md",
+        ".ai/assistant/templates/ai-infrastructure-recommendation.md",
+        ".ai/assistant/templates/ai-infrastructure-adaptation-record.md",
+        ".ai/project/development-evidence.json"
+      ],
+      "check_ids": ["ai-infrastructure-inventory", "ai-infrastructure-recommendations", "ai-infrastructure-router"]
+    },
+    "multi-assistant-bridges": {
+      "module_kind": "assistant-infrastructure",
+      "min_framework_pack": "core",
+      "requires": ["assistant-runtime-capabilities", "installed-operations"],
+      "rule_ids": ["ALATYR-BRIDGE-001"],
+      "framework_files": ["bridge-capability-matrix.md"],
+      "target_files": [
+        "AI_ASSISTANTS.md",
+        ".ai/assistant/bridge-capability-matrix.md",
+        ".ai/assistant/assistant-capabilities.json",
+        ".ai/assistant/gates/checklist.md"
+      ],
+      "check_ids": ["assistant-surface-conformance", "bridge-capability-matrix"]
+    },
+    "installed-operations": {
+      "module_kind": "governance-support",
+      "min_framework_pack": "core",
+      "requires": [],
+      "rule_ids": ["ALATYR-OPERATION-001", "ALATYR-AUTHORIZATION-001"],
+      "framework_files": ["installed-operations.md", "operation-help.md", "action-authorization.md"],
+      "target_files": [
+        ".ai/assistant/operation-index.json",
+        ".ai/assistant/operation-catalog.json",
+        ".ai/assistant/help.md",
+        ".ai/assistant/help-reference.md",
+        ".ai/assistant/flows/operation-routing.flow.md",
+        ".ai/assistant/flows/adapter-health.flow.md",
+        ".ai/assistant/templates/pre-change-preview.md",
+        ".ai/assistant/templates/post-install-message.md",
+        ".ai/assistant/templates/post-update-message.md",
+        ".ai/assistant/policies/action-authorization.json"
+      ],
+      "check_ids": ["action-authorization", "operation-catalog", "operation-index", "operation-help"]
+    },
+    "large-task-orchestration": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "standard",
+      "requires": ["installed-operations"],
+      "operation_ids": ["large-task"],
+      "rule_ids": ["ALATYR-CONTEXT-001"],
+      "framework_files": ["large-task-orchestration.md"],
+      "target_files": [
+        ".ai/assistant/context/task-scales/large-or-resumable.json",
+        ".ai/assistant/flows/large-task-orchestration.flow.md",
+        ".ai/assistant/templates/large-task-operation-packet.md",
+        ".ai/assistant/templates/operation-completion-evidence.json"
+      ],
+      "check_ids": ["large-task-orchestration"]
+    },
+    "subagent-delegation": {
+      "module_kind": "assistant-infrastructure",
+      "min_framework_pack": "complete",
+      "requires": ["assistant-runtime-capabilities", "installed-operations"],
+      "rule_ids": ["ALATYR-DELEGATION-001"],
+      "framework_files": ["subagent-delegation.md"],
+      "target_files": [
+        ".ai/assistant/delegation-policy.json",
+        ".ai/assistant/context/task-scales/delegated-execution.json",
+        ".ai/assistant/flows/subagent-delegation.flow.md",
+        ".ai/assistant/prompts/worker-orchestration.md",
+        ".ai/assistant/templates/subagent-task-packet.md",
+        ".ai/assistant/templates/native-worker-binding.md",
+        ".ai/assistant/templates/worker-execution-plan.md",
+        ".ai/assistant/templates/worker-result.md",
+        ".ai/assistant/workers/role-catalog.json",
+        ".ai/assistant/workers/roles/explorer.md",
+        ".ai/assistant/workers/roles/implementer.md",
+        ".ai/assistant/workers/roles/test-runner.md",
+        ".ai/assistant/workers/roles/documentation-worker.md",
+        ".ai/assistant/workers/roles/reviewer.md",
+        ".ai/assistant/workers/roles/fast-focused-worker.md",
+        ".ai/assistant/assistant-capabilities.json",
+        ".ai/assistant/bridge-capability-matrix.md"
+      ],
+      "check_ids": ["subagent-delegation", "assistant-capability-index", "bridge-capability-matrix"]
+    },
+    "change-packages": {
+      "module_kind": "governance-support",
+      "min_framework_pack": "complete",
+      "requires": ["durable-approvals"],
+      "rule_ids": ["ALATYR-PACKAGE-001"],
+      "framework_files": ["change-packages.md"],
+      "target_files": [
+        ".ai/assistant/change-packages/index.json",
+        ".ai/assistant/context/task-scales/change-package.json",
+        ".ai/assistant/flows/change-package.flow.md",
+        ".ai/assistant/gates/contract-artifacts.md",
+        ".ai/assistant/templates/contract-artifact-review.md",
+        ".ai/assistant/templates/change-package-record.json",
+        ".ai/assistant/templates/change-package-report.md"
+      ],
+      "check_ids": ["change-packages"]
+    },
+    "team-collaboration": {
+      "module_kind": "project-facing",
+      "min_framework_pack": "complete",
+      "requires": ["installed-operations"],
+      "operation_ids": ["team-identity", "team-status", "team-task", "team-conflict-review", "team-handoff", "team-decision", "team-review", "team-merge-check"],
+      "rule_ids": ["ALATYR-TEAM-001"],
+      "framework_files": ["team-collaboration.md"],
+      "target_files": [
+        ".ai/project/team-policy.json",
+        ".ai/project/team-operating-model.md",
+        ".ai/assistant/team/context-overlay.json",
+        ".ai/assistant/team/work-registry.json",
+        ".ai/assistant/team/active-work-index.json",
+        ".ai/assistant/team/backend-contract.json",
+        ".ai/assistant/team/task-record-template.json",
+        ".ai/assistant/flows/team-identity.flow.md",
+        ".ai/assistant/flows/team-task-coordination.flow.md",
+        ".ai/assistant/flows/team-handoff.flow.md",
+        ".ai/assistant/flows/team-decision.flow.md",
+        ".ai/assistant/flows/team-review.flow.md",
+        ".ai/assistant/gates/team-collaboration.md",
+        ".ai/assistant/skills/team-collaboration/SKILL.md",
+        ".ai/assistant/templates/team-checkpoint.md",
+        ".ai/assistant/templates/team-collaboration-review.md",
+        ".ai/assistant/templates/team-decision-record.md",
+        ".ai/assistant/templates/team-handoff.md",
+        ".ai/assistant/templates/team-identity.example.json"
+      ],
+      "check_ids": ["team-collaboration", "team-collaboration-scenarios"]
+    },
+    "durable-approvals": {
+      "module_kind": "governance-support",
+      "min_framework_pack": "core",
+      "requires": [],
+      "rule_ids": ["ALATYR-APPROVAL-001"],
+      "framework_files": ["approval-records.md"],
+      "target_files": [
+        ".ai/assistant/approvals/approval-template.md",
+        ".ai/assistant/approvals/approval-record-template.json"
+      ],
+      "check_ids": ["approval-template"]
+    },
+    "migration-diff": {
+      "module_kind": "governance-support",
+      "min_framework_pack": "standard",
+      "requires": [],
+      "rule_ids": ["ALATYR-LIFECYCLE-001"],
+      "framework_files": ["migration-diff.md"],
+      "target_files": [
+        ".ai/assistant/context/migration-routing.json",
+        ".ai/assistant/templates/migration-note.md"
+      ],
+      "check_ids": ["migration-diff-report"]
+    },
+    "effectiveness-metrics": {
+      "module_kind": "governance-support",
+      "min_framework_pack": "complete",
+      "requires": [],
+      "rule_ids": ["ALATYR-EVIDENCE-001"],
+      "framework_files": ["effectiveness-metrics.md"],
+      "target_files": [
+        ".ai/assistant/templates/effectiveness-report.md",
+        ".ai/assistant/templates/delayed-outcome-evidence.json",
+        ".ai/assistant/templates/adapter-maintenance-evidence.json"
+      ],
+      "check_ids": ["effectiveness-benchmark", "captured-effectiveness-results"]
+    },
+    "debug-mode": {
+      "module_kind": "governance-support",
+      "min_framework_pack": "complete",
+      "requires": ["effectiveness-metrics", "installed-operations"],
+      "operation_ids": ["debug-mode"],
+      "rule_ids": ["ALATYR-DEBUG-001", "ALATYR-AUTHORIZATION-001", "ALATYR-EVIDENCE-001"],
+      "framework_files": ["debug-mode.md", "effectiveness-metrics.md", "operation-help.md"],
+      "target_files": [
+        ".ai/project/debug/README.md",
+        ".ai/project/debug/index.json",
+        ".ai/project/debug/records/README.md",
+        ".ai/assistant/context/task-scales/debug-mode.json",
+        ".ai/assistant/flows/debug-mode.flow.md",
+        ".ai/assistant/gates/debug-mode.md",
+        ".ai/assistant/templates/debug-session-record.json",
+        ".ai/assistant/templates/debug-summary.md"
+      ],
+      "check_ids": ["debug-mode", "target-adapter-validator"]
+    },
+    "support-generation": {
+      "module_kind": "governance-support",
+      "min_framework_pack": "core",
+      "requires": ["installed-operations"],
+      "operation_ids": ["support-generation"],
+      "rule_ids": ["ALATYR-SUPPORT-001"],
+      "framework_files": ["support-information.md"],
+      "target_files": [
+        ".ai/project/support-generation/registry.json",
+        ".ai/assistant/support-generation-index.json",
+        ".ai/assistant/flows/support-generation.flow.md",
+        ".ai/assistant/gates/support-generation.md"
+      ],
+      "check_ids": ["support-information"]
+    },
+    "scaffolding": {
+      "module_kind": "source-repository",
+      "min_framework_pack": "complete",
+      "requires": [],
+      "rule_ids": ["ALATYR-MODULE-001"],
+      "framework_files": ["scaffolding.md"],
+      "target_files": [],
+      "check_ids": ["scaffold-profiles", "conformance-scaffold"]
+    }
+  }
+}

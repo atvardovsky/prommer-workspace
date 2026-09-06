@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "descriptor_kind": "target-context-profile",
+  "profile": "data-change",
+  "use_when": [
+    "schema change",
+    "persistence change",
+    "migration or backfill",
+    "data ownership or retention change"
+  ],
+  "operation_candidates": [
+    "product-change",
+    "logical-integrity-review",
+    "engineering-evidence",
+    "project-knowledge",
+    "drift-review"
+  ],
+  "required_context": [
+    ".ai/project/source-of-truth-registry.md",
+    ".ai/assistant/gates/core.md",
+    ".ai/assistant/gates/semantic-integrity.md",
+    ".ai/assistant/gates/code-and-tests.md",
+    ".ai/assistant/gates/final-evidence.md",
+    ".ai/project/contour.md"
+  ],
+  "conditional_context": [
+    {
+      "path": ".ai/framework/change-risk-model.md",
+      "when": "changed-fact risk classification or escalation is disputed"
+    },
+    {
+      "path": ".ai/framework/logical-integrity.md",
+      "when": "invariant derivation repair-set selection or semantic closure is ambiguous"
+    },
+    {
+      "path": ".ai/framework/context-discovery.md",
+      "when": "source selection expansion rules or missing-context handling are disputed"
+    },
+    {
+      "path": ".ai/framework/source-of-truth-registry.md",
+      "when": "registry ownership semantics are disputed or the target registry requires repair"
+    },
+    {
+      "path": ".ai/framework/security-safety-guidance.md",
+      "when": "privacy credentials destructive live-service or retention boundaries are affected"
+    },
+    {
+      "path": ".ai/assistant/gates/security-approval.md",
+      "when": "the data change reaches a protected destructive privacy live or approval boundary"
+    }
+  ],
+  "expand_when": [
+    "destructive_or_data_loss_risk",
+    "privacy_or_security_changes",
+    "migration_rollback_needed",
+    "external_data_contract_changes",
+    "diagram_changes"
+  ],
+  "approval_gates": [
+    "destructive_data_change",
+    "privacy_change",
+    "migration_risk_change",
+    "live_service_data_change"
+  ],
+  "validation": [
+    "manual target review; data sources and automated checks are not yet available"
+  ],
+  "final_evidence": [
+    "canonical_data_owner",
+    "re_derived_invariants",
+    "external_failure_distinction",
+    "derived_surfaces",
+    "contract_artifact_result",
+    "migration_or_rollback_notes",
+    "validation",
+    "unresolved_risk"
+  ]
+}

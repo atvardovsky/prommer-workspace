@@ -1,0 +1,214 @@
+schema_version: 48
+framework:
+  name: "Alatyr Core"
+  version: "0.1.0-alpha.58"
+  source: "https://github.com/atvardovsky/AlatyrCore"
+  template_version: 53
+  pack: "complete"
+  rule_registry: ".ai/framework/rule-registry.json"
+installation:
+  id: "alatyr-20260903-prommer-workspace"
+  date: "2026-09-03"
+  mode: "new-install"
+  support_profile: "core"
+  state: "accepted"
+  state_record: ".ai/assistant/installation-state.json"
+owner:
+  responsible_team: "repository maintainers"
+  technical_owner: "primary repository maintainer"
+  backup_owner: "backup repository maintainer"
+  last_review_date: "2026-09-03"
+  review_cadence: "when a new implementation brief arrives and on every Alatyr framework update"
+  codeowners: "not used; this fresh target has no file-owner metadata"
+  review_triggers:
+    - "a new implementation brief, product source, or validation policy is added"
+    - "Alatyr framework, adapter schema, or template version changes"
+supported_assistants:
+  - "codex"
+contours:
+  framework: ".ai/framework"
+  project: ".ai/project"
+  assistant: ".ai/assistant"
+source_of_truth:
+  project_contour: ".ai/project/contour.md"
+  registry: ".ai/project/source-of-truth-registry.md"
+  engineering_evidence_index: ".ai/project/engineering-evidence/index.json"
+  development_evidence: ".ai/project/development-evidence.json"
+  architecture_index: ".ai/project/architecture/README.md"
+  architecture_catalog: ".ai/project/architecture/catalog.json"
+  assistant_contour: ".ai/assistant/contour.md"
+  context_router: ".ai/assistant/context-router.json"
+  bootstrap_index: ".ai/assistant/bootstrap-index.json"
+  bootstrap_integrity: ".ai/assistant/bootstrap-integrity.json"
+  framework_context_index: ".ai/framework/context-index.json"
+  project_context_index: ".ai/project/context-index.json"
+  assistant_context_index: ".ai/assistant/context-index.json"
+  semantic_codebook: ".ai/framework/semantics/index.json"
+  agent_entry_packet: ".ai/assistant/entry-packet.json"
+  context_profiles: ".ai/assistant/context-profiles.md"
+  module_profile: ".ai/assistant/module-profile.md"
+  project_sources:
+    - ".ai/project/contour.md"
+    - ".ai/project/source-of-truth-registry.md"
+    - ".ai/project/product-context.md"
+    - ".ai/project/privacy-policy.md"
+    - ".ai/project/delivery-policy.md"
+support_information:
+  policy: ".ai/project/support-policy.json"
+  state: ".ai/support-state.json"
+context_routing:
+  router_schema_version: 11
+  preloaded_context:
+    - "AGENTS.md"
+  compact_bootstrap:
+    - ".ai/assistant/bootstrap-index.json"
+  agent_entry_packet_schema_version: 3
+  agent_entry_packet: ".ai/assistant/entry-packet.json"
+  bootstrap_max_files: 2
+  bootstrap_max_words: 900
+  profile_default_max_files: 12
+  profile_default_max_total_words: 8000
+  profile_default_max_portable_words: 5600
+  profile_default_reserved_target_words: 2400
+  budget_behavior: "load required safety and owner evidence, then record measured expansion"
+  recursive_index_schema_version: 1
+  recursive_index_max_depth: 8
+  semantic_codebook_schema_version: 2
+  semantic_preload_policy: "core definitions are embedded in the generated bootstrap; domain and project term shards remain conditional"
+  context_packet_schema_version: 3
+  context_packet_template: ".ai/assistant/templates/context-packet.json"
+modules:
+  core_profile: "complete-core"
+  selected:
+    - "ai-infrastructure"
+    - "architecture-knowledge"
+    - "assistant-runtime-capabilities"
+    - "blueprint-change"
+    - "debug-mode"
+    - "effectiveness-metrics"
+    - "installed-operations"
+    - "multi-assistant-bridges"
+    - "subagent-delegation"
+  staged: []
+  enabled:
+    - "ai-infrastructure"
+    - "architecture-knowledge"
+    - "assistant-runtime-capabilities"
+    - "blueprint-change"
+    - "debug-mode"
+    - "effectiveness-metrics"
+    - "installed-operations"
+    - "multi-assistant-bridges"
+    - "subagent-delegation"
+  deferred:
+    - "all other optional modules: no codebase, runtime, validation, collaboration, or dependency evidence exists yet"
+  blocked: []
+validation:
+  commands:
+    - name: "manual target review"
+      command: "manual-review: inspect changed files and report that automated project validation is unavailable"
+      required_for:
+        - "all task profiles until project validation is added"
+ai_infrastructure:
+  router: ".ai/assistant/ai-infrastructure-router.json"
+  inventory: ".ai/assistant/templates/ai-infrastructure-inventory.md"
+  recommendation: ".ai/assistant/templates/ai-infrastructure-recommendation.md"
+  adaptation_record: ".ai/assistant/templates/ai-infrastructure-adaptation-record.md"
+extensions:
+dependency_knowledge:
+workspace_modes:
+operations:
+  gate_index: ".ai/assistant/gates/index.json"
+  catalog: ".ai/assistant/operation-catalog.json"
+  index: ".ai/assistant/operation-index.json"
+  routing: ".ai/assistant/flows/operation-routing.flow.md"
+  health: ".ai/assistant/flows/adapter-health.flow.md"
+  pre_change_preview: ".ai/assistant/templates/pre-change-preview.md"
+  blueprint_change: ".ai/assistant/flows/blueprint-driven-change.flow.md"
+  failure_analysis: ".ai/assistant/flows/failure-analysis.flow.md"
+  action_authorization_policy: ".ai/assistant/policies/action-authorization.json"
+  task_decomposition: ".ai/assistant/task-decomposition.json"
+  task_decomposition_plan: ".ai/assistant/templates/task-decomposition.md"
+  architecture_assistance: ".ai/assistant/flows/architecture-assistance.flow.md"
+  architecture_discussion_result: ".ai/assistant/templates/architecture-discussion-result.md"
+  help: ".ai/assistant/help.md"
+  help_reference: ".ai/assistant/help-reference.md"
+  operation_request: ".ai/assistant/templates/operation-request.md"
+  installation_note: ".ai/assistant/templates/installation-note.md"
+  output_contracts: ".ai/assistant/templates/adapter-output-contracts.md"
+  documentation_sync: ".ai/assistant/flows/documentation-sync.flow.md"
+  engineering_evidence_capture: ".ai/assistant/flows/engineering-evidence-capture.flow.md"
+  engineering_evidence_record: ".ai/assistant/templates/engineering-evidence-record.json"
+  project_knowledge: ".ai/assistant/flows/project-knowledge.flow.md"
+  project_knowledge_promotion: ".ai/assistant/templates/project-knowledge-promotion.json"
+  project_knowledge_route_shard: ".ai/assistant/templates/project-knowledge-route-shard.json"
+  debug_mode: ".ai/assistant/flows/debug-mode.flow.md"
+  ai_infrastructure_inventory: ".ai/assistant/templates/ai-infrastructure-inventory.md"
+  ai_infrastructure_recommendation: ".ai/assistant/templates/ai-infrastructure-recommendation.md"
+  development_evidence_capture: ".ai/assistant/flows/development-evidence-capture.flow.md"
+  effectiveness_report: ".ai/assistant/templates/effectiveness-report.md"
+  delayed_outcome_evidence: ".ai/assistant/templates/delayed-outcome-evidence.json"
+  adapter_maintenance_evidence: ".ai/assistant/templates/adapter-maintenance-evidence.json"
+team_collaboration: {}
+maturity:
+  profile: ".ai/assistant/maturity-profile.md"
+bridges:
+  capabilities: ".ai/assistant/assistant-capabilities.json"
+  matrix: ".ai/assistant/bridge-capability-matrix.md"
+  capability_matrix: ".ai/assistant/bridge-capability-matrix.md"
+change_packages: {}
+engineering_evidence:
+  contract_version: 3
+  index: ".ai/project/engineering-evidence/index.json"
+  records: ".ai/project/engineering-evidence/records"
+  flow: ".ai/assistant/flows/engineering-evidence-capture.flow.md"
+  gate: ".ai/assistant/gates/engineering-evidence.md"
+  machine_template: ".ai/assistant/templates/engineering-evidence-record.json"
+  storage_mode: "repository-internal"
+  external_patch_policy: "exclude-from-external-patch"
+  retention_policy: "retain compact validated engineering outcomes until superseded or removed by a maintainer"
+  redaction_policy: "exclude prompts transcripts timing session provenance private reasoning credentials and non-product contextual metadata"
+project_knowledge:
+  contract_version: 3
+  index: ".ai/project/knowledge/index.json"
+  route_shards: ".ai/project/knowledge/routes"
+  promotions: ".ai/project/knowledge/promotions"
+  routing: ".ai/assistant/context/project-knowledge-routing.json"
+  flow: ".ai/assistant/flows/project-knowledge.flow.md"
+  gate: ".ai/assistant/gates/project-knowledge.md"
+  promotion_template: ".ai/assistant/templates/project-knowledge-promotion.json"
+  route_shard_template: ".ai/assistant/templates/project-knowledge-route-shard.json"
+  owner: "repository maintainers"
+  review_policy: "maintainer review is required before candidate guidance becomes accepted"
+  retention_policy: "retain accepted guidance and supersession lineage until a maintainer removes it"
+  redaction_policy: "store reusable project guidance only; exclude prompts transcripts timing drafts private reasoning credentials and non-product contextual metadata"
+debug_mode:
+  contract_version: 6
+  index: ".ai/project/debug/index.json"
+  records: ".ai/project/debug/records"
+  overlay: ".ai/assistant/context/task-scales/debug-mode.json"
+  flow: ".ai/assistant/flows/debug-mode.flow.md"
+  gate: ".ai/assistant/gates/debug-mode.md"
+  record_template: ".ai/assistant/templates/debug-session-record.json"
+  summary_template: ".ai/assistant/templates/debug-summary.md"
+code_documentation:
+project_vocabulary:
+test_first_development:
+policies:
+  privacy: ".ai/project/privacy-policy.md"
+  source_access: ".ai/assistant/policies/ai-infrastructure-source-access.md"
+  prompt_injection: ".ai/assistant/policies/prompt-injection.md"
+known_gaps:
+  - "The target contains no implementation brief, product source, package metadata, tests, CI, or project validation commands."
+  - "Named human owner identities are not available; repository-maintainer roles are used."
+  - "The workspace exposes no usable Git revision, so installation evidence cannot be revision-bound until the repository has a commit."
+  - "Codex loading is configured through AGENTS.md but has not been independently observed in a later session."
+  - "Runtime, input/output contract, provider requirements, delivery format, and deployment expectations are not established."
+  - "Optional modules other than AI infrastructure, architecture knowledge, blueprint change, Debug Mode, effectiveness metrics, installed operations, multi-assistant bridges, and subagent delegation remain deferred until target evidence justifies them."
+local_deviations:
+  - "The core support profile uses the complete framework pack so project knowledge, development-pattern evidence, Debug Mode, and their required dependencies are available."
+  - "Diagram routing is disabled. Portable framework diagram guidance remains installed as inert complete-pack documentation."
+  - "Structured records are permitted only under the project retention policy; non-product contextual metadata, raw prompts, transcripts, timing, drafts, private reasoning, and credentials remain prohibited."
+  - "Delegation uses the shared Codex workspace with packet-level disjoint-write enforcement; the primary assistant retains decisions, approvals, integration, and final convergence."
+  - "Architecture knowledge is enabled with an empty concrete-pattern catalog; only neutral selection principles are established until repository evidence and a maintainer decision identify a solution architecture."
+  - "AlatyrCore source validation tools are not vendored into the target."

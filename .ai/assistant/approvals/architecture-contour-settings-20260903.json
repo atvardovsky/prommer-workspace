@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "record_kind": "alatyr-approval-record",
+  "evidence_classification": "historical-record",
+  "approval_id": "architecture-contour-settings-20260903",
+  "operation": {
+    "id": "enable-architecture-knowledge",
+    "type": "project-contour-architecture-policy"
+  },
+  "plan": {
+    "version": "1",
+    "sha256": "not available; the approved plan was a transient discussion and privacy policy prohibits persisting raw interaction content",
+    "file": "not available; the bounded plan is normalized in this approval scope"
+  },
+  "diff": {
+    "base": "not available; the workspace has no Git repository metadata or commits",
+    "patch_sha256": "not available; no Git diff base exists",
+    "repository_revision_at_approval": "not available; the workspace has no Git repository metadata or commits"
+  },
+  "scope": {
+    "allowed_protected_changes": [
+      "enable the architecture-knowledge module",
+      "establish neutral architecture selection principles and lifecycle policy",
+      "route architecture requests without selecting a concrete solution pattern"
+    ],
+    "allowed_changed_fact_ids": [
+      "architecture-selection-policy",
+      "architecture-knowledge-module-state"
+    ],
+    "allowed_architecture_areas": [
+      "none; no concrete architecture area may be accepted"
+    ],
+    "allowed_behavior_categories": [
+      "project-contour architecture assistance and selection policy only"
+    ],
+    "excluded_semantic_effects": [
+      "selection or acceptance of a concrete application architecture, framework, provider, database, runtime, integration, or deployment topology",
+      "enablement of diagrams or unrelated optional modules"
+    ],
+    "permitted_external_effects": [
+      "none"
+    ],
+    "allowed_files_or_surfaces": [
+      "AGENTS.md",
+      ".ai/alatyr.yaml",
+      ".ai/README.md",
+      ".ai/project/contour.md",
+      ".ai/project/source-of-truth-registry.md",
+      ".ai/project/architecture/**",
+      ".ai/project/context-index.json",
+      ".ai/assistant/context-router.json",
+      ".ai/assistant/context/intents/**",
+      ".ai/assistant/operation-catalog.json",
+      ".ai/assistant/operation-index.json",
+      ".ai/assistant/module-profile.md",
+      ".ai/assistant/flows/architecture-assistance.flow.md",
+      ".ai/assistant/flows/context-index.json",
+      ".ai/assistant/templates/architecture-*.md",
+      ".ai/assistant/templates/context-index.json",
+      ".ai/assistant/installation-state.json",
+      ".ai/assistant/bootstrap-index.json",
+      ".ai/assistant/entry-packet.json",
+      ".ai/assistant/approvals/**",
+      ".ai/support-state.json"
+    ],
+    "excluded_files_or_surfaces": [
+      "all product code, tests, framework-owned files, and non-architecture project facts"
+    ],
+    "excluded_actions": [
+      "commit",
+      "publish",
+      "live-external",
+      "product implementation"
+    ],
+    "allowed_actions_mode": "full-with-approval",
+    "invalidation_rule": "invalidate immediately if a concrete architecture pattern, new module, product behavior, external effect, or file outside the allowed scope is introduced"
+  },
+  "approval": {
+    "requested_by": "primary repository maintainer",
+    "approved_by": "current user acting as repository maintainer",
+    "approved_at": "2026-09-03T12:08:11+03:00",
+    "source_or_message": "explicit current-scope instruction to implement the reviewed project-contour architecture settings",
+    "expires_at_or_reuse_policy": "single use for enable-architecture-knowledge; no reuse"
+  },
+  "use_result": {
+    "used_by": "enable-architecture-knowledge",
+    "patch_changed_after_approval": "no scope expansion; implementation remains bounded to the reviewed configuration",
+    "implementation_within_scope": "yes; only the approved architecture module, policy, routing, templates, approval, installation, and generated support surfaces changed",
+    "declared_semantic_scope_within_approval": "yes; no concrete architecture area, solution pattern, product behavior, external effect, or unrelated module was selected",
+    "validation": "strict Alatyr acceptance validation passed with 0 errors and 0 blocking warnings",
+    "result_evidence": ".ai/assistant/installation-state.json",
+    "residual_risk": "Git-bound diff and patch-hash validation remain unavailable until the workspace has repository history"
+  }
+}

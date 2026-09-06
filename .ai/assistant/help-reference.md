@@ -1,0 +1,684 @@
+# Alatyr Help Reference
+
+Use this file in the prommer.net workspace for the full installed Alatyr operation
+reference. The short default help lives in `.ai/assistant/help.md`.
+
+Replace placeholders with target facts before accepting installation.
+
+Alatyr is used here through assistant requests over the installed Markdown
+adapter. It is not a universal CLI command, and this workspace currently
+defines no local Alatyr command.
+
+These aliases are chat/request shortcuts, not shell commands.
+
+Action authorization is current-scope and phase-specific. Returning to an
+issue or backlog item, discussing a report, checking status, requesting
+analysis or a plan, and ambiguous continuation are read-only. Implementation
+does not imply commit; commit does not imply push; authorization from a
+completed or redirected task is not reusable. See
+`.ai/assistant/policies/action-authorization.json`.
+
+Canonical operation metadata lives in
+`.ai/assistant/operation-catalog.json`. This file is its human explanation,
+not a competing operation registry. A clear request routes automatically and
+does not require a formal operation ID.
+
+Exact aliases route through `.ai/assistant/operation-index.json`, which is a
+checked compact derivative of the catalog. Do not edit the index without
+updating the canonical catalog.
+
+Task decomposition is not a user-facing operation ID. For non-trivial work,
+route through `.ai/assistant/task-decomposition.json` and
+`.ai/assistant/templates/task-decomposition.md` to assign implementation
+levels, dependencies, bounded context, validation, and primary/worker executor
+decisions. Small local work may stay as one compact task; delegation consumes
+the primary-owned plan.
+
+## Supported Request Aliases
+
+- `Alatyr architecture`, `Alatyr architecture inventory`,
+  `explain architecture`, `discuss architecture pattern`,
+  `compare architecture options`, `review architecture`, or
+  `document architecture`: route to `architecture-assistance`; infer the
+  inventory, explain, discuss, compare, review, or document mode from the
+  request.
+- `alatyr-ai-inventory`: route to `ai-infrastructure-inventory` and report
+  existing AI instructions, prompts, skills, rules, wrappers, bridges, MCP/tool
+  configs, gates, checkers, and generated assistant artifacts.
+- `alatyr-suggest-ai request-specific`: route to read-only
+  `ai-infrastructure-recommendation` for bounded new-item and existing-item
+  suggestions based on project-contour, quality, context-cost, and maintenance
+  evidence.
+- `alatyr-improve-ai request-specific`: route to read-only
+  `ai-infrastructure-recommendation` for one current router item.
+- `alatyr-adaptation request-specific`: route to
+  `skill-adaptation` using `request-specific` as a local path, Git
+  URL, HTTPS URL, assistant-native skill or prompt reference, pasted content,
+  package/plugin reference, or other target-approved source form.
+- `alatyr-add-ai request-specific`: route to `skill-adaptation` with
+  integration intent after inventory, provenance, safety, and approval checks.
+- `Alatyr team status`: route to read-only `team-status`.
+- `Alatyr set actor request-specific`, `Alatyr who am I`, or `Alatyr clear
+  actor`: route to `team-identity`. Local selection is attribution, not
+  authentication or authority.
+- `Alatyr start request-specific`, `Alatyr claim request-specific`,
+  `Alatyr checkpoint request-specific`, or `Alatyr release request-specific`: route to
+  `team-task`.
+- `Alatyr conflicts request-specific`: route to read-only
+  `team-conflict-review`.
+- `Alatyr handoff request-specific`: route to `team-handoff`.
+- `Alatyr decision request-specific` or
+  `Alatyr discuss request-specific`: route to `team-decision`.
+- `Alatyr review request-specific`: route to read-only `team-review`.
+- `Alatyr merge check request-specific`: route to read-only `team-merge-check`.
+- `Alatyr dependencies`, `Alatyr dependency status`, `Alatyr sync
+  dependencies`, `Alatyr inspect dependency request-specific`, `Alatyr explain
+  dependency request-specific`, or `Alatyr dependency impact request-specific`:
+  route to `dependency-knowledge` when the optional module is enabled. These
+  aliases do not run package managers, update packages, or activate nested
+  adapters.
+- `Alatyr modes`, `Alatyr mode status`, `Alatyr suggest modes`, `Alatyr mode
+  request-specific`, `Alatyr define mode`, or `Alatyr accept mode request-specific`: route
+  to `workspace-mode` when the optional module is enabled. Suggestions remain
+  proposed and mode selection grants no authority or permissions.
+
+## Operation Menu
+
+Operation: `help`
+Use when: the user asks what Alatyr can do or the request is unclear.
+Flow: `.ai/assistant/flows/operation-routing.flow.md`
+Minimum input: goal or suspected task area.
+
+Operation: `adapter-health`
+Use when: reporting current adapter structure for `Alatyr status` or `Alatyr
+doctor` without making changes.
+Flow: `.ai/assistant/flows/adapter-health.flow.md`
+Minimum input: optional health scope.
+Default allowed actions: `read-only`.
+
+Operation: `create-project-blueprint`
+Use when: creating, repairing, or rechecking blueprint-equivalent
+source-of-truth docs from target evidence.
+Flow: `.ai/assistant/flows/project-blueprint-creation.flow.md`
+Minimum input: blueprint scope and non-goals.
+
+Operation: `architecture-assistance`
+Use when: inventorying, explaining, discussing, comparing, reviewing, or
+documenting project architecture, patterns, boundaries, constraints,
+technologies, or other architectural items.
+Flow: `.ai/assistant/flows/architecture-assistance.flow.md`
+Minimum input: architecture question or scope, plus non-goals and decision
+intent when known.
+Aliases: `Alatyr architecture`, `Alatyr architecture inventory`,
+`explain architecture`, `discuss architecture pattern`,
+`compare architecture options`, `review architecture`,
+`document architecture`.
+Default allowed actions: `read-only`. Under `docs-only`, record observed,
+proposed, contradicted, or unknown evidence only. Accepted architecture needs
+the target decision owner and `full-with-approval`, then hands off to
+`product-change`.
+
+Operation: `recheck-after-installation`
+Use when: verifying the installed adapter after initial installation.
+Flow: `.ai/assistant/flows/adapter-recheck.flow.md`
+Minimum input: installation note or known gaps.
+
+Operation: `recheck-after-framework-update`
+Use when: checking whether an Alatyr Core update requires target adapter
+migration.
+Flow: `.ai/assistant/flows/adapter-recheck.flow.md`
+Minimum input: update source, changed framework baseline, or migration
+assessment path.
+
+Operation: `product-change`
+Use when: changing accepted project behavior, architecture, data, runtime, or
+public contract.
+Flow: `.ai/assistant/flows/blueprint-driven-change.flow.md`
+Companion flow: `.ai/assistant/flows/change-package.flow.md`
+Minimum input: change intent, non-goals, related review items, and approval
+constraints including diff base and explicit JSON records when scoped.
+
+Operation: `large-task`
+Use when: coordinating large, cross-boundary, multi-workstream, or resumable
+work while keeping context bounded per workstream.
+Flow: `.ai/assistant/flows/large-task-orchestration.flow.md`
+Companion flow: `.ai/assistant/flows/subagent-delegation.flow.md`
+Use it only for bounded delegated workstreams when the module and current
+assistant capability permit it.
+Minimum input: goal, non-goals, affected project areas, allowed actions, and
+known approval or validation checkpoints, including diff base and explicit
+JSON approval records when scoped.
+Task decomposition: required before implementation or delegation; record one
+implementation level and executor decision per task.
+
+Operation: `team-status`
+Use when: reporting active, blocked, stale, handed-off, review, or merge-ready
+team work without making changes.
+Flow: `.ai/assistant/flows/team-task-coordination.flow.md`
+Minimum input: optional team, area, actor, or task scope.
+Default allowed actions: `read-only`.
+
+Operation: `team-identity`
+Use when: selecting, inspecting, or clearing the current actor through ignored
+local state without changing the canonical team policy or Git configuration.
+Flow: `.ai/assistant/flows/team-identity.flow.md`
+Minimum input: action and actor ID or display name for selection.
+Default allowed actions: `read-only` for inspection and `adapter-only` for
+local set or clear.
+
+Operation: `team-task`
+Use when: starting, claiming, checkpointing, or releasing a team task.
+Flow: `.ai/assistant/flows/team-task-coordination.flow.md`
+Minimum input: action, task ID or goal, actor ID, and allowed actions.
+Default allowed actions: `adapter-only` for record changes.
+
+Operation: `team-conflict-review`
+Use when: checking active task overlap by changed facts, canonical owners,
+contracts, dependencies, migrations, generated artifacts, and secondary file
+evidence.
+Flow: `.ai/assistant/flows/team-task-coordination.flow.md`
+Minimum input: task ID or proposed task scope.
+Default allowed actions: `read-only`.
+
+Operation: `team-handoff`
+Use when: checkpointing and handing a task to another actor or role.
+Flow: `.ai/assistant/flows/team-handoff.flow.md`
+Minimum input: task ID, source actor, destination actor or role, and reason.
+Default allowed actions: `adapter-only` for checkpoint and handoff records.
+
+Operation: `team-decision`
+Use when: structuring a priority, business, architecture, data, security, or
+adapter decision and routing an accepted fact to its canonical owner.
+Flow: `.ai/assistant/flows/team-decision.flow.md`
+Minimum input: decision question, decision type, and affected facts or tasks.
+Preview: risk-gated when accepted semantic or protected facts may change.
+
+Operation: `team-review`
+Use when: reviewing a task against current scope, concurrent work, required
+reviewers, validation, and logical integrity.
+Flow: `.ai/assistant/flows/team-review.flow.md`
+Minimum input: task ID, review scope, and current head/base revisions.
+Default allowed actions: `read-only`.
+
+Operation: `team-merge-check`
+Use when: classifying revision-bound merge readiness without performing a
+merge.
+Flow: `.ai/assistant/flows/team-review.flow.md`
+Minimum input: task ID and current head/base revisions.
+Default allowed actions: `read-only`.
+
+Operation: `engineering-evidence`
+Use when: a material task reaches finalization and reusable invariant,
+root-cause, solution, or regression knowledge would otherwise be lost; or when
+reviewing a prior compact engineering-evidence record.
+Flow: `.ai/assistant/flows/engineering-evidence-capture.flow.md`
+Minimum input: current task or evidence ID, plus capture, inspect, or repair
+intent.
+Aliases: `Alatyr evidence`, `Alatyr capture evidence`, `Alatyr explain
+decision`.
+Default allowed actions: `read-only` for inspection; use `docs-only`,
+`adapter-only`, or a broader current-scope modify phase only when target policy
+permits record changes.
+
+Operation: `project-knowledge`
+Use when: proposing reusable engineering knowledge, recording durable guidance
+from a registered decision owner, reviewing or promoting a candidate, recording
+an explicit exception, or routing, revalidating, superseding, or explaining
+accepted project guidance.
+Flow: `.ai/assistant/flows/project-knowledge.flow.md`
+Minimum input: knowledge subject, candidate ID, selected guidance ID, or direct
+decision-owner guidance, plus the requested lifecycle action.
+Aliases: `Alatyr knowledge`, `Alatyr remember this`, `Alatyr record guidance`,
+`Alatyr what do we know`, `Alatyr revalidate knowledge`.
+Default allowed actions: `read-only` for lookup and proposals. Canonical-owner,
+promotion-record, exception, coverage, or route changes require the matching
+current-scope modify authorization and normal approval policy. A direct human
+statement is authoritative only when target evidence identifies the speaker as
+the registered decision owner for that fact type and the durable record binds
+the statement to its canonical owner.
+
+Operation: `debug-mode`
+Use when: explicitly enabling non-canonical Alatyr performance observation for
+the current task or session; checking or checkpointing an active record;
+finalizing or disabling capture; or comparing selected completed records.
+Flow: `.ai/assistant/flows/debug-mode.flow.md`
+Minimum input: debug action and selected scope; enablement also requires an
+explicit current user activation request.
+Aliases: `Enable Alatyr Debug Mode`, `Alatyr debug`, `Alatyr debug status`,
+`Alatyr debug checkpoint`, `Alatyr debug summary`, `Disable Alatyr Debug Mode`,
+`Alatyr compare debug`.
+Default allowed actions: `read-only` for status and comparison; `adapter-only`
+for target-approved record writes. Activation never grants code, commit,
+publish, live-external, protected-change, or tool permission and expires at the
+logical-scope boundary.
+
+Operation: `logical-integrity-review`
+Use when: reviewing whether code, docs, tests, diagrams, prompts, skills,
+gates, and bridges agree.
+Flow: `.ai/assistant/flows/logical-integrity-review.flow.md`
+Minimum input: changed fact or fact ID, suspected drift, or files to inspect.
+When enabled, the support diff and consistency reverse index select only
+matching graph shards before semantic/invariant review.
+Aliases: `check integrity`, `logical integrity review`, `Alatyr impact`,
+`Alatyr support diff`, `Alatyr change cost`.
+Final evidence should include support/product change cost when measured,
+contract artifact results for cross-boundary contracts, visual validation
+results for visual or diagram surfaces, and residual semantic risk.
+
+Operation: `support-generation`
+Use when: target-owned derived support is stale and the optional module is
+enabled.
+Flow: `.ai/assistant/flows/support-generation.flow.md`
+Minimum input: artifact or bounded scope and plan/check/apply intent.
+Planning and checking are read-only. Apply requires current `modify`
+authorization, an exact current plan digest, unchanged repository state,
+staged deterministic output, and protected approval when triggered.
+Aliases: `Alatyr generate support`, `Alatyr check generated support`.
+
+Operation: `diagram-discussion`
+Use when: showing, sketching, comparing, explaining, or revising a diagram in
+the current assistant discussion.
+Flow: `.ai/assistant/flows/diagram-discussion.flow.md`
+Minimum input: diagram purpose or question, scope, and persistence intent when
+known.
+Aliases: `Alatyr diagram`, `show as a diagram`, `visualize architecture`.
+Default allowed actions: `read-only`; use `docs-only` only when persisting
+target-owned source or an allowed derived visual artifact.
+Presentation: always provide bounded pure ASCII; use the current compact
+assistant capability only to add native inline or a local rendered artifact.
+Preserve stable revision lineage, classify or redact sensitive content, and
+hand off external rendering.
+When the result is persisted or promoted beyond transient chat, apply the
+visual-validation gate and report evidence or skipped visual risk.
+
+Operation: `ai-infrastructure-inventory`
+Use when: checking what AI infrastructure already exists and what can be kept,
+adapted, added, removed, or left unresolved.
+Flow: `.ai/assistant/flows/ai-infrastructure-inventory.flow.md`
+Minimum input: inventory scope and target assistant surfaces.
+Alias: `alatyr-ai-inventory`.
+Route: `inventory` in `.ai/assistant/ai-infrastructure-router.json`.
+
+Operation: `ai-infrastructure-recommendation`
+Use when: recommending new AI infrastructure or improvements, consolidation,
+replacement, retirement, or retention of existing items.
+Flow: `.ai/assistant/flows/ai-infrastructure-recommendation.flow.md`
+Companion flow: `.ai/assistant/flows/development-evidence-capture.flow.md`.
+Minimum input: bounded project area or problem, or an existing item ID, plus
+available outcome evidence.
+Aliases: `alatyr-suggest-ai request-specific`,
+`alatyr-improve-ai request-specific`.
+Route: `recommend` in `.ai/assistant/ai-infrastructure-router.json`.
+Default allowed actions: `read-only`; recommendation does not fetch, install,
+execute, edit, remove, activate, or change permissions.
+
+Operation: `skill-adaptation`
+Use when: importing, adapting, adding, or reviewing skills, prompts, wrappers,
+bridges, rules, MCP/tool configs, gates, checkers, or third-party assistant
+infrastructure.
+Flow: `.ai/assistant/flows/skill-adaptation.flow.md`
+Minimum input: source, item type, source type, intended use, target assistant
+surfaces, and permissions.
+Aliases: `alatyr-adaptation request-specific`,
+`alatyr-add-ai request-specific`.
+Route: `adapt-import` in `.ai/assistant/ai-infrastructure-router.json`.
+
+Operation: `drift-review`
+Use when: finding stale source-of-truth, docs, diagrams, gates, prompts,
+skills, or bridge files.
+Flow: `.ai/assistant/flows/logical-integrity-review.flow.md`
+Minimum input: drift area or recently changed facts.
+
+Operation: `documentation-sync`
+Use when: inventorying, proposing, reviewing, writing, synchronizing, or
+generating code documentation, or syncing docs, diagrams, prompts, gates,
+skills, or bridge files after a fact changed. Code-comment and generated
+reference work requires the optional `code-documentation` module.
+Flow: `.ai/assistant/flows/documentation-sync.flow.md`
+Minimum input: changed fact and owning source, or bounded source area and
+documentation goal.
+Aliases: `document code`, `propose comment style`, `generate code docs`,
+`review code documentation`.
+Apply contract-artifacts and visual-validation gates when documentation sync
+changes generated references, API/schema/event artifacts, diagram output, or
+UI/visual explanatory surfaces.
+
+Operation: `project-vocabulary`
+Use when: explaining a project term, resolving an alias or acronym, proposing
+or reviewing vocabulary, or checking terminology consistency in a bounded
+scope. Requires the optional `project-vocabulary` module.
+Flow: `.ai/assistant/flows/project-vocabulary.flow.md`
+Minimum input: term, alias, acronym, or bounded terminology scope; domain when
+known.
+Aliases: `Alatyr glossary`, `Alatyr define term`, `propose glossary entry`,
+`check terminology`, `review project vocabulary`.
+
+Operation: `test-first-configuration`
+Use when: assessing, enabling, revising, disabling, or reviewing target-adapted
+test-first development. This operation remains available when the optional
+module is not enabled.
+Flow: `.ai/assistant/flows/test-first-configuration.flow.md`
+Minimum input: configuration mode or project area and known test evidence.
+Aliases: `Alatyr enable test-first`, `Alatyr configure TDD`,
+`Alatyr review test-first`, `Alatyr disable test-first`.
+Default allowed actions: `read-only`; use `adapter-only` for accepted `.ai/*`
+policy changes and `full-with-approval` for dependency, CI, merge-gate,
+permission, or protected-surface changes.
+
+Operation: `test-first-change`
+Use when: applying an enabled target policy to a defect, invariant, contract,
+or risky refactor through RED, GREEN, refactor, and broader validation.
+Flow: `.ai/assistant/flows/test-first-change.flow.md`
+Minimum input: changed fact, defect, invariant, contract, or refactor scope and
+allowed actions.
+Aliases: `Alatyr test first`, `Alatyr TDD`, `fix regression test first`,
+`characterize before refactor`, `define contract first`.
+Recommendation: show at most once per task with trigger, mode, likely level,
+cost, and next action. It is non-blocking unless an enabled accepted target
+trigger is required.
+
+Operation: `extension-management`
+Use when: listing installed extension state; inspecting or planning from a
+local path, Git URL, HTTPS URL, package/plugin, pasted, or assistant-native
+source; or installing, updating, disabling, removing, or reviewing one
+declarative extension.
+Flow: `.ai/assistant/flows/extension-lifecycle.flow.md`
+Minimum input: lifecycle mode, source or installed extension ID, and allowed
+actions.
+Aliases: `Alatyr extensions`, `Alatyr inspect extension`, `Alatyr add
+extension`, `Alatyr update extension`, `Alatyr disable extension`, `Alatyr
+remove extension`, `Alatyr review extension`.
+Default allowed actions: `read-only` for list, inspect, plan, and review;
+canonical integration uses `adapter-only` or `full-with-approval` only after
+immutable source, compatibility, bindings, permissions, ownership, approval,
+and validation are resolved.
+
+Operation: `dependency-knowledge`
+Use when: reporting dependency knowledge state; discovering or inspecting one
+declared passive export; planning or synchronizing the target-owned projection;
+explaining selected dependency contracts; or mapping dependency change impact.
+Flow: `.ai/assistant/flows/dependency-knowledge-sync.flow.md`
+Minimum input: mode or dependency question, plus package ecosystem, name,
+instance, or changed lockfile when known.
+Aliases: `Alatyr dependencies`, `Alatyr dependency status`, `Alatyr sync
+dependencies`, `Alatyr inspect dependency`, `Alatyr explain dependency`,
+`Alatyr dependency impact`.
+Default allowed actions: `read-only`; use `adapter-only` only for reviewed
+catalog, knowledge-lock, deviation, and permitted normalized-snapshot changes.
+Dependency, code, CI, security, permission, or policy-authority changes require
+their normal operation and approval route.
+
+Operation: `workspace-mode`
+Use when: listing mode state; suggesting evidence-bound modes; inspecting or
+selecting one mode for a task; or defining, accepting, updating, disabling,
+deprecating, removing, or reviewing a user-owned mode.
+Flow: `.ai/assistant/flows/workspace-mode.flow.md`
+Minimum input: mode action or workspace-role question; mode ID and explicit
+user decision for accepted-state changes.
+Aliases: `Alatyr modes`, `Alatyr mode status`, `Alatyr suggest modes`,
+`Alatyr mode`, `Alatyr define mode`, `Alatyr accept mode`.
+Default allowed actions: `read-only` for list, status, suggestion, inspection,
+and selection preview; `adapter-only` for accepted descriptor/catalog changes.
+Protected project facts require their normal operation and approval route.
+
+Operation: `adapter-maturity-review`
+Use when: reporting whether the adapter is incomplete, minimal, usable, or
+mature for a requested task.
+Flow: `.ai/assistant/flows/adapter-recheck.flow.md`
+Minimum input: task scope and maturity concern.
+
+## Operation Type Aliases
+
+Treat these as target request aliases, not executable commands. Replace,
+remove, or extend them with `request-specific` terminology before accepting the
+adapter.
+
+Alias: `Alatyr help`
+Route to: `help`.
+
+Alias: `Alatyr`
+Route to: `help` with compact adapter state and no more than three relevant
+available actions. Do not claim health was checked unless fresh evidence
+exists.
+
+Alias: `Alatyr status` or `Alatyr doctor`
+Route to: `adapter-health` with `read-only` allowed actions.
+
+Alias: `update Alatyr` or `обнови Alatyr`
+Route to: `recheck-after-framework-update` when a framework update source is
+known. If no update context is known, show `help` and ask for the update
+source or intended recheck scope.
+
+Alias: `check Alatyr` or `проверь Alatyr`
+Route to: `recheck-after-installation` after initial installation, or
+`adapter-maturity-review` when the request is a broader adapter readiness
+review.
+
+Alias: `create blueprint` or `создай blueprint`
+Route to: `create-project-blueprint`.
+
+Alias: `Alatyr architecture`, `Alatyr architecture inventory`,
+`explain architecture`, `discuss architecture pattern`,
+`compare architecture options`, `review architecture`, or
+`document architecture`
+Route to: `architecture-assistance`. These are chat/request shortcuts, not
+shell commands. Start from the compact project architecture catalog and infer
+the discussion mode from the request.
+
+Alias: `Alatyr glossary`, `Alatyr define term`, `propose glossary entry`,
+`check terminology`, or `review project vocabulary`
+Route to: `project-vocabulary`. These are chat/request shortcuts, not shell
+commands. Start from the compact vocabulary catalog and preserve scoped term
+states, ambiguity, owners, and canonical links.
+
+Alias: `Alatyr enable test-first`, `Alatyr configure TDD`,
+`Alatyr review test-first`, or `Alatyr disable test-first`
+Route to: `test-first-configuration`. These are chat/request shortcuts, not
+shell commands. Assess target evidence before changing policy state.
+
+Alias: `Alatyr test first`, `Alatyr TDD`, `fix regression test first`,
+`characterize before refactor`, or `define contract first`
+Route to: `test-first-change` only when the optional module and target policy
+are enabled; otherwise route to read-only `test-first-configuration` and name
+the missing policy evidence.
+
+Alias: `Alatyr extensions`, `Alatyr inspect extension <source>`, `Alatyr add
+extension <source>`, `Alatyr update extension <id>`, `Alatyr disable extension
+<id>`, `Alatyr remove extension <id>`, or `Alatyr review extension <id>`
+Route to: `extension-management`. These are chat/request shortcuts, not shell
+commands. External content remains untrusted and list/inspection remains read-
+only until a separate approved lifecycle step is selected.
+
+Alias: `Alatyr suggest extensions <scope>`
+Route to: `ai-infrastructure-recommendation`. Keep the result read-only; do not
+search, fetch, install, or grant permissions without target source-access policy
+and a separate extension lifecycle request.
+
+Alias: `Alatyr diagram`, `show as a diagram`, or `visualize architecture`
+Route to: `diagram-discussion`. These are chat/request shortcuts, not shell
+commands. Default to a non-canonical read-only draft and use the current
+assistant surface's recorded presentation capability.
+
+Alias: `check integrity` or `проверь целостность`
+Route to: `logical-integrity-review`.
+
+Alias: `change business rule` or `измени бизнес-правило`
+Route to: `product-change`.
+
+Alias: `plan large task`, `continue large task`, or `resume Alatyr task`
+Route to: `large-task`. Continue from an existing operation packet when its
+path or operation ID is known; otherwise create a packet only after the
+large-task activation gate passes.
+
+Alias: `Enable Alatyr Debug Mode`, `Alatyr debug`, `Alatyr debug status`,
+`Alatyr debug checkpoint`, `Alatyr debug summary`, `Disable Alatyr Debug Mode`,
+or `Alatyr compare debug`
+Route to: `debug-mode` only when the optional module is enabled. Enablement
+requires an explicit current-task or current-session request; status and
+comparison remain read-only, and activation expires with the logical scope.
+
+Alias: `Alatyr team status`
+Route to: `team-status`.
+
+Alias: `Alatyr set actor request-specific`, `Alatyr who am I`, or `Alatyr
+clear actor`
+Route to: `team-identity`.
+
+Alias: `Alatyr start request-specific`, `Alatyr claim request-specific`,
+`Alatyr checkpoint request-specific`, or `Alatyr release request-specific`
+Route to: `team-task`.
+
+Alias: `Alatyr conflicts request-specific`
+Route to: `team-conflict-review`.
+
+Alias: `Alatyr handoff request-specific`
+Route to: `team-handoff`.
+
+Alias: `Alatyr decision request-specific` or
+`Alatyr discuss request-specific`
+Route to: `team-decision`.
+
+Alias: `Alatyr review request-specific`
+Route to: `team-review`.
+
+Alias: `Alatyr merge check request-specific`
+Route to: `team-merge-check`.
+
+## Request Shape
+
+Use this shape when asking for an operation:
+
+```text
+Use the installed Alatyr adapter in this repository.
+
+Operation type: `request-specific`
+Goal: `request-specific`
+Non-goals: `request-specific`
+Known context: `request-specific`
+Task scale: `request-specific`
+Existing operation packet: `request-specific`
+Team task id: `request-specific`
+Actor id: `request-specific`
+Current logical scope: `request-specific`
+Current user authorization: `request-specific`
+Authorization source/message: `request-specific`
+Allowed actions: `request-specific`
+Expected final evidence: `request-specific`
+```
+
+Allowed actions guide:
+
+- `read-only`: inspect target files and report only; no file changes.
+- `docs-only`: docs, blueprint-equivalent docs, and diagram sources only; no
+  code changes.
+- `adapter-only`: adapter-owned `.ai/*` surfaces and bridge files, including
+  assistant templates, gates, flows, policies, checker rules, and normalized
+  project-process or adapter-effectiveness evidence; no product code, tests,
+  or accepted business, domain, architecture, data, runtime, or product-
+  behavior facts.
+- `code-and-tests`: code, tests, and required docs/diagram sync; no live
+  external actions, destructive actions, production dependencies, or broader
+  permissions.
+- `full-with-approval`: protected changes require explicit programmer
+  approval before they are made.
+
+Architecture assistance shorthand:
+
+```text
+Alatyr architecture: request-specific
+
+Goal: `request-specific`
+Non-goals: `request-specific`
+Mode when known: `request-specific`
+Decision intent: `request-specific`
+Allowed actions: `request-specific`
+```
+
+AI infrastructure inventory shorthand:
+
+```text
+alatyr-ai-inventory
+
+Goal: `request-specific`
+Inventory scope: `request-specific`
+Target assistant surfaces: `request-specific`
+```
+
+AI infrastructure recommendation shorthand:
+
+```text
+alatyr-suggest-ai request-specific
+
+Goal: `request-specific`
+Project area or problem: `request-specific`
+Existing item IDs: `request-specific`
+Evidence sources: `request-specific`
+Allowed actions: `read-only`
+```
+
+Existing-item improvement shorthand:
+
+```text
+alatyr-improve-ai request-specific
+
+Goal: `request-specific`
+Project-contour outcome: `request-specific`
+Observed item result: `request-specific`
+Allowed actions: `read-only`
+```
+
+AI infrastructure adaptation shorthand:
+
+```text
+alatyr-adaptation request-specific
+
+Goal: `request-specific`
+Non-goals: `request-specific`
+Item type: `request-specific`
+Target item ID: `request-specific`
+Source type: `request-specific`
+Target assistant surfaces: `request-specific`
+Integration mode: `request-specific`
+```
+
+AI infrastructure add shorthand:
+
+```text
+alatyr-add-ai request-specific
+
+Goal: `request-specific`
+Non-goals: `request-specific`
+Item type: `request-specific`
+Target item ID: `request-specific`
+Source type: `request-specific`
+Target assistant surfaces: `request-specific`
+Integration mode: `request-specific`
+```
+
+## Target Notes
+
+- Supported assistants: `request-specific`
+- Target validation or manual checks: `request-specific`
+- Approval constraints: `request-specific`
+- AI infrastructure source access policy:
+  `.ai/assistant/policies/ai-infrastructure-source-access.md`
+- Prompt-injection policy: `.ai/assistant/policies/prompt-injection.md`
+- Allowed AI infrastructure source access:
+  `request-specific`
+- Pre-change preview template:
+  `.ai/assistant/templates/pre-change-preview.md`
+- Known adapter gaps: `request-specific`
+- AI infrastructure router: `.ai/assistant/ai-infrastructure-router.json`
+- Consistency map: `.ai/project/consistency-map.json` when the optional module
+  is enabled.
+- Architecture knowledge index and compact catalog:
+  `.ai/project/architecture/README.md` and
+  `.ai/project/architecture/catalog.json` when the optional module is enabled.
+- Team operating model: `.ai/project/team-operating-model.md` when the optional
+  module is enabled.
+- Team work registry: `.ai/assistant/team/work-registry.json` when the optional
+  module is enabled.
+- Companion flow: `.ai/assistant/flows/change-package.flow.md` when the
+  optional module is enabled. It is an automatic evidence overlay for
+  applicable operations, not a separate shell command or required operation
+  type for local tasks.

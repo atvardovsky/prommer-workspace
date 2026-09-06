@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "pack_kind": "alatyr-framework-pack-catalog",
+  "packs": {
+    "kernel": {
+      "description": "Smallest portable rule-owner pack for low-cost target bootstrap, ownership, integrity, authorization, support-state, and final-evidence surfaces.",
+      "rule_ids": [
+        "ALATYR-ADAPTER-001",
+        "ALATYR-APPROVAL-001",
+        "ALATYR-AUTHORIZATION-001",
+        "ALATYR-CONTEXT-001",
+        "ALATYR-DECOMPOSITION-001",
+        "ALATYR-EVIDENCE-001",
+        "ALATYR-INTEGRITY-001",
+        "ALATYR-LIFECYCLE-001",
+        "ALATYR-MODULE-001",
+        "ALATYR-OPERATION-001",
+        "ALATYR-RISK-001",
+        "ALATYR-SAFETY-001",
+        "ALATYR-SAFETY-002",
+        "ALATYR-SOURCE-001",
+        "ALATYR-SUPPORT-001"
+      ],
+      "additional_files": [
+        "README.md",
+        "semantics/index.json",
+        "semantics/core.json",
+        "semantics/infrastructure.json",
+        "capabilities.json",
+        "context-discovery.md",
+        "context-router.md",
+        "contour.md",
+        "framework-packs.json",
+        "portability.md",
+        "support-information.md"
+      ]
+    },
+    "core": {
+      "description": "Kernel framework plus durable evidence, project knowledge, bridge, AI infrastructure, and common support guidance.",
+      "extends": "kernel",
+      "rule_ids": [
+        "ALATYR-BRIDGE-001",
+        "ALATYR-ENGINEERING-EVIDENCE-001",
+        "ALATYR-KNOWLEDGE-001"
+      ],
+      "additional_files": [
+        "semantics/change.json",
+        "semantics/knowledge.json",
+        "semantics/collaboration.json",
+        "adapter-maturity.md",
+        "ai-infrastructure-recommendations.md",
+        "ai-infrastructure-routing.md",
+        "consistency-model.md",
+        "installed-operations.md",
+        "skill-adaptation.md",
+        "testing-guidance.md"
+      ]
+    },
+    "standard": {
+      "description": "Core framework plus common blueprint and migration guidance.",
+      "extends": "core",
+      "rule_ids": [
+        "ALATYR-CHANGE-001"
+      ],
+      "additional_files": [
+        "large-task-orchestration.md",
+        "migration-diff.md"
+      ]
+    },
+    "complete": {
+      "description": "Every portable framework Markdown and JSON file.",
+      "extends": "standard",
+      "rule_ids": [],
+      "additional_files": [],
+      "include_remaining_framework_files": true
+    }
+  },
+  "projected_files": [
+    "README.md",
+    "context-index.json",
+    "file-inventory.json",
+    "rule-ownership.md",
+    "rule-registry.json",
+    "rule-registry.md"
+  ]
+}

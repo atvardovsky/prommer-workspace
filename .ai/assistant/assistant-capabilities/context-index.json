@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.assistant-capabilities",
+  "contour": "assistant",
+  "title": "Assistant Assistant Capabilities Context",
+  "summary": "Recursive navigation for the assistant contour at assistant-capabilities.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.assistant-capabilities-codex-json",
+      "kind": "content",
+      "path": "assistant-capabilities/codex.json",
+      "summary": "Codex",
+      "selectors": {
+        "path_terms": [
+          "assistant",
+          "capabilities",
+          "codex"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 774,
+      "content_digest": "sha256:5fced709ff9247d0095b26f433353039f5399f64bf3acb4172368e8aefc6b38a"
+    }
+  ]
+}

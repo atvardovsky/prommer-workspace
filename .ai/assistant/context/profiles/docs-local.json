@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "descriptor_kind": "target-context-profile",
+  "profile": "docs-local",
+  "use_when": [
+    "local wording",
+    "README or documentation text",
+    "non-semantic documentation change"
+  ],
+  "operation_candidates": [
+    "documentation-sync",
+    "drift-review",
+    "logical-integrity-review",
+    "project-knowledge"
+  ],
+  "required_context": [
+    ".ai/assistant/gates/core.md",
+    ".ai/assistant/gates/documentation.md",
+    ".ai/assistant/gates/final-evidence.md",
+    ".ai/project/contour.md"
+  ],
+  "conditional_context": [
+    {
+      "path": ".ai/framework/context-discovery.md",
+      "when": "context selection expansion or missing-context handling is disputed"
+    },
+    {
+      "path": ".ai/framework/support-information.md",
+      "when": "support diff generation ownership or relationship-candidate semantics are disputed"
+    }
+  ],
+  "expand_when": [
+    "semantic_fact_changes",
+    "source_of_truth_conflict",
+    "approval_scope_unclear",
+    "diagram_or_public_contract_changes"
+  ],
+  "approval_gates": [
+    "accepted_behavior_change",
+    "security_posture_change",
+    "public_contract_change",
+    "approval_rule_change"
+  ],
+  "validation": [
+    "manual target review; no automated project documentation check is available"
+  ],
+  "final_evidence": [
+    "changed_docs",
+    "source_of_truth",
+    "skipped_checks",
+    "why_no_logical_integrity_expansion"
+  ]
+}

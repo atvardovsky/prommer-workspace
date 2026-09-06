@@ -1,0 +1,11 @@
+{
+  "schema_version": 4,
+  "index_kind": "target-engineering-evidence-index",
+  "project": "prommer.net workspace",
+  "owner": "repository maintainers",
+  "storage_mode": "repository-internal",
+  "external_patch_policy": "exclude-from-external-patch",
+  "retention_policy": "retain compact validated engineering outcomes until superseded or removed by a maintainer",
+  "redaction_policy": "exclude prompts transcripts timing session provenance private reasoning credentials and non-product contextual metadata",
+  "records": []
+}

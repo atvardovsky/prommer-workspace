@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.migrations",
+  "contour": "assistant",
+  "title": "Assistant Migrations Context",
+  "summary": "Recursive navigation for the assistant contour at migrations.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.migrations-alatyr-core-alpha52-md",
+      "kind": "content",
+      "path": "migrations/alatyr-core-alpha52.md",
+      "summary": "Alatyr Core Update Record",
+      "selectors": {
+        "path_terms": [
+          "migrations",
+          "alatyr",
+          "core",
+          "alpha52"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 287,
+      "content_digest": "sha256:784b7c5a8571e2c17830281594a75405de8ced8640f5fa30401ee2fbff6d228d"
+    },
+    {
+      "id": "assistant.content.migrations-alatyr-core-alpha58-md",
+      "kind": "content",
+      "path": "migrations/alatyr-core-alpha58.md",
+      "summary": "Alatyr Core Update Record",
+      "selectors": {
+        "path_terms": [
+          "migrations",
+          "alatyr",
+          "core",
+          "alpha58"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 544,
+      "content_digest": "sha256:e93d4586cc5e9d06771276196e4cb5a6d72ce59d8fb099ca76e4c0380a2cbd17"
+    }
+  ]
+}

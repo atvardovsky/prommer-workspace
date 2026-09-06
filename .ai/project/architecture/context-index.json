@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "project.architecture",
+  "contour": "project",
+  "title": "Project Architecture Context",
+  "summary": "Recursive navigation for the project contour at architecture.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "project.content.architecture-catalog-json",
+      "kind": "content",
+      "path": "architecture/catalog.json",
+      "summary": "Catalog",
+      "selectors": {
+        "path_terms": [
+          "architecture",
+          "catalog"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 85,
+      "content_digest": "sha256:b0f106c3161ccf7ac4b17dbebaba563bd5f89bbd32cd9d9e7c8ae31814e44f66"
+    },
+    {
+      "id": "project.content.architecture-readme-md",
+      "kind": "content",
+      "path": "architecture/README.md",
+      "summary": "Project Architecture Knowledge",
+      "selectors": {
+        "path_terms": [
+          "architecture"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 600,
+      "content_digest": "sha256:0dc9d760d50fa1f4d841fb0765429a96b63d86277d1261430d08fc7427d46204"
+    }
+  ]
+}

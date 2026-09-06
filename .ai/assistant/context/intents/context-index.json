@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.context-intents",
+  "contour": "assistant",
+  "title": "Assistant Intents Context",
+  "summary": "Recursive navigation for the assistant contour at context/intents.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.context-intents-architecture-request-json",
+      "kind": "content",
+      "path": "context/intents/architecture-request.json",
+      "summary": "Architecture Request",
+      "selectors": {
+        "path_terms": [
+          "intents",
+          "architecture",
+          "request"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 130,
+      "content_digest": "sha256:ae7cd67c51dff49020c5ed7a25b9149463d0eee57561504a929e5f81d5ab261e"
+    }
+  ]
+}

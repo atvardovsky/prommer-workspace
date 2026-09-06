@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "record_kind": "alatyr-delayed-outcome-evidence",
+  "evidence_classification": "historical-record",
+  "outcome_id": "request-specific",
+  "operation_id": "request-specific",
+  "recorded_at": "request-specific",
+  "outcome_type": "request-specific",
+  "source_records": [
+    {
+      "record_kind": "request-specific",
+      "record_id": "request-specific",
+      "completion_state": "completed"
+    }
+  ],
+  "prior_outcome_ids": [],
+  "outcome": {
+    "summary": "request-specific",
+    "occurred_at": "request-specific",
+    "evidence_state": "request-specific",
+    "evidence_references": [
+      "request-specific"
+    ],
+    "limitations": []
+  },
+  "immutability": {
+    "append_only_record": true,
+    "completed_source_records_modified": false
+  },
+  "privacy": {
+    "raw_chat_stored": false,
+    "chain_of_thought_stored": false,
+    "secrets_stored": false
+  }
+}

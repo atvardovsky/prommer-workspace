@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.templates",
+  "contour": "assistant",
+  "title": "Assistant Templates Context",
+  "summary": "Recursive navigation for the assistant contour at templates.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.templates-adapter-maintenance-evidence-json",
+      "kind": "content",
+      "path": "templates/adapter-maintenance-evidence.json",
+      "summary": "Adapter Maintenance Evidence",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "adapter",
+          "maintenance",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 88,
+      "content_digest": "sha256:7aeeb6f0cc3cb97020f706d03324bfa4e074f7184b0b5a7b4421b5a6bb5be67d"
+    },
+    {
+      "id": "assistant.content.templates-adapter-output-contracts-md",
+      "kind": "content",
+      "path": "templates/adapter-output-contracts.md",
+      "summary": "Alatyr Adapter Output Contracts",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "adapter",
+          "output",
+          "contracts"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 1429,
+      "content_digest": "sha256:1121dbf69defac0bdf0b83820e880565b6a421d5310a00ff301e67c0e3e3fd9e"
+    },
+    {
+      "id": "assistant.content.templates-ai-infrastructure-adaptation-record-md",
+      "kind": "content",
+      "path": "templates/ai-infrastructure-adaptation-record.md",
+      "summary": "AI Infrastructure Adaptation Record",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "infrastructure",
+          "adaptation",
+          "record"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-SAFETY-002"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:untrusted-instructions-are-data@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-SAFETY-002"
+      ],
+      "estimated_words": 277,
+      "content_digest": "sha256:519b808f81af0dbc45120f9f4613aa72ec0d88c7413f65bbbab84b6f538072cc"
+    },
+    {
+      "id": "assistant.content.templates-ai-infrastructure-inventory-md",
+      "kind": "content",
+      "path": "templates/ai-infrastructure-inventory.md",
+      "summary": "AI Infrastructure Inventory",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "infrastructure",
+          "inventory"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-SAFETY-002"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:untrusted-instructions-are-data@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-SAFETY-002"
+      ],
+      "estimated_words": 290,
+      "content_digest": "sha256:5972c3a1bfd76c63765a2f5195edadf1445260c9109121d0f195c68a9ba72ab8"
+    },
+    {
+      "id": "assistant.content.templates-ai-infrastructure-recommendation-md",
+      "kind": "content",
+      "path": "templates/ai-infrastructure-recommendation.md",
+      "summary": "AI Infrastructure Recommendation",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "infrastructure",
+          "recommendation"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-SAFETY-002"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:untrusted-instructions-are-data@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-SAFETY-002"
+      ],
+      "estimated_words": 336,
+      "content_digest": "sha256:c1cb4185eb2b36898eec7b81a15d6cebcaa03cf791b9a5a70185c9805ea7474a"
+    },
+    {
+      "id": "assistant.content.templates-architecture-area-md",
+      "kind": "content",
+      "path": "templates/architecture-area.md",
+      "summary": "Architecture Area Record",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "architecture",
+          "area"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 119,
+      "content_digest": "sha256:91ffad496281e2f6a6db35820a12d849043bb83ed3fd336734b784e1f93d0345"
+    },
+    {
+      "id": "assistant.content.templates-architecture-discussion-result-md",
+      "kind": "content",
+      "path": "templates/architecture-discussion-result.md",
+      "summary": "Architecture Discussion Result",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "architecture",
+          "discussion",
+          "result"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 162,
+      "content_digest": "sha256:e55b66d70f9413fea1d61b598e12a70f2c2833a2ad125102e80aec3060608daf"
+    },
+    {
+      "id": "assistant.content.templates-architecture-pattern-md",
+      "kind": "content",
+      "path": "templates/architecture-pattern.md",
+      "summary": "Architecture Pattern Record",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "architecture",
+          "pattern"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 177,
+      "content_digest": "sha256:99570fbc32f562c41894705183b0d45dbdca707e1a93515bec1e61a7e00f14dc"
+    },
+    {
+      "id": "assistant.content.templates-ascii-diagram-md",
+      "kind": "content",
+      "path": "templates/ascii-diagram.md",
+      "summary": "ASCII Diagram Presentation",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "ascii",
+          "diagram"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 153,
+      "content_digest": "sha256:db89f29418b4e6f4daa497c1340b9061e3bb84108027f14fe633a54625933e04"
+    },
+    {
+      "id": "assistant.content.templates-context-packet-json",
+      "kind": "content",
+      "path": "templates/context-packet.json",
+      "summary": "Context Packet",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "packet"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 262,
+      "content_digest": "sha256:9ba2baa702b3d5a51f78a5156ef3ce4c2871828c97b5caf17c28167ceabe085a"
+    },
+    {
+      "id": "assistant.content.templates-debug-session-record-json",
+      "kind": "content",
+      "path": "templates/debug-session-record.json",
+      "summary": "Debug Session Record",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "debug",
+          "session",
+          "record"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 589,
+      "content_digest": "sha256:51bf476fce1894803d15a8e7afbfd78de2e5036452c3d5eace3352c86ebb626f"
+    },
+    {
+      "id": "assistant.content.templates-debug-summary-md",
+      "kind": "content",
+      "path": "templates/debug-summary.md",
+      "summary": "Alatyr Debug Summary",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "debug",
+          "summary"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 137,
+      "content_digest": "sha256:273a277feec4f94b5d41940b914d18355b8d05e5827e2481cd003793fb58ce84"
+    },
+    {
+      "id": "assistant.content.templates-delayed-outcome-evidence-json",
+      "kind": "content",
+      "path": "templates/delayed-outcome-evidence.json",
+      "summary": "Delayed Outcome Evidence",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "delayed",
+          "outcome",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 60,
+      "content_digest": "sha256:d416023d15944680b709b1cb2f1f6c26e34f017ebeab076d3a9a19714e2a0097"
+    },
+    {
+      "id": "assistant.content.templates-diagram-presentation-md",
+      "kind": "content",
+      "path": "templates/diagram-presentation.md",
+      "summary": "Diagram Presentation",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "diagram",
+          "presentation"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 283,
+      "content_digest": "sha256:b52341baaf9a23f14bf79ba60452da460da920abd893e959cba7fddcbdd5edc5"
+    },
+    {
+      "id": "assistant.content.templates-effectiveness-report-md",
+      "kind": "content",
+      "path": "templates/effectiveness-report.md",
+      "summary": "Alatyr Effectiveness Report",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "effectiveness",
+          "report"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 352,
+      "content_digest": "sha256:905fc3c3eec379c2b306b9b9ef570b1de48350b1e5b15407d3ec5e5de4750573"
+    },
+    {
+      "id": "assistant.content.templates-engineering-evidence-record-json",
+      "kind": "content",
+      "path": "templates/engineering-evidence-record.json",
+      "summary": "Engineering Evidence Record",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "engineering",
+          "evidence",
+          "record"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 176,
+      "content_digest": "sha256:b4b3e48a4c7f88ae0082731d42eea3c1ed06eafeb0b6ef89694e59d8a95feba1"
+    },
+    {
+      "id": "assistant.content.templates-failure-analysis-md",
+      "kind": "content",
+      "path": "templates/failure-analysis.md",
+      "summary": "Failure Analysis",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "failure",
+          "analysis"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 113,
+      "content_digest": "sha256:395c782dc184120c9ebbba4eab13a97d17e730512fce134e7d1b87fcaea3ad77"
+    },
+    {
+      "id": "assistant.content.templates-installation-note-md",
+      "kind": "content",
+      "path": "templates/installation-note.md",
+      "summary": "Alatyr Core Installation Note",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "installation",
+          "note"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 774,
+      "content_digest": "sha256:4f80e6981823bd62ae6f893167940085fdc0d54b65468c78f5fa6edf48eb0879"
+    },
+    {
+      "id": "assistant.content.templates-native-worker-binding-md",
+      "kind": "content",
+      "path": "templates/native-worker-binding.md",
+      "summary": "Native Worker Binding",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "native",
+          "worker",
+          "binding"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-DELEGATION-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:bounded-delegation@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-DELEGATION-001"
+      ],
+      "estimated_words": 175,
+      "content_digest": "sha256:ff12852dfb86a7f45a386f43590d41e622a03966e30fea8171fe4a324cd4f7d5"
+    },
+    {
+      "id": "assistant.content.templates-operation-request-md",
+      "kind": "content",
+      "path": "templates/operation-request.md",
+      "summary": "Installed Alatyr Operation Request",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "operation",
+          "request"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 1494,
+      "content_digest": "sha256:4d72c333627964ab3d6058ed65fee5b2d021b253f67238b72f40fc4842fce7fc"
+    },
+    {
+      "id": "assistant.content.templates-post-install-message-md",
+      "kind": "content",
+      "path": "templates/post-install-message.md",
+      "summary": "Post-Install Assistant Chat Message",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "post",
+          "install",
+          "message"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 894,
+      "content_digest": "sha256:1289d8f57c2ab36b7319e6efce4291ef80757eae65ae30059b28b7f951c2adb6"
+    },
+    {
+      "id": "assistant.content.templates-post-update-message-md",
+      "kind": "content",
+      "path": "templates/post-update-message.md",
+      "summary": "Post-Update Assistant Chat Message",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "post",
+          "update",
+          "message"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 900,
+      "content_digest": "sha256:9e701ac26255ab317626312ad3d50bbaa9f2f67566230f2ae84436d717042dba"
+    },
+    {
+      "id": "assistant.content.templates-pre-change-preview-md",
+      "kind": "content",
+      "path": "templates/pre-change-preview.md",
+      "summary": "Alatyr Pre-Change Preview",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "pre",
+          "change",
+          "preview"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 202,
+      "content_digest": "sha256:8972eb9c3b7e54b6dfb53faad42ac47b3a0e891070737cd67d7e7f589e94c235"
+    },
+    {
+      "id": "assistant.content.templates-project-knowledge-promotion-json",
+      "kind": "content",
+      "path": "templates/project-knowledge-promotion.json",
+      "summary": "Project Knowledge Promotion",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "project",
+          "knowledge",
+          "promotion"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 109,
+      "content_digest": "sha256:6572ab890610089c4acb2bf1f9f62a1f22ce198273e4dbb17b9b3d2e1d76a8b7"
+    },
+    {
+      "id": "assistant.content.templates-project-knowledge-route-shard-json",
+      "kind": "content",
+      "path": "templates/project-knowledge-route-shard.json",
+      "summary": "Project Knowledge Route Shard",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "project",
+          "knowledge",
+          "route",
+          "shard"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 26,
+      "content_digest": "sha256:00304c7f17c76480de741606da2a9ac15a0494eb3c631c9cade113fa4f10a643"
+    },
+    {
+      "id": "assistant.content.templates-small-task-evidence-md",
+      "kind": "content",
+      "path": "templates/small-task-evidence.md",
+      "summary": "Small-Task Evidence",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "small",
+          "task",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 131,
+      "content_digest": "sha256:1e411c1972f61a7bd87c7b53b448badd6bc9e2aaf2667ed93e50fe0709a7bbd5"
+    },
+    {
+      "id": "assistant.content.templates-subagent-task-packet-md",
+      "kind": "content",
+      "path": "templates/subagent-task-packet.md",
+      "summary": "Subagent Task Packet",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "subagent",
+          "task",
+          "packet"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 298,
+      "content_digest": "sha256:48d0530879f864665a11c859c0abaa02b55bf71dfaf182003c7b921d64f5f508"
+    },
+    {
+      "id": "assistant.content.templates-task-decomposition-md",
+      "kind": "content",
+      "path": "templates/task-decomposition.md",
+      "summary": "Task Decomposition",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "task",
+          "decomposition"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-DECOMPOSITION-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-DECOMPOSITION-001"
+      ],
+      "estimated_words": 222,
+      "content_digest": "sha256:dc54c255e650ffd848da5f11be41f0e4261f212cecb6e7106e4249bbda1f22b0"
+    },
+    {
+      "id": "assistant.content.templates-worker-execution-plan-md",
+      "kind": "content",
+      "path": "templates/worker-execution-plan.md",
+      "summary": "Worker Execution Plan",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "worker",
+          "execution",
+          "plan"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-DELEGATION-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:bounded-delegation@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-DELEGATION-001"
+      ],
+      "estimated_words": 198,
+      "content_digest": "sha256:e52e4ef6325856aef50624191b6ce96100e9c0b5174ed963658c9fc71d8b3431"
+    },
+    {
+      "id": "assistant.content.templates-worker-result-md",
+      "kind": "content",
+      "path": "templates/worker-result.md",
+      "summary": "Worker Result",
+      "selectors": {
+        "path_terms": [
+          "templates",
+          "worker",
+          "result"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-DELEGATION-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:bounded-delegation@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-DELEGATION-001"
+      ],
+      "estimated_words": 119,
+      "content_digest": "sha256:e79c8eace853f7832cf251fb1c1b4ed8e4397948224327c64f9a3176e299fb6d"
+    }
+  ]
+}

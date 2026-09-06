@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.context",
+  "contour": "assistant",
+  "title": "Assistant Context Context",
+  "summary": "Recursive navigation for the assistant contour at context.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.context-cost-scenarios-json",
+      "kind": "content",
+      "path": "context/cost-scenarios.json",
+      "summary": "Cost Scenarios",
+      "selectors": {
+        "path_terms": [
+          "cost",
+          "scenarios"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 114,
+      "content_digest": "sha256:db24664caf5f773872e25a4bbfc03c1b83d8f8c9a461f7fdeedf4fa140779765"
+    },
+    {
+      "id": "assistant.content.context-migration-routing-json",
+      "kind": "content",
+      "path": "context/migration-routing.json",
+      "summary": "Migration Routing",
+      "selectors": {
+        "path_terms": [
+          "migration",
+          "routing"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 131,
+      "content_digest": "sha256:1ad4c873c357eba0571204b61830df4bb4d0fcd9f95264781061d1616cb53115"
+    },
+    {
+      "id": "assistant.content.context-project-knowledge-routing-json",
+      "kind": "content",
+      "path": "context/project-knowledge-routing.json",
+      "summary": "Project Knowledge Routing",
+      "selectors": {
+        "path_terms": [
+          "project",
+          "knowledge",
+          "routing"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001",
+          "ALATYR-KNOWLEDGE-001",
+          "ALATYR-SOURCE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1",
+        "alatyr:canonical-owner@1",
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001",
+        "ALATYR-KNOWLEDGE-001",
+        "ALATYR-SOURCE-001"
+      ],
+      "estimated_words": 294,
+      "content_digest": "sha256:2eb7f1b84cd7e41e1143445bb25c9af78cbcb008a8c7dc301f4542267ec34d6b"
+    },
+    {
+      "id": "assistant.section.context-intents",
+      "kind": "index",
+      "path": "context/intents/context-index.json",
+      "summary": "Intents section",
+      "selectors": {
+        "path_terms": [
+          "intents"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 91,
+      "content_digest": "sha256:ec7581d420b28ec2ad4e4515b6fc8863d75d61bdf71b12b1078457d93955c117"
+    },
+    {
+      "id": "assistant.section.context-profiles",
+      "kind": "index",
+      "path": "context/profiles/context-index.json",
+      "summary": "Profiles section",
+      "selectors": {
+        "path_terms": [
+          "profiles"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 364,
+      "content_digest": "sha256:6a73dd096bbcacfee90b464cfe28dc829f9c0e01da61d26757828039c1515e48"
+    },
+    {
+      "id": "assistant.section.context-task-scales",
+      "kind": "index",
+      "path": "context/task-scales/context-index.json",
+      "summary": "Task Scales section",
+      "selectors": {
+        "path_terms": [
+          "task-scales"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 197,
+      "content_digest": "sha256:821f543f2967380d5932946da976a6d86d8dcd50c1fddcf09f14ef749857a26b"
+    }
+  ]
+}

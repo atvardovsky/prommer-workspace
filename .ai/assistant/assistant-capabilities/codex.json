@@ -1,0 +1,189 @@
+{
+  "schema_version": 4,
+  "capability_kind": "target-assistant-surface-capabilities",
+  "assistant_surface": "codex",
+  "surface_state": {
+    "overall": "limited",
+    "selected_for_target": "yes",
+    "evidence_state": "current",
+    "advertised_by_surface": "yes",
+    "verified_for_target": "yes",
+    "limitations": [
+      "Client version is not exposed to the workspace.",
+      "Delegates share the workspace, so writable parallel tasks require disjoint path scopes."
+    ],
+    "review_triggers": [
+      "Codex client or runtime changes",
+      "AGENTS.md or assistant capability configuration changes"
+    ]
+  },
+  "instruction_loading": {
+    "route": "supported",
+    "runtime_variant": "Codex desktop workspace",
+    "selected_entry_path": "AGENTS.md",
+    "competing_sources": [],
+    "auto_load_observed": "yes",
+    "precedence_evidence": "The active workspace presented AGENTS.md as repository instructions.",
+    "configuration_state": "enabled through the repository root AGENTS.md",
+    "verified_at": "2026-09-03",
+    "client_version": "unknown: the host did not expose a client version",
+    "evidence": "Current-session repository instruction loading was observed.",
+    "expires_at": "review-trigger: Codex runtime or AGENTS.md loading behavior changes",
+    "review_triggers": [
+      "Codex runtime changes",
+      "AGENTS.md changes",
+      "another assistant entry file is added"
+    ]
+  },
+  "skills": {
+    "route": "unknown",
+    "discovery_paths": [],
+    "selected_source": "No target-specific skill source is selected.",
+    "activation_mode": "disabled",
+    "verified_at": "unknown: no target-specific skill was exercised",
+    "client_version": "unknown: the host did not expose a client version",
+    "evidence": "The adapter uses repository instructions and flows rather than a target skill.",
+    "expires_at": "review-trigger: target skill configuration changes",
+    "review_triggers": [
+      "a target-specific skill is added",
+      "Codex skill discovery behavior changes"
+    ]
+  },
+  "tool_permissions": {
+    "client_permission_mode": "managed by the active Codex host",
+    "effective_restrictions": "host permissions and current user authorization both apply",
+    "alatyr_authorization_separate": true,
+    "verified_at": "2026-09-03",
+    "client_version": "unknown: the host did not expose a client version",
+    "evidence": "Current host permissions are visible per task and do not grant Alatyr action phases.",
+    "expires_at": "review-trigger: host permission policy changes",
+    "review_triggers": [
+      "host permission policy changes",
+      "tool availability changes"
+    ]
+  },
+  "context_caching": {
+    "route": "unknown",
+    "provider": "unknown: the active Codex host does not expose a provider contract to this workspace",
+    "model": "unknown: the active Codex host does not expose an exact model identifier to this workspace",
+    "provider_cache_mode": "unknown",
+    "client_control_exposure": "unsupported",
+    "client_telemetry_exposure": "unsupported",
+    "retention": "unknown: provider cache retention is not exposed",
+    "minimum_cacheable_tokens": "unknown: provider cache minimum size is not exposed",
+    "stable_prefix_ordering": true,
+    "context_window_reduction": false,
+    "fallback": "bounded-context-routing",
+    "verified_at": "2026-09-04",
+    "client_version": "unknown: the host did not expose a client version",
+    "evidence": "The current Codex workspace exposes repository context and tools but no provider cache controls, cache configuration, retention, minimum size, or cached-token usage fields.",
+    "expires_at": "review-trigger: provider, model, client controls, telemetry, or Codex runtime behavior changes",
+    "review_triggers": [
+      "provider model or API changed",
+      "client cache controls or telemetry changed",
+      "stable-prefix delivery behavior changed",
+      "Codex host begins exposing provider cache evidence"
+    ]
+  },
+  "diagram_discussion": {
+    "route": "supported",
+    "native_inline_syntaxes": [
+      "portable ASCII"
+    ],
+    "artifact_presentation": "link",
+    "readable_fallback": "ascii",
+    "verified_at": "2026-09-03",
+    "client_version": "unknown: the host did not expose a client version",
+    "evidence": "The current Codex surface supports readable fenced ASCII and links to local workspace artifacts; no richer native diagram syntax is claimed.",
+    "expires_at": "review-trigger: Codex presentation behavior changes",
+    "review_triggers": [
+      "Codex presentation behavior changes",
+      "diagram policy or artifact tooling changes"
+    ]
+  },
+  "subagent_delegation": {
+    "route": "supported",
+    "dispatch_backend": "native",
+    "external_dispatcher": "not applicable; native Codex collaboration tools",
+    "client_product": "Codex desktop workspace",
+    "runtime_variant": "current workspace",
+    "native_subagents": "supported",
+    "automatic_delegation": "supported",
+    "explicit_delegation": "supported",
+    "project_worker_definitions": "unsupported",
+    "worker_definition_format": "Alatyr roles are translated into bounded native task messages by the primary assistant.",
+    "worker_definition_paths": [],
+    "tool_restrictions": "unsupported",
+    "write_isolation": "shared-workspace",
+    "background_execution": "supported",
+    "nested_delegation": "supported",
+    "model_override": "supported",
+    "parallel_dispatch": "supported",
+    "actual_model_evidence": "unknown",
+    "role_bindings": [
+      {
+        "role_id": "explorer",
+        "selection_mode": "inherit",
+        "model": "inherit",
+        "reasoning": "inherit",
+        "availability": "supported",
+        "evidence": "Native delegates accept bounded read-only discovery tasks.",
+        "expires_at": "review-trigger: Codex collaboration behavior changes"
+      },
+      {
+        "role_id": "implementer",
+        "selection_mode": "inherit",
+        "model": "inherit",
+        "reasoning": "inherit",
+        "availability": "supported",
+        "evidence": "Native delegates share repository files and can receive disjoint implementation scopes.",
+        "expires_at": "review-trigger: Codex collaboration behavior changes"
+      },
+      {
+        "role_id": "test-runner",
+        "selection_mode": "inherit",
+        "model": "inherit",
+        "reasoning": "inherit",
+        "availability": "supported",
+        "evidence": "Native delegates can execute bounded validation and return normalized results.",
+        "expires_at": "review-trigger: Codex collaboration behavior changes"
+      },
+      {
+        "role_id": "documentation-worker",
+        "selection_mode": "inherit",
+        "model": "inherit",
+        "reasoning": "inherit",
+        "availability": "supported",
+        "evidence": "Native delegates can receive bounded documentation scopes.",
+        "expires_at": "review-trigger: Codex collaboration behavior changes"
+      },
+      {
+        "role_id": "reviewer",
+        "selection_mode": "inherit",
+        "model": "inherit",
+        "reasoning": "inherit",
+        "availability": "supported",
+        "evidence": "Native delegates can independently review bounded repository evidence.",
+        "expires_at": "review-trigger: Codex collaboration behavior changes"
+      },
+      {
+        "role_id": "fast-focused-worker",
+        "selection_mode": "inherit",
+        "model": "inherit",
+        "reasoning": "inherit",
+        "availability": "supported",
+        "evidence": "Native delegates can execute small reversible tasks with packet-level scope limits.",
+        "expires_at": "review-trigger: Codex collaboration behavior changes"
+      }
+    ],
+    "verified_at": "2026-09-06",
+    "client_version": "unknown: the host did not expose a client version",
+    "evidence": "The active Codex runtime exposes native spawn, message, interrupt, list, and wait controls with up to three delegates alongside the primary assistant; nested delegation is available and the repository policy permits assistant-selected bounded recursive dispatch.",
+    "expires_at": "review-trigger: Codex collaboration tools, limits, or shared-workspace behavior change",
+    "review_triggers": [
+      "Codex collaboration tools or concurrency limits change",
+      "delegation policy or worker role catalog changes",
+      "shared-workspace write behavior changes"
+    ]
+  }
+}

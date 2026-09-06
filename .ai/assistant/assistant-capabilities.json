@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "capability_kind": "target-assistant-capability-index",
+  "human_reference": ".ai/assistant/bridge-capability-matrix.md",
+  "default_surface": "codex",
+  "state_evidence": {
+    "state_model": "supported|limited|unsupported|unknown plus selected and freshness evidence",
+    "selected_surface": "codex",
+    "selected_surface_evidence": "The active Codex workspace loaded AGENTS.md as repository instructions on 2026-09-03.",
+    "capability_records_are_authoritative": true,
+    "unknown_means_not_verified": true,
+    "stale_or_expired_evidence_requires_recheck": true
+  },
+  "surfaces": {
+    "codex": ".ai/assistant/assistant-capabilities/codex.json"
+  },
+  "bridge_paths": {
+    "codex": [
+      "AGENTS.md"
+    ]
+  }
+}

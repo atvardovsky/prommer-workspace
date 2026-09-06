@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "assistant.context-task-scales",
+  "contour": "assistant",
+  "title": "Assistant Task Scales Context",
+  "summary": "Recursive navigation for the assistant contour at context/task-scales.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "assistant.content.context-task-scales-debug-mode-json",
+      "kind": "content",
+      "path": "context/task-scales/debug-mode.json",
+      "summary": "Debug Mode",
+      "selectors": {
+        "path_terms": [
+          "task",
+          "scales",
+          "debug",
+          "mode"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 314,
+      "content_digest": "sha256:0516dfac94184319e68124789e144f0e2de4d314282ad8d76dc8de7c82f97da3"
+    },
+    {
+      "id": "assistant.content.context-task-scales-delegated-execution-json",
+      "kind": "content",
+      "path": "context/task-scales/delegated-execution.json",
+      "summary": "Delegated Execution",
+      "selectors": {
+        "path_terms": [
+          "task",
+          "scales",
+          "delegated",
+          "execution"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 169,
+      "content_digest": "sha256:611aa59951caa386dc5dd5c9b96c2c4292976eb5b738acf128c30bd865ab9ac4"
+    },
+    {
+      "id": "assistant.content.context-task-scales-engineering-evidence-json",
+      "kind": "content",
+      "path": "context/task-scales/engineering-evidence.json",
+      "summary": "Engineering Evidence",
+      "selectors": {
+        "path_terms": [
+          "task",
+          "scales",
+          "engineering",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 166,
+      "content_digest": "sha256:b11b954d021f59881c9fdd9e28f52ee5dc51887243615c5109cadf125a84de82"
+    },
+    {
+      "id": "assistant.content.context-task-scales-small-task-json",
+      "kind": "content",
+      "path": "context/task-scales/small-task.json",
+      "summary": "Small Task",
+      "selectors": {
+        "path_terms": [
+          "task",
+          "scales",
+          "small"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 240,
+      "content_digest": "sha256:60ae1cfa6df1143baaa2059e54d9f04d2984191675afbd803f1fb9d125404075"
+    }
+  ]
+}

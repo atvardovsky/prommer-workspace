@@ -1,0 +1,120 @@
+# Scaffolding
+
+Scaffolding is an optional helper step that can create placeholder directories
+and files before an assistant performs the real installation work.
+
+Scaffolding is not installation. It does not inspect target facts, choose
+project source-of-truth owners, approve overwrites, fill placeholders, or
+claim the adapter is usable.
+
+## Allowed Scaffolder Behavior
+
+A safe scaffolder may:
+
+- create missing directories
+- copy placeholder target templates
+- copy portable framework documents and `framework/rule-registry.json` into
+  `.ai/framework`
+- create an empty or placeholder manifest
+- run in dry-run mode
+- refuse to overwrite existing files by default
+- report skipped files and protected surfaces
+
+Before a writable run, the scaffolder must resolve the complete composition
+and detect every known overwrite or shared-surface blocker. If preflight finds
+a blocker, it must not write a partial scaffold. A write run that cannot
+produce every selected output must fail even when some earlier outputs were
+already unchanged or successfully projected.
+
+## Forbidden Scaffolder Behavior
+
+A scaffolder must not:
+
+- fill project facts from guesses
+- overwrite existing target instructions without explicit approval
+- change product code, tests, runtime config, CI, secrets, or dependencies
+- import third-party AI infrastructure into canonical target files
+- claim installation is complete
+- replace target repository inspection, readiness review, installation plan,
+  approval gates, logical integrity review, or final evidence
+
+## Source Repository Helper
+
+The AlatyrCore source repository may include helper scripts for maintainers,
+such as `tools/scaffold_target_structure.py`.
+
+Those helpers validate or scaffold source templates. They are not portable
+framework requirements and must not be copied into target repositories as
+required validation or installation commands.
+
+Source conformance helpers may materialize temporary fixture repositories to
+check scaffolder behavior. Such checks validate source templates and helper
+behavior only; they are not assistant installation tests and do not prove a
+target adapter is complete.
+
+Source helpers should be platform-neutral when practical. The canonical
+scaffolder is Python standard-library code and may provide thin launch wrappers
+for Windows shells. Wrapper files must delegate to the canonical helper and
+must not duplicate installation logic.
+
+A source scaffolder may expose bounded support profiles when their contents are
+deterministic and machine-checked:
+
+- `kernel`: minimal adapter, bootstrap, routing, ownership, integrity,
+  authorization, generated entry packet, support-state, and final-evidence
+  surfaces
+- `core`: kernel plus durable engineering evidence, project knowledge,
+  change-impact, and common documentation support surfaces
+- `standard`: core plus common blueprint, recheck, help, and lifecycle
+  operation surfaces
+- `full`: the `standard` target support surface with the complete portable
+  framework pack; optional modules remain explicit, and native assistant
+  bridges still require reviewed surface selection
+
+Exhaustive materialization of every target template is a source conformance
+purpose, not an installation profile. Source tooling may select that purpose
+for isolated fixtures, but a target installation must not use it as evidence
+that every optional capability is enabled or maintained.
+The target-facing CLI must reject writable conformance projection.
+
+The selected scaffold support profile limits target placeholder files. A
+matching portable framework pack may also limit the copied framework corpus:
+
+- `kernel` support maps to the `kernel` framework pack
+- `core` support maps to the `core` framework pack
+- `standard` support maps to the `standard` framework pack
+- `full` support maps to the `complete` framework pack
+
+A broader framework pack is allowed; a smaller pack than the support profile
+is not. Selective packs must preserve rule dependency closure and carry
+projected rule-registry, ownership, and file-inventory surfaces. Pack selection
+does not enable modules, choose supported assistants, resolve target facts, or
+prove installation maturity. Enabling a module whose rule owner is absent
+requires an explicit pack expansion and normal framework-update evidence.
+
+Installation and update planning should start from the cheapest sufficient
+profile. Use `kernel` unless target evidence names a needed capability,
+operation surface, native bridge, or validation failure that requires `core`,
+`standard`, or `full`. The compact bootstrap records the selected profile;
+the generated recovery entry packet records its escalation reason without
+becoming routine model context.
+
+Selecting an assistant-native surface must also select the portable bridge
+and installed-operation support needed by that surface. It must not implicitly
+enable unrelated optional modules. Every rendered bridge and help surface must
+refer only to installed paths; optional references require projection guards.
+
+## Final Evidence
+
+If scaffolding was used, installation evidence should report:
+
+- helper name and mode
+- selected scaffold profile
+- generated entry-packet freshness
+- selected framework pack and projected inventory
+- target path
+- files created
+- files skipped because they already existed
+- whether any overwrite approval was used
+- remaining placeholders
+- confirmation that target facts still need assistant and human review

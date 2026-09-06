@@ -1,0 +1,189 @@
+{
+  "schema_version": 3,
+  "packet_kind": "target-agent-entry-packet",
+  "path": ".ai/assistant/entry-packet.json",
+  "generated_by": {
+    "schema_version": 1,
+    "tool": "render_target_entry_packet.py",
+    "source_revision": "112382767a2974bd8199ceb2d570c010a217456c",
+    "source_worktree_state": "clean",
+    "source_dirty_paths": [],
+    "target_manifest": ".ai/alatyr.yaml",
+    "target_manifest_digest": "sha256:defdcbd73165b91ec97a14b8fdb9f24768837b20896dfb0134fb7457f297d3db",
+    "target_worktree_state": "dirty",
+    "target_dirty_paths": [
+      "<git-state-unavailable>"
+    ],
+    "framework_version": "0.1.0-alpha.58",
+    "adapter_schema_version": "48",
+    "template_version": "53"
+  },
+  "derived_from": {
+    "manifest": {
+      "path": ".ai/alatyr.yaml",
+      "sha256": "defdcbd73165b91ec97a14b8fdb9f24768837b20896dfb0134fb7457f297d3db"
+    },
+    "context_router": {
+      "path": ".ai/assistant/context-router.json",
+      "sha256": "014e0a0dd1b5e2d5958d57d1c6ba74002076276d8863c5071529effcf6ecd71d"
+    },
+    "gate_index": {
+      "path": ".ai/assistant/gates/index.json",
+      "sha256": "99660d012a9adaae2f5566cd48774bbeb72cf5802c31684bc343e8090477c583"
+    },
+    "action_authorization_policy": {
+      "path": ".ai/assistant/policies/action-authorization.json",
+      "sha256": "de908ca79c427057ff96331ec469c7e8e94876fd58cf6375ef06e89bae69c5c0"
+    },
+    "support_policy": {
+      "path": ".ai/project/support-policy.json",
+      "sha256": "df4deae31521bcb7f2e9c74e4e5fc3ed5fea5da5fd5c38303531c1da5b69057b"
+    },
+    "task_decomposition": {
+      "path": ".ai/assistant/task-decomposition.json",
+      "sha256": "b64325c400e15669384418f107aec272d8b7b005403a61f25a724127ee53228e"
+    },
+    "operation_index": {
+      "path": ".ai/assistant/operation-index.json",
+      "sha256": "7e647f753ea82c2acd7461c9cdb9d174d946a9d6e127df4b41b2007aabc811ae"
+    },
+    "operation_catalog": {
+      "path": ".ai/assistant/operation-catalog.json",
+      "sha256": "3ff0ca022ec2f5d06a7c9d24dd4aeae2ea5f5c4d842b1ffb6c2ca8ec9e8e67f6"
+    }
+  },
+  "installation": {
+    "framework_version": "0.1.0-alpha.58",
+    "adapter_schema_version": "48",
+    "template_version": "53",
+    "support_profile": "core",
+    "framework_pack": "complete",
+    "installation_state": "accepted",
+    "enabled_modules": [
+      "ai-infrastructure",
+      "architecture-knowledge",
+      "assistant-runtime-capabilities",
+      "blueprint-change",
+      "debug-mode",
+      "effectiveness-metrics",
+      "installed-operations",
+      "multi-assistant-bridges",
+      "subagent-delegation"
+    ]
+  },
+  "entry_sequence": [
+    {
+      "phase": "host-preloaded",
+      "paths": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "phase": "bootstrap",
+      "paths": [
+        ".ai/assistant/bootstrap-index.json"
+      ]
+    },
+    {
+      "phase": "recovery-packet",
+      "paths": [
+        ".ai/assistant/entry-packet.json"
+      ]
+    }
+  ],
+  "cache_aware_delivery": {
+    "policy": ".ai/assistant/context-router.json#cache_aware_delivery",
+    "provider_capability_index": ".ai/assistant/assistant-capabilities.json",
+    "cache_hit_required": false,
+    "context_window_reduction": false,
+    "fallback": "bounded-context-routing"
+  },
+  "budget_summary": {
+    "policy": ".ai/assistant/context-router.json#context_budgets",
+    "bootstrap_max_words": null,
+    "profile_max_words": 8000
+  },
+  "routing_sources": {
+    "installed_profile_routes": ".ai/assistant/bootstrap-index.json",
+    "profile_descriptors": "profiles",
+    "gate_index": ".ai/assistant/gates/index.json",
+    "operation_index": ".ai/assistant/operation-index.json",
+    "operation_catalog": ".ai/assistant/operation-catalog.json",
+    "full_router": ".ai/assistant/context-router.json",
+    "selection_policy": "bootstrap-selector-then-selected-owner"
+  },
+  "task_classification": {
+    "schema_version": 1,
+    "classification_order": [
+      "protected-or-sensitive",
+      "large-or-resumable",
+      "small-task",
+      "standard-task"
+    ],
+    "default_class": "standard-task",
+    "ambiguity_behavior": "read-only-on-ambiguity",
+    "small_task_overlay": "small-task",
+    "expansion_policy": ".ai/assistant/context-router.json#task_classification.expansion_triggers"
+  },
+  "task_decomposition": {
+    "schema_version": 1,
+    "policy": ".ai/assistant/task-decomposition.json",
+    "plan_template": ".ai/assistant/templates/task-decomposition.md",
+    "level_range": "L0-L7",
+    "non_delegable_levels": [
+      "L0",
+      "L6",
+      "L7"
+    ],
+    "default_behavior": "non-trivial-decompose",
+    "executor_default": "primary"
+  },
+  "operation_routing": {
+    "index": ".ai/assistant/operation-index.json",
+    "catalog": ".ai/assistant/operation-catalog.json",
+    "fallback_operation": "help",
+    "load_catalog_when": [
+      "bare Alatyr entry",
+      "ambiguity",
+      "operation or adapter repair"
+    ]
+  },
+  "authorization": {
+    "policy": ".ai/assistant/policies/action-authorization.json",
+    "default_phase": "inspect",
+    "current_scope_required_for": [
+      "modify",
+      "commit",
+      "publish",
+      "live-external"
+    ]
+  },
+  "support_delta_first": {
+    "policy": ".ai/project/support-policy.json",
+    "state": ".ai/support-state.json",
+    "support_diff_tool": "tools/alatyr.py support-diff --target <target-repo>",
+    "support_delta_tool": "tools/alatyr.py support-delta --target <target-repo> --diff-ref <base-ref>",
+    "impact_plan_tool": "tools/alatyr.py impact --target <target-repo> --diff-ref <base-ref>",
+    "approval_scope_check_tool": "tools/alatyr.py approval-check --target <target-repo> --diff-ref <base-ref> --approval-record <target-approval-json>",
+    "routing_order": [
+      "support-delta",
+      "impact",
+      "selected-owners"
+    ],
+    "semantic_correctness_proven": false,
+    "review_after_code_change": true,
+    "missing_state": "repair-with-current-modify-authorization"
+  },
+  "lazy_human_fallbacks": [
+    ".ai/assistant/context-profiles.md",
+    ".ai/assistant/module-profile.md",
+    ".ai/assistant/help-reference.md",
+    ".ai/support-state.json"
+  ],
+  "reasoning_boundary": {
+    "logical_integrity": "required",
+    "invariant_derivation": "required",
+    "deterministic_checks": "evidence-only",
+    "final_correctness": "assistant-and-human-reasoning"
+  }
+}

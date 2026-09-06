@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "framework.knowledge",
+  "contour": "framework",
+  "title": "Knowledge Framework Context",
+  "summary": "Bounded knowledge framework rules and supporting guidance.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "framework.knowledge.architecture-knowledge-md",
+      "kind": "content",
+      "path": "architecture-knowledge.md",
+      "summary": "Architecture Knowledge And Discussion",
+      "selectors": {
+        "path_terms": [
+          "architecture",
+          "knowledge"
+        ],
+        "rule_ids": [
+          "ALATYR-ARCHITECTURE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:observed-is-not-accepted@1"
+      ],
+      "owner_refs": [
+        "ALATYR-ARCHITECTURE-001"
+      ],
+      "estimated_words": 1239,
+      "content_digest": "sha256:ca52641fca946c087b63e77d3fd9187cef0f74a0ead70f2e80a98a960030504c"
+    },
+    {
+      "id": "framework.knowledge.code-documentation-md",
+      "kind": "content",
+      "path": "code-documentation.md",
+      "summary": "Code Documentation Generation",
+      "selectors": {
+        "path_terms": [
+          "code",
+          "documentation"
+        ],
+        "rule_ids": [
+          "ALATYR-CODEDOC-001"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [
+        "ALATYR-CODEDOC-001"
+      ],
+      "estimated_words": 1586,
+      "content_digest": "sha256:3995f21616fb44304bf15080cc681271e1b686c678636398a04ad75c0b11acdc"
+    },
+    {
+      "id": "framework.knowledge.debug-mode-md",
+      "kind": "content",
+      "path": "debug-mode.md",
+      "summary": "Debug Mode",
+      "selectors": {
+        "path_terms": [
+          "debug",
+          "mode"
+        ],
+        "rule_ids": [
+          "ALATYR-DEBUG-001"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [
+        "ALATYR-DEBUG-001"
+      ],
+      "estimated_words": 3289,
+      "content_digest": "sha256:290b99df87baebe2701124647bb069eb479b68ed9eba7db861fc666ec8d0b69a"
+    },
+    {
+      "id": "framework.knowledge.diagram-guidance-md",
+      "kind": "content",
+      "path": "diagram-guidance.md",
+      "summary": "AI Framework Diagram Guidance",
+      "selectors": {
+        "path_terms": [
+          "diagram",
+          "guidance"
+        ],
+        "rule_ids": [
+          "ALATYR-DIAGRAM-001"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [
+        "ALATYR-DIAGRAM-001"
+      ],
+      "estimated_words": 1459,
+      "content_digest": "sha256:017c40d26ee1889ec09d29bbef4ed02dda84960b6ce461dfda0113316dec626f"
+    },
+    {
+      "id": "framework.knowledge.engineering-evidence-md",
+      "kind": "content",
+      "path": "engineering-evidence.md",
+      "summary": "Durable Engineering Evidence",
+      "selectors": {
+        "path_terms": [
+          "engineering",
+          "evidence"
+        ],
+        "rule_ids": [
+          "ALATYR-ENGINEERING-EVIDENCE-001"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [
+        "ALATYR-ENGINEERING-EVIDENCE-001"
+      ],
+      "estimated_words": 1486,
+      "content_digest": "sha256:7163c63e3eb66a0b5314d68388b45d87f9218e913abf2287179b40b6c40da208"
+    },
+    {
+      "id": "framework.knowledge.project-knowledge-md",
+      "kind": "content",
+      "path": "project-knowledge.md",
+      "summary": "Project Development Guidance And Knowledge Delivery",
+      "selectors": {
+        "path_terms": [
+          "project",
+          "knowledge"
+        ],
+        "rule_ids": [
+          "ALATYR-KNOWLEDGE-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:accepted-current@1"
+      ],
+      "owner_refs": [
+        "ALATYR-KNOWLEDGE-001"
+      ],
+      "estimated_words": 2023,
+      "content_digest": "sha256:47b4849783a12149d80ae900bf268edc123112fd41d0392035c36a2688cb17f6"
+    },
+    {
+      "id": "framework.knowledge.project-vocabulary-md",
+      "kind": "content",
+      "path": "project-vocabulary.md",
+      "summary": "Project Vocabulary",
+      "selectors": {
+        "path_terms": [
+          "project",
+          "vocabulary"
+        ],
+        "rule_ids": [
+          "ALATYR-VOCABULARY-001"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [
+        "ALATYR-VOCABULARY-001"
+      ],
+      "estimated_words": 1358,
+      "content_digest": "sha256:548d3ce86ed7df6a4874e69ffcbf74c14fbaedf744ecc2b3582253e7470cf11d"
+    }
+  ]
+}

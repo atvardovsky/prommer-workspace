@@ -1,0 +1,108 @@
+{
+  "schema_version": 3,
+  "policy_kind": "target-subagent-delegation-policy",
+  "state": "enabled",
+  "owner": "repository maintainers",
+  "decision_mode": "automatic",
+  "default_preference": "auto",
+  "max_parallel_delegates": 3,
+  "tree_policy": {
+    "dispatch_owner": "primary-assistant",
+    "worker_child_behavior": "propose-only",
+    "default_max_depth": 1,
+    "hard_max_depth": 2,
+    "max_total_delegates": 3,
+    "max_children_per_parent": 3,
+    "max_context_words_total": 12000,
+    "max_retries_total": 3,
+    "require_disjoint_coverage_keys": true
+  },
+  "stop_policy": {
+    "require_stop_reason": true,
+    "evidence_saturation": "stop-when-acceptance-and-required-evidence-are-covered",
+    "stop_reason_ids": [
+      "scope-covered",
+      "evidence-sufficient",
+      "coordination-cost-exceeds-benefit",
+      "maximum-depth-reached",
+      "worker-budget-reached",
+      "context-budget-reached",
+      "semantic-decision-required",
+      "overlapping-scope",
+      "primary-critical-path",
+      "capability-unavailable",
+      "user-restricted"
+    ]
+  },
+  "decomposition_policy": ".ai/assistant/task-decomposition.json",
+  "role_catalog": ".ai/assistant/workers/role-catalog.json",
+  "enabled_role_ids": [
+    "explorer",
+    "implementer",
+    "test-runner",
+    "documentation-worker",
+    "reviewer",
+    "fast-focused-worker"
+  ],
+  "requirements": {
+    "primary_keeps_critical_path": true,
+    "independent_local_acceptance": true,
+    "disjoint_write_scope": true,
+    "primary_final_convergence": true,
+    "current_capability_evidence": true,
+    "recursive_delegation_when_beneficial": true,
+    "primary_dispatches_proposed_children": true
+  },
+  "eligible_work": [
+    "bounded read-only discovery",
+    "independent validation and failure-evidence collection",
+    "settled implementation or documentation work with disjoint write scope",
+    "independent review of a bounded result",
+    "second-level child work proposed by a delegate when it is independently useful bounded locally verifiable and primary-approved"
+  ],
+  "prohibited_work": [
+    "unresolved business rules or semantic invariants",
+    "architecture or source-of-truth decisions",
+    "approval or decision authority",
+    "security permissions credentials destructive production spend migration or external-effect work",
+    "overlapping write scopes or final convergence",
+    "external communication publication or persistence of raw private context"
+  ],
+  "retry_policy": {
+    "max_attempts_per_task": 1,
+    "retry_only_when_scope_unchanged": true,
+    "retryable_outcomes": [
+      "transient dispatch failure",
+      "bounded validation failure with a known local repair"
+    ],
+    "non_retryable_outcomes": [
+      "authorization capability or approval failure",
+      "scope dependency semantic or architecture expansion",
+      "repeated identical failure",
+      "privacy or context-boundary failure"
+    ]
+  },
+  "conflict_policy": {
+    "overlapping_writes": "reject-concurrent-dispatch",
+    "contradictory_results": "return-to-primary",
+    "stale_baseline": "revalidate-before-integration",
+    "scope_violation": "reject-result"
+  },
+  "result_policy": {
+    "accept_out_of_scope_changes": false,
+    "accept_unvalidated_changes": false,
+    "require_primary_review": true,
+    "require_actual_model_or_unverified_status": true,
+    "require_normalized_worker_result": true
+  },
+  "privacy_and_retention": "use bounded redacted packets; keep coordination transient unless normalized evidence independently qualifies under .ai/project/privacy-policy.md",
+  "validation": [
+    "Alatyr structural validation and primary review of every delegated result"
+  ],
+  "review_triggers": [
+    "assistant client or model availability changed",
+    "tool permission or write-isolation behavior changed",
+    "delegated work caused rework validation failure or scope drift",
+    "Codex collaboration tool limits or shared-workspace behavior changes"
+  ]
+}

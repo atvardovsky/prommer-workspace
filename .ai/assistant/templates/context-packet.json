@@ -1,0 +1,126 @@
+{
+  "schema_version": 3,
+  "packet_kind": "alatyr-context-packet",
+  "cache_delivery": {
+    "schema_version": 1,
+    "assistant_surface": "codex",
+    "capability_record": ".ai/assistant/assistant-capabilities/codex.json",
+    "route": "unknown",
+    "provider": "unknown: not exposed by the active host",
+    "model": "unknown: exact model identifier not exposed by the active host",
+    "provider_cache_mode": "unknown",
+    "client_control_exposure": "unsupported",
+    "client_telemetry_exposure": "unsupported",
+    "stable_prefix_sections": [
+      "semantic_terms"
+    ],
+    "dynamic_tail_sections": [
+      "profile",
+      "operation",
+      "selected_items",
+      "budget",
+      "receipt"
+    ],
+    "stable_prefix_digest": "sha256:not-applicable-no-target-evidence",
+    "dynamic_tail_digest": "sha256:not-applicable-no-target-evidence",
+    "cache_hit_required": false,
+    "context_window_reduction": false,
+    "fallback": "bounded-context-routing"
+  },
+  "profile": "not-applicable-no-target-evidence",
+  "operation": "not-applicable-no-target-evidence",
+  "task_classification": "not-applicable-no-target-evidence",
+  "selected_items": [
+    {
+      "id": "not-applicable-no-target-evidence",
+      "path": "not-applicable-no-target-evidence",
+      "content_digest": "sha256:not-applicable-no-target-evidence",
+      "reason": ["not-applicable-no-target-evidence"],
+      "semantic_refs": ["not-applicable-no-target-evidence"],
+      "owner_refs": ["not-applicable-no-target-evidence"]
+    }
+  ],
+  "required_obligations": {
+    "semantic_term_ids": ["not-applicable-no-target-evidence"],
+    "owner_rule_ids": ["not-applicable-no-target-evidence"]
+  },
+  "routing": {
+    "selection_basis": "exact catalog selectors and declared owner dependencies",
+    "omitted_item_ids": [
+      "not-applicable-no-target-evidence"
+    ],
+    "expansion_triggers": [
+      "not-applicable-no-target-evidence"
+    ],
+    "unresolved_selector_behavior": "load the canonical owner and report the routing gap"
+  },
+  "semantic_terms": [
+    {
+      "id": "not-applicable-no-target-evidence",
+      "version": 1,
+      "definition": "not-applicable-no-target-evidence",
+      "owner_rule_id": "not-applicable-no-target-evidence",
+      "canonical_owner": "not-applicable-no-target-evidence"
+    }
+  ],
+  "budget": {
+    "max_words": 1,
+    "selected_content_words": 0,
+    "semantic_definition_words": 0,
+    "total_words": 0
+  },
+  "receipt": {
+    "schema_version": 1,
+    "receipt_kind": "alatyr-context-receipt",
+    "measurement_state": "not-applicable-no-target-evidence",
+    "planned": {
+      "paths": [
+        "not-applicable-no-target-evidence"
+      ],
+      "approximate_words": "not-applicable-no-target-evidence"
+    },
+    "resolved": {
+      "status": "not-applicable-no-target-evidence",
+      "paths": [
+        "not-applicable-no-target-evidence"
+      ],
+      "approximate_words": "not-applicable-no-target-evidence"
+    },
+    "observed": {
+      "evidence_level": "not-applicable-no-target-evidence",
+      "source": "not-applicable-no-target-evidence",
+      "files_loaded": "not-applicable-no-target-evidence",
+      "input_tokens": "not-applicable-no-target-evidence",
+      "cached_input_tokens": "not-applicable-no-target-evidence",
+      "output_tokens": "not-applicable-no-target-evidence",
+      "evidence": "not-applicable-no-target-evidence"
+    },
+      "semantic_guidance": {
+        "schema_version": 1,
+        "planned": "not-applicable-no-target-evidence",
+        "resolved": "not-applicable-no-target-evidence",
+        "observed": "not-applicable-no-target-evidence"
+    },
+    "task_classification": {
+      "class": "not-applicable-no-target-evidence",
+      "selected_task_scale_overlay": "not-applicable-no-target-evidence",
+      "reason": "not-applicable-no-target-evidence",
+      "expansion_triggers": [
+        "not-applicable-no-target-evidence"
+      ]
+    }
+  },
+  "cost_claim": {
+    "classification": "not-applicable-no-target-evidence",
+    "exact_billing_claim": false,
+    "exact_context_delivery_claim": false,
+    "basis": "not-applicable-no-target-evidence",
+    "limitation": "not-applicable-no-target-evidence"
+  },
+  "limitations": [
+    "Static source estimates are not billed tokens.",
+    "Provider usage alone does not prove exact semantic guidance delivery.",
+    "Hidden client context may exist outside repository-visible evidence."
+  ],
+  "packet_digest": "sha256:not-applicable-no-target-evidence"
+}

@@ -1,0 +1,188 @@
+---
+alatyr_doc:
+  id: framework.approval-records
+  type: framework-rule-owner
+  owns_rules:
+    - ALATYR-APPROVAL-001
+  depends_on:
+    - ALATYR-RISK-001
+  applies_to:
+    - business-change
+    - architecture-change
+    - data-change
+    - security-sensitive
+    - ai-infrastructure
+    - framework-upgrade
+---
+# Approval Records
+
+Approval records bind protected changes to a specific plan, scope, and
+evidence trail.
+
+They do not authorize an assistant to start implementation, commit, publish,
+or perform a live external action. Current user authorization for those phases
+is owned separately by `ALATYR-AUTHORIZATION-001`; both gates must pass when
+both apply.
+
+They are required when a target adapter needs durable evidence for an approval,
+when approval scope covers multiple files or protected categories, or when a
+plan may be reused after review.
+
+## When To Use
+
+Use an approval record for:
+
+- architecture changes
+- accepted business behavior changes
+- destructive, live-service, data-loss, spend-affecting, or production actions
+- new production dependencies or external services
+- permission, credential, authentication, authorization, privacy, or security
+  changes
+- importing third-party assistant infrastructure into canonical target files
+- overwriting existing AI instructions
+- weakening tests, gates, approval rules, validation, or final evidence
+
+Simple chat approval can be enough only when the target adapter explicitly
+allows it and the protected change is narrow, immediate, and unambiguous.
+
+## Minimum Record
+
+An approval record should include:
+
+- approval ID
+- operation ID
+- plan version
+- plan hash or content hash when available
+- approved plan file or recorded reason when a file is unavailable
+- approved diff base when approval is bound to a repository comparison
+- patch hash when an exact proposed diff is approved and deterministic hashing
+  is practical
+- allowed protected changes
+- allowed changed-fact IDs, architecture areas, and behavior categories when
+  semantic scope is material
+- excluded semantic effects and permitted external effects when applicable
+- allowed files or surfaces
+- excluded files or surfaces, including an explicit `none` when applicable
+- excluded actions
+- approval source or message reference
+- approved by
+- approved at
+- repository revision at approval when available
+- whether reuse is allowed
+- scope invalidation rule
+- evidence of whether the final patch still matches the approved scope
+- use result, result evidence, validation, and residual risk
+
+If the plan changes after approval, the assistant must treat the approval as
+stale for any changed protected scope.
+
+For a change package, approval is stale when implementation introduces a
+protected changed fact, architecture area, behavior category, external effect,
+or path outside the approved scope. Path approval never grants undeclared
+semantic scope.
+
+An approval record is `historical-record` evidence. Keep allowed and excluded
+files in explicit list fields so a checker can compare them with an actual
+diff. A path mentioned only in narrative text does not place it inside the
+approved scope.
+
+For deterministic enforcement, use a machine-readable approval record with a
+schema version, record kind, approved diff base, target-relative allowed and
+excluded path lists, invalidation rule, and approval identity. Markdown may
+remain the human explanation surface, but it must not be the only source used
+for a strict `changed paths subset of approved scope` check.
+
+Strict scope validation should:
+
+- use only approval records explicitly selected for the operation, not every
+  historical record in the approval directory
+- verify that each selected record is bound to the requested Git diff base
+- include committed, staged, unstaged, renamed, deleted, and untracked paths
+- fail when any changed path is outside the union of allowed scopes
+- fail when any changed path matches an excluded scope
+- report unavailable Git or record evidence instead of treating it as a pass
+
+Repository health checks may audit every stored approval as historical archive
+evidence for parseability, required fields, safe target-relative scope, result
+declarations, and verifiable plan references. That archive audit must remain
+separate from current-operation enforcement: an unselected historical record
+must never authorize, constrain, or be compared with the current operation
+diff.
+
+The source target-adapter validator enters strict scope mode automatically
+when a caller supplies both a diff base and one or more explicit approval
+records. A caller that supplies only a diff base receives advisory protected-
+surface review because no operation-specific approval was selected.
+
+The source helper `tools/alatyr.py approval-check --target <target-repo>
+--diff-ref <base-ref> --approval-record <record.json>` is the compact
+read-only route for this strict check when the AlatyrCore source tools are
+available.
+
+When semantic scope fields are present, deterministic validation should also
+compare declared actual fact IDs, areas, behavior categories, and external
+effects with the approved lists. This detects declared scope drift; it does
+not infer undeclared effects or replace logical integrity review.
+
+The strict comparison covers the complete operation diff, including code,
+tests, docs, diagrams, adapter files, and approval evidence. Protected-change
+classification decides whether approval is required; once a scoped approval is
+used, companion files do not silently fall outside that scope.
+
+## Repository Storage
+
+Installed adapters should reserve a target-owned approval directory, commonly:
+
+```text
+.ai/assistant/approvals/
+```
+
+Approval records are target adapter evidence, not portable framework core.
+The target may choose whether committed records are allowed, redacted, or
+stored outside the repository.
+
+## Hash Guidance
+
+When a deterministic hash is practical, hash the approved plan text or the
+validator's canonical Git change-set payload. The canonical payload binds one
+resolved merge base, committed changes through the observed HEAD, staged and
+unstaged layers, changed paths, and content digests for untracked files. The
+same payload must own both approval-scope paths and content identity. If
+hashing is not practical, record the exact plan version and the reason hash
+evidence is unavailable.
+
+When an installed adapter uses a validator, it may verify the recorded plan
+hash against an approved plan file and the legacy-named `patch_sha256` field
+against the canonical Git change-set payload for the recorded diff base.
+New records must declare `canonical-git-change-set-v1` as the patch hash
+contract. A validator must not silently compare a legacy or unknown hash under
+the canonical contract.
+If either hash cannot be verified, final evidence should say why rather than
+claiming cryptographic approval binding.
+
+Approved plan file references used for hash verification should be
+target-relative paths. Do not point approval records at arbitrary absolute
+local paths.
+
+Do not include secrets in approval records or hash inputs that must remain
+private.
+
+Content hashes and path-scope validation are different controls. A scope check
+does not prove content approval. A hash implementation that omits committed,
+index, worktree, or untracked layers does not prove the complete selected
+change set. Report the exact contract that was verified.
+
+## Final Evidence
+
+When an approval record was used, final evidence should name:
+
+- approval ID
+- protected categories covered
+- files or surfaces changed under approval
+- whether the implementation stayed within scope
+- whether declared semantic scope stayed within the approved fact, area,
+  behavior, and external-effect boundaries
+- whether the approval remained valid after plan, patch, or scope changes
+- validation run or skipped
+- result or evidence reference
+- residual risk

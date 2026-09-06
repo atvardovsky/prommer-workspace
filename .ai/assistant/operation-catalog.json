@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "catalog_kind": "target-operation-catalog",
+  "project": "prommer.net workspace",
+  "compact_help": ".ai/assistant/help.md",
+  "human_reference": ".ai/assistant/help-reference.md",
+  "routing_flow": ".ai/assistant/flows/operation-routing.flow.md",
+  "health_flow": ".ai/assistant/flows/adapter-health.flow.md",
+  "pre_change_preview": ".ai/assistant/templates/pre-change-preview.md",
+  "action_authorization_policy": ".ai/assistant/policies/action-authorization.json",
+  "module_profile": ".ai/assistant/module-profile.md",
+  "fallback_operation": "help",
+  "authorization_phases": [
+    "inspect",
+    "modify",
+    "commit",
+    "publish",
+    "live-external"
+  ],
+  "required_final_evidence": [
+    "current_user_authorization",
+    "durable_engineering_evidence"
+  ],
+  "operations": [
+    {
+      "id": "help",
+      "title": "Alatyr",
+      "summary": "Show adapter state and the most relevant available actions.",
+      "use_when": [
+        "bare Alatyr request",
+        "operation help",
+        "ambiguous request"
+      ],
+      "context_profiles": [],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/operation-routing.flow.md",
+      "minimum_inputs": [
+        "goal or suspected task area when known"
+      ],
+      "allowed_actions": [
+        "read-only"
+      ],
+      "preview": "never",
+      "aliases": [
+        "Alatyr",
+        "Alatyr help"
+      ],
+      "final_evidence": [
+        "adapter state evidence status",
+        "relevant operations",
+        "next safe action"
+      ]
+    },
+    {
+      "id": "adapter-health",
+      "title": "Adapter health",
+      "summary": "Inspect current adapter structure and return prioritized repair routes without editing.",
+      "use_when": [
+        "adapter status",
+        "adapter doctor",
+        "suspected adapter breakage"
+      ],
+      "context_profiles": [
+        "framework-upgrade"
+      ],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/adapter-health.flow.md",
+      "minimum_inputs": [
+        "optional health scope"
+      ],
+      "allowed_actions": [
+        "read-only"
+      ],
+      "preview": "never",
+      "aliases": [
+        "Alatyr status",
+        "Alatyr doctor"
+      ],
+      "final_evidence": [
+        "health state enum",
+        "installation state",
+        "acceptance eligibility",
+        "checks run and unavailable",
+        "up to three repair operations",
+        "no files changed"
+      ]
+    },
+    {
+      "id": "create-project-blueprint",
+      "title": "Create project blueprint",
+      "summary": "Create, repair, or recheck blueprint-equivalent sources from target evidence.",
+      "use_when": [
+        "missing blueprint",
+        "stale blueprint",
+        "source-of-truth repair"
+      ],
+      "context_profiles": [
+        "business-change",
+        "architecture-change"
+      ],
+      "required_module": "blueprint-change",
+      "flow": ".ai/assistant/flows/project-blueprint-creation.flow.md",
+      "minimum_inputs": [
+        "blueprint scope",
+        "non-goals"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "create blueprint",
+        "repair blueprint",
+        "recheck blueprint"
+      ],
+      "final_evidence": [
+        "sources inspected",
+        "facts recorded",
+        "gaps and approvals"
+      ]
+    },
+    {
+      "id": "product-change",
+      "title": "Product change",
+      "summary": "Carry an accepted business, architecture, data, runtime, or public-contract change through all affected surfaces.",
+      "use_when": [
+        "business rule change",
+        "architecture change",
+        "data contract change",
+        "public behavior change"
+      ],
+      "context_profiles": [
+        "business-change",
+        "architecture-change",
+        "data-change",
+        "security-sensitive"
+      ],
+      "required_module": "blueprint-change",
+      "flow": ".ai/assistant/flows/blueprint-driven-change.flow.md",
+      "minimum_inputs": [
+        "change intent",
+        "non-goals",
+        "approval constraints"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "code-and-tests",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "change business rule",
+        "product change"
+      ],
+      "final_evidence": [
+        "changed facts and owners",
+        "repair set",
+        "contract artifact result when applicable",
+        "visual validation result when applicable",
+        "support/product change cost when measured",
+        "validation and residual risk"
+      ]
+    },
+    {
+      "id": "architecture-assistance",
+      "title": "Architecture assistance",
+      "summary": "Inventory, explain, discuss, compare, review, or document project architecture and patterns from target evidence.",
+      "use_when": [
+        "architecture inventory",
+        "architecture explanation",
+        "pattern discussion",
+        "architecture alternative comparison",
+        "architecture review",
+        "architecture documentation"
+      ],
+      "context_profiles": [
+        "docs-local",
+        "architecture-change",
+        "data-change",
+        "security-sensitive"
+      ],
+      "required_module": "architecture-knowledge",
+      "flow": ".ai/assistant/flows/architecture-assistance.flow.md",
+      "minimum_inputs": [
+        "architecture question or scope",
+        "non-goals when known",
+        "decision intent when known"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "Alatyr architecture",
+        "Alatyr architecture inventory",
+        "explain architecture",
+        "discuss architecture pattern",
+        "compare architecture options",
+        "review architecture",
+        "document architecture"
+      ],
+      "final_evidence": [
+        "selected architecture evidence and states",
+        "drivers options and pattern-proliferation result",
+        "documentation or change handoff",
+        "validation and residual risk"
+      ]
+    },
+    {
+      "id": "failure-analysis",
+      "title": "Failure analysis",
+      "summary": "Produce an evidence-led engineering failure analysis with recovery and prevention actions.",
+      "use_when": [
+        "failure analysis",
+        "incident analysis",
+        "pipeline failure",
+        "root cause and prevention"
+      ],
+      "context_profiles": [
+        "code-local",
+        "architecture-change",
+        "security-sensitive"
+      ],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/failure-analysis.flow.md",
+      "minimum_inputs": [
+        "observed failure or bounded scenario",
+        "available evidence"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only"
+      ],
+      "preview": "never",
+      "aliases": [
+        "failure autopsy",
+        "failure analysis",
+        "root cause analysis"
+      ],
+      "final_evidence": [
+        "expected and observed behavior",
+        "impact and timeline",
+        "root cause and contributing conditions",
+        "recovery and prevention",
+        "validation and uncertainty"
+      ]
+    },
+    {
+      "id": "engineering-evidence",
+      "title": "Durable engineering evidence",
+      "summary": "Capture or inspect compact project-owned invariant, root-cause, solution, regression, validation, and repository-binding evidence.",
+      "use_when": [
+        "material task reaches finalization",
+        "reusable engineering knowledge would be lost",
+        "inspect or explain a prior engineering decision"
+      ],
+      "context_profiles": [
+        "code-local",
+        "business-change",
+        "architecture-change",
+        "data-change",
+        "security-sensitive"
+      ],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/engineering-evidence-capture.flow.md",
+      "minimum_inputs": [
+        "current task or evidence ID",
+        "capture inspect or repair intent"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "adapter-only",
+        "code-and-tests",
+        "full-with-approval"
+      ],
+      "preview": "never",
+      "aliases": [
+        "Alatyr evidence",
+        "Alatyr capture evidence",
+        "Alatyr explain decision"
+      ],
+      "final_evidence": [
+        "capture status and evaluated materiality or canonical skip evidence",
+        "task and repository binding state lineage and object verification",
+        "record validation privacy publication and residual uncertainty"
+      ]
+    },
+    {
+      "id": "project-knowledge",
+      "title": "Project knowledge",
+      "summary": "Intake, review, promote, except, route, revalidate, supersede, or explain reusable project guidance without replacing canonical owners.",
+      "use_when": [
+        "reusable engineering conclusion needs human promotion review",
+        "a registered decision owner gives durable project guidance",
+        "inspect what the project already knows about a selected area or contract",
+        "guidance exception coverage freshness contradiction or supersession review"
+      ],
+      "context_profiles": [
+        "docs-local",
+        "code-local",
+        "business-change",
+        "architecture-change",
+        "data-change",
+        "security-sensitive"
+      ],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/project-knowledge.flow.md",
+      "minimum_inputs": [
+        "knowledge subject candidate ID selected guidance ID or direct decision-owner guidance",
+        "propose intake review promote except explain revalidate or supersede intent"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "adapter-only",
+        "code-and-tests",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "Alatyr knowledge",
+        "Alatyr remember this",
+        "Alatyr record guidance",
+        "Alatyr what do we know",
+        "Alatyr revalidate knowledge"
+      ],
+      "final_evidence": [
+        "candidate origin guidance kind and human disposition when applicable",
+        "decision-owner authority or canonical-owner update exception precedence and freshness evidence",
+        "coverage state initial and refined selectors selected omitted warning and blocked IDs",
+        "packet limits validation and residual risk"
+      ]
+    },
+    {
+      "id": "debug-mode",
+      "title": "Alatyr Debug Mode",
+      "summary": "Explicitly enable, inspect, checkpoint, finalize, disable, or compare non-canonical task observability evidence.",
+      "use_when": [
+        "explicit Debug Mode activation for the current task or session",
+        "debug status checkpoint finalization disablement or comparison"
+      ],
+      "context_profiles": [],
+      "required_module": "debug-mode",
+      "flow": ".ai/assistant/flows/debug-mode.flow.md",
+      "minimum_inputs": [
+        "debug action",
+        "current task or session scope for enablement",
+        "explicit current user activation for enablement"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "adapter-only"
+      ],
+      "preview": "never",
+      "aliases": [
+        "Enable Alatyr Debug Mode",
+        "Alatyr debug",
+        "Alatyr debug status",
+        "Alatyr debug checkpoint",
+        "Alatyr debug summary",
+        "Disable Alatyr Debug Mode",
+        "Alatyr compare debug"
+      ],
+      "final_evidence": [
+        "activation status scope expiry and continuation lineage",
+        "record schema attribution model lifecycle capture quality and event-derived metrics",
+        "typed evidence-event links materiality and durable engineering-evidence decision",
+        "claim-validation fidelity result binding lineage external projection privacy validation and residual uncertainty"
+      ]
+    },
+    {
+      "id": "logical-integrity-review",
+      "title": "Logical integrity review",
+      "summary": "Check changed facts, invariants, owners, and companion surfaces for consistency.",
+      "use_when": [
+        "suspected cross-surface drift",
+        "changed invariant",
+        "review item cluster"
+      ],
+      "context_profiles": [
+        "code-local",
+        "business-change",
+        "architecture-change",
+        "data-change",
+        "security-sensitive",
+        "ai-infrastructure"
+      ],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/logical-integrity-review.flow.md",
+      "minimum_inputs": [
+        "changed fact, suspected drift, or files to inspect"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "adapter-only",
+        "code-and-tests",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "check integrity",
+        "logical integrity review",
+        "Alatyr impact",
+        "Alatyr support diff",
+        "Alatyr change cost"
+      ],
+      "final_evidence": [
+        "support diff and impact closure",
+        "support/product change cost when measured",
+        "invariants and relationship candidates",
+        "contract artifact result when applicable",
+        "visual validation result when applicable",
+        "repair set",
+        "validation and residual risk"
+      ]
+    },
+    {
+      "id": "ai-infrastructure-inventory",
+      "title": "AI infrastructure inventory",
+      "summary": "Report existing target-owned AI infrastructure and unresolved inventory gaps.",
+      "use_when": [
+        "list AI infrastructure",
+        "check existing skills prompts gates or tools"
+      ],
+      "context_profiles": [
+        "ai-infrastructure"
+      ],
+      "required_module": "ai-infrastructure",
+      "flow": ".ai/assistant/flows/ai-infrastructure-inventory.flow.md",
+      "minimum_inputs": [
+        "inventory scope",
+        "target assistant surfaces"
+      ],
+      "allowed_actions": [
+        "read-only"
+      ],
+      "preview": "never",
+      "aliases": [
+        "alatyr-ai-inventory"
+      ],
+      "final_evidence": [
+        "inventory",
+        "coverage gaps",
+        "no-change confirmation"
+      ]
+    },
+    {
+      "id": "ai-infrastructure-recommendation",
+      "title": "AI infrastructure recommendation",
+      "summary": "Recommend evidence-based additions or improvements without changing infrastructure.",
+      "use_when": [
+        "suggest AI infrastructure",
+        "improve existing AI item",
+        "repeated development friction"
+      ],
+      "context_profiles": [
+        "ai-infrastructure"
+      ],
+      "required_module": "ai-infrastructure",
+      "flow": ".ai/assistant/flows/ai-infrastructure-recommendation.flow.md",
+      "minimum_inputs": [
+        "bounded project problem or item ID",
+        "available outcome evidence"
+      ],
+      "allowed_actions": [
+        "read-only"
+      ],
+      "preview": "never",
+      "aliases": [
+        "alatyr-suggest-ai",
+        "alatyr-improve-ai",
+        "Alatyr suggest extensions"
+      ],
+      "final_evidence": [
+        "recommendation",
+        "quality cost and maintenance impact",
+        "acceptance criteria"
+      ]
+    },
+    {
+      "id": "skill-adaptation",
+      "title": "AI infrastructure adaptation",
+      "summary": "Review or adapt skills, prompts, gates, tools, bridges, wrappers, and related sources.",
+      "use_when": [
+        "adapt external AI source",
+        "add AI infrastructure",
+        "change AI infrastructure item"
+      ],
+      "context_profiles": [
+        "ai-infrastructure",
+        "security-sensitive"
+      ],
+      "required_module": "ai-infrastructure",
+      "flow": ".ai/assistant/flows/skill-adaptation.flow.md",
+      "minimum_inputs": [
+        "source",
+        "item type",
+        "intended use",
+        "assistant surfaces",
+        "permissions"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "adapter-only",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "alatyr-adaptation",
+        "alatyr-add-ai"
+      ],
+      "final_evidence": [
+        "provenance",
+        "rejected source instructions",
+        "adaptation and validation"
+      ]
+    },
+    {
+      "id": "drift-review",
+      "title": "Drift review",
+      "summary": "Find stale owners, derived surfaces, or adapter claims without assuming repair scope.",
+      "use_when": [
+        "suspected source-of-truth drift",
+        "stale docs diagrams gates prompts or bridges"
+      ],
+      "context_profiles": [
+        "docs-local",
+        "code-local",
+        "framework-upgrade"
+      ],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/logical-integrity-review.flow.md",
+      "minimum_inputs": [
+        "drift area or recently changed facts"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "adapter-only",
+        "code-and-tests",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "review drift",
+        "find stale Alatyr facts"
+      ],
+      "final_evidence": [
+        "drift findings",
+        "owners",
+        "repair recommendation"
+      ]
+    },
+    {
+      "id": "documentation-sync",
+      "title": "Documentation sync",
+      "summary": "Propose project-area comment styles, maintain structured comments, generate derived code reference, or synchronize other explanatory surfaces.",
+      "use_when": [
+        "code comment style proposal",
+        "documentation profile review",
+        "structured comment maintenance",
+        "generated code reference",
+        "documentation drift",
+        "diagram sync",
+        "companion assistant artifact sync"
+      ],
+      "context_profiles": [
+        "docs-local",
+        "code-local",
+        "ai-infrastructure"
+      ],
+      "required_module": "core-profile",
+      "flow": ".ai/assistant/flows/documentation-sync.flow.md",
+      "minimum_inputs": [
+        "changed fact and canonical owner, or bounded source area and documentation goal"
+      ],
+      "allowed_actions": [
+        "read-only",
+        "docs-only",
+        "adapter-only",
+        "code-and-tests",
+        "full-with-approval"
+      ],
+      "preview": "risk-gated",
+      "aliases": [
+        "sync documentation",
+        "sync diagrams",
+        "document code",
+        "propose comment style",
+        "generate code docs",
+        "review code documentation"
+      ],
+      "final_evidence": [
+        "selected documentation profile and canonical owners",
+        "comments and derived surfaces",
+        "contract artifact result when applicable",
+        "visual validation result when applicable",
+        "generator and output policy",
+        "validation and residual risk"
+      ]
+    }
+  ]
+}

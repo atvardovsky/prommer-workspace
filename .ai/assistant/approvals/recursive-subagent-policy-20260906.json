@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "record_kind": "alatyr-approval-record",
+  "evidence_classification": "historical-record",
+  "approval_id": "recursive-subagent-policy-20260906",
+  "operation": {
+    "id": "enable-bounded-recursive-delegation",
+    "type": "target-adapter-policy-update"
+  },
+  "plan": {
+    "version": "1",
+    "sha256": "not available; the bounded plan is represented by this normalized approval scope",
+    "file": "not available; transient planning is excluded by project privacy policy"
+  },
+  "diff": {
+    "base": "not available; the workspace has no Git repository metadata or commits",
+    "hash_contract": "canonical-git-change-set-v1",
+    "patch_sha256": "not available; no target Git diff base exists",
+    "repository_revision_at_approval": "not available; the workspace has no Git repository metadata or commits"
+  },
+  "scope": {
+    "allowed_protected_changes": [
+      "change delegation from suggest-only to automatic bounded selection",
+      "require recursive depth-two delegation when an eligible child proposal materially improves execution or independent validation",
+      "update current Codex delegation capability evidence and routing guidance",
+      "regenerate Alatyr-owned indexes bootstrap integrity entry packet and support state"
+    ],
+    "allowed_changed_fact_ids": [
+      "delegation-decision-mode",
+      "recursive-delegation-activation",
+      "codex-delegation-capability"
+    ],
+    "allowed_architecture_areas": ["none; no product architecture decision is included"],
+    "allowed_behavior_categories": ["Alatyr delegation orchestration and assistant routing only"],
+    "excluded_semantic_effects": [
+      "delegating authorization architecture approval integration acceptance or overlapping writes",
+      "changing project facts privacy boundaries product behavior module selection or framework baseline"
+    ],
+    "permitted_external_effects": ["none"],
+    "allowed_files_or_surfaces": [
+      "AGENTS.md",
+      "AI_ASSISTANTS.md",
+      ".ai/alatyr.yaml",
+      ".ai/assistant/**",
+      ".ai/project/**/context-index.json",
+      ".ai/support-state.json"
+    ],
+    "excluded_files_or_surfaces": ["all product source project facts tests deployment files and non-Alatyr configuration"],
+    "excluded_actions": ["commit", "push", "publish", "deploy", "live-external action"],
+    "allowed_actions_mode": "adapter-only",
+    "invalidation_rule": "invalidate if recursion exceeds depth two or aggregate budgets changes primary dispatch ownership or touches product semantics"
+  },
+  "approval": {
+    "requested_by": "primary repository maintainer",
+    "approved_by": "current user acting as repository maintainer",
+    "approved_at": "2026-09-06T17:24:10+03:00",
+    "source_or_message": "explicit request to ensure recursive subagents are used when needed",
+    "expires_at_or_reuse_policy": "single use for enable-bounded-recursive-delegation; no reuse"
+  },
+  "use_result": {
+    "used_by": "enable-bounded-recursive-delegation",
+    "patch_changed_after_approval": "no known scope change; canonical Git change-set comparison is unavailable because the workspace has no Git metadata",
+    "implementation_within_scope": "yes; changes are limited to approved delegation and derived Alatyr surfaces",
+    "declared_semantic_scope_within_approval": "yes; recursion remains depth-two bounded with primary dispatch and does not change product facts",
+    "validation": "migration-staging and strict acceptance validation passed with 0 errors and 0 blocking warnings",
+    "result_evidence": ".ai/assistant/installation-state.json",
+    "residual_risk": "Git-bound diff and patch-hash enforcement are unavailable until the workspace has repository history"
+  }
+}

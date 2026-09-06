@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "index_kind": "alatyr-context-index",
+  "index_id": "framework.lifecycle",
+  "contour": "framework",
+  "title": "Lifecycle Framework Context",
+  "summary": "Bounded lifecycle framework rules and supporting guidance.",
+  "max_depth": 8,
+  "entry_defaults": {
+    "load_when": [
+      "selected by an exact task, operation, owner, path, fact, contract, dependency, risk, or conflict signal"
+    ]
+  },
+  "entries": [
+    {
+      "id": "framework.lifecycle.adapter-maturity-md",
+      "kind": "content",
+      "path": "adapter-maturity.md",
+      "summary": "AI Framework Adapter Maturity",
+      "selectors": {
+        "path_terms": [
+          "adapter",
+          "maturity"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 1126,
+      "content_digest": "sha256:7191c0384308af1032b6ef13817881837267a1e6e5341c25210d9130bd1f25c0"
+    },
+    {
+      "id": "framework.lifecycle.framework-packs-json",
+      "kind": "content",
+      "path": "framework-packs.json",
+      "summary": "Framework Packs",
+      "selectors": {
+        "path_terms": [
+          "framework",
+          "packs"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 150,
+      "content_digest": "sha256:6fb0994c8403aabe244087f1b543cc8fb590cff01c283709e770c624a27b468b"
+    },
+    {
+      "id": "framework.lifecycle.lifecycle-md",
+      "kind": "content",
+      "path": "lifecycle.md",
+      "summary": "AI Framework Lifecycle",
+      "selectors": {
+        "path_terms": [
+          "lifecycle"
+        ],
+        "rule_ids": [
+          "ALATYR-LIFECYCLE-001"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [
+        "ALATYR-LIFECYCLE-001"
+      ],
+      "estimated_words": 2989,
+      "content_digest": "sha256:af092ae687c5bdeebf7f0c29a6e1dca711181fd00ef4549b26ff59b1369854bf"
+    },
+    {
+      "id": "framework.lifecycle.migration-diff-md",
+      "kind": "content",
+      "path": "migration-diff.md",
+      "summary": "Migration Diff",
+      "selectors": {
+        "path_terms": [
+          "migration",
+          "diff"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 575,
+      "content_digest": "sha256:4895b5a115637622b2cf83c06c8c795a95a3e1066497e0ca88db9e221eb9634f"
+    },
+    {
+      "id": "framework.lifecycle.portability-md",
+      "kind": "content",
+      "path": "portability.md",
+      "summary": "Alatyr Core Portability Boundary",
+      "selectors": {
+        "path_terms": [
+          "portability"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 842,
+      "content_digest": "sha256:b409b7b8b7dfef955db3eefd1804bc7a8e748d7263c83650085881e6fe098863"
+    },
+    {
+      "id": "framework.lifecycle.scaffolding-md",
+      "kind": "content",
+      "path": "scaffolding.md",
+      "summary": "Scaffolding",
+      "selectors": {
+        "path_terms": [
+          "scaffolding"
+        ]
+      },
+      "semantic_refs": [],
+      "owner_refs": [],
+      "estimated_words": 749,
+      "content_digest": "sha256:6d5abcc71b24e9ee1ca5888a9e61ee493ee55c99849479cd3dfe9133476ef35e"
+    }
+  ]
+}

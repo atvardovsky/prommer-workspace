@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "record_kind": "alatyr-installation-state",
+  "current_state": "accepted",
+  "transitions": [
+    {
+      "sequence": 1,
+      "previous_state": null,
+      "next_state": "scaffolded",
+      "reason": "initial-scaffold",
+      "operation_id": "scaffold-target-adapter",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested installation in the current workspace, authorizing inspection and target-file modification only.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "not-run",
+        "evidence": "Scaffolding does not accept an installation."
+      },
+      "recorded_at": "2026-09-03T10:03:00+03:00"
+    },
+    {
+      "sequence": 2,
+      "previous_state": "scaffolded",
+      "next_state": "staged",
+      "reason": "adaptation-started",
+      "operation_id": "install-alatyr-core",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested installation in the current workspace, authorizing inspection and target-file modification only.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "not-run",
+        "evidence": "Target adaptation must complete before acceptance validation."
+      },
+      "recorded_at": "2026-09-03T10:25:00+03:00"
+    },
+    {
+      "sequence": 3,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "install-alatyr-core",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested installation in the current workspace, authorizing inspection and target-file modification only.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "passed",
+        "evidence": "Alatyr target-adapter acceptance validation completed with 0 errors and 0 blocking warnings; eight non-blocking warnings record absent target project sources and checker infrastructure."
+      },
+      "recorded_at": "2026-09-03T10:30:00+03:00"
+    },
+    {
+      "sequence": 4,
+      "previous_state": "accepted",
+      "next_state": "staged",
+      "reason": "controlled-update",
+      "operation_id": "configure-prommer-workspace",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested preparation of all Alatyr settings for the upcoming prommer.net work, authorizing adapter and project-context modification only.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "not-run",
+        "evidence": "Module and privacy configuration is in progress."
+      },
+      "recorded_at": "2026-09-03T10:41:34+03:00"
+    },
+    {
+      "sequence": 5,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "configure-prommer-workspace",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested preparation of Alatyr settings for prommer.net work, authorizing adapter and project-context modification only.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "passed",
+        "evidence": "Alatyr target-adapter acceptance validation completed with 0 errors and 0 blocking warnings; the single non-blocking warning records that no target-local checker exists before a codebase is supplied. Privacy-sensitive durable recording modules remain disabled."
+      },
+      "recorded_at": "2026-09-03T10:52:28+03:00"
+    },
+    {
+      "sequence": 6,
+      "previous_state": "accepted",
+      "next_state": "staged",
+      "reason": "controlled-update",
+      "operation_id": "configure-retention-and-debug-modules",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested disabling diagrams and enabling project-knowledge retention, Debug Mode, and development-pattern evidence, authorizing the required adapter and project-policy changes.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "not-run",
+        "evidence": "Module dependency closure and privacy-constrained record policies are being configured."
+      },
+      "recorded_at": "2026-09-03T10:59:02+03:00"
+    },
+    {
+      "sequence": 7,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "configure-retention-and-debug-modules",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested disabling diagrams and enabling project-knowledge retention, Debug Mode, and development-pattern evidence, authorizing the required adapter and project-policy changes.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "passed",
+        "evidence": "Alatyr target-adapter acceptance validation completed with 0 errors and 0 blocking warnings. One non-blocking warning records that no target-local checker exists before a codebase is supplied; project knowledge is enabled-empty."
+      },
+      "recorded_at": "2026-09-03T11:07:04+03:00"
+    },
+    {
+      "sequence": 8,
+      "previous_state": "accepted",
+      "next_state": "staged",
+      "reason": "controlled-update",
+      "operation_id": "enable-multi-agent-support",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested enabling repository-level multi-agent support, authorizing the required adapter configuration and capability-record changes.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "not-run",
+        "evidence": "Delegation policy, worker roles, Codex capability evidence, and dependency closure are being configured."
+      },
+      "recorded_at": "2026-09-03T11:19:18+03:00"
+    },
+    {
+      "sequence": 9,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "enable-multi-agent-support",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested enabling repository-level multi-agent support, authorizing the required adapter configuration and capability-record changes.",
+      "approval_evidence": null,
+      "validation": {
+        "status": "passed",
+        "evidence": "Alatyr target-adapter acceptance validation completed with 0 errors and 0 blocking warnings. A non-blocking warning records shared-workspace write isolation and requires packet-level disjoint-write enforcement; another records the absent target-local checker."
+      },
+      "recorded_at": "2026-09-03T11:23:24+03:00"
+    },
+    {
+      "sequence": 10,
+      "previous_state": "accepted",
+      "next_state": "staged",
+      "reason": "controlled-update",
+      "operation_id": "enable-architecture-knowledge",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested implementation of the reviewed project-contour architecture settings, authorizing repository modification only.",
+      "approval_evidence": ".ai/assistant/approvals/architecture-contour-settings-20260903.json",
+      "validation": {
+        "status": "not-run",
+        "evidence": "Architecture knowledge, selection policy, lifecycle, routing, and catalog configuration are being validated."
+      },
+      "recorded_at": "2026-09-03T12:08:11+03:00"
+    },
+    {
+      "sequence": 11,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "enable-architecture-knowledge",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested implementation of the reviewed project-contour architecture settings, authorizing repository modification only.",
+      "approval_evidence": ".ai/assistant/approvals/architecture-contour-settings-20260903.json",
+      "validation": {
+        "status": "passed",
+        "evidence": "Alatyr target-adapter acceptance validation completed with 0 errors and 0 blocking warnings. Two non-blocking warnings record shared-workspace delegation isolation and the absent target-local checker."
+      },
+      "recorded_at": "2026-09-03T12:10:30+03:00"
+    },
+    {
+      "sequence": 12,
+      "previous_state": "accepted",
+      "next_state": "staged",
+      "reason": "controlled-update",
+      "operation_id": "update-alatyr-core-alpha52",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested updating Alatyr and completing all post-update checks, authorizing the bounded framework and target-adapter migration but not commit, push, publication, deployment, or product changes.",
+      "approval_evidence": ".ai/assistant/approvals/alatyr-core-update-20260904.json",
+      "validation": {
+        "status": "not-run",
+        "evidence": "The adapter is staged until framework synchronization, schema migration, generated-artifact rebuild, and post-update validation complete."
+      },
+      "recorded_at": "2026-09-04T12:12:32+03:00"
+    },
+    {
+      "sequence": 13,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "update-alatyr-core-alpha52",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested updating Alatyr and completing all post-update checks, authorizing the bounded framework and target-adapter migration but not commit, push, publication, deployment, or product changes.",
+      "approval_evidence": ".ai/assistant/approvals/alatyr-core-update-20260904.json",
+      "validation": {
+        "status": "passed",
+        "evidence": "Migration-staging and strict acceptance validation completed with 0 errors and 0 blocking warnings; final derived-artifact consistency is rechecked after evidence finalization."
+      },
+      "recorded_at": "2026-09-04T12:17:25+03:00"
+    },
+    {
+      "sequence": 14,
+      "previous_state": "accepted",
+      "next_state": "staged",
+      "reason": "controlled-update",
+      "operation_id": "update-alatyr-core-alpha58",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested updating Alatyr and verifying the complete post-update state, authorizing the bounded framework and target-adapter migration but not commit, push, publication, deployment, or product changes.",
+      "approval_evidence": ".ai/assistant/approvals/alatyr-core-update-20260906.json",
+      "validation": {
+        "status": "not-run",
+        "evidence": "The adapter is staged until cumulative framework synchronization through alpha.58, schema migration, generated-artifact rebuild, and complete target validation finish."
+      },
+      "recorded_at": "2026-09-06T01:13:57+03:00"
+    },
+    {
+      "sequence": 15,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "update-alatyr-core-alpha58",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested updating Alatyr and completing all post-update checks, authorizing the bounded framework and target-adapter migration but not commit, push, publication, deployment, or product changes.",
+      "approval_evidence": ".ai/assistant/approvals/alatyr-core-update-20260906.json",
+      "validation": {
+        "status": "passed",
+        "evidence": "Full migration-staging and strict acceptance validation passed with 0 errors and 0 blocking warnings. Two non-blocking warnings record shared-workspace delegation isolation and the absence of a target-local checker. Upstream full, fast, platform, and release profiles passed at the exact alpha.58 revision."
+      },
+      "recorded_at": "2026-09-06T16:15:21+03:00"
+    },
+    {
+      "sequence": 16,
+      "previous_state": "accepted",
+      "next_state": "staged",
+      "reason": "controlled-update",
+      "operation_id": "enable-bounded-recursive-delegation",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested ensuring recursive subagent use when needed, authorizing the bounded delegation-policy and routing update but not commit, push, publication, deployment, or product changes.",
+      "approval_evidence": ".ai/assistant/approvals/recursive-subagent-policy-20260906.json",
+      "validation": {
+        "status": "not-run",
+        "evidence": "The adapter is staged until recursive delegation routing, capability evidence, generated artifacts, and full target validation are complete."
+      },
+      "recorded_at": "2026-09-06T17:24:10+03:00"
+    },
+    {
+      "sequence": 17,
+      "previous_state": "staged",
+      "next_state": "accepted",
+      "reason": "strict-acceptance",
+      "operation_id": "enable-bounded-recursive-delegation",
+      "repository_revision": "unavailable because the workspace has no Git repository metadata or commits",
+      "current_user_authorization": "The user explicitly requested ensuring recursive subagent use when needed, authorizing the bounded delegation-policy and routing update but not commit, push, publication, deployment, or product changes.",
+      "approval_evidence": ".ai/assistant/approvals/recursive-subagent-policy-20260906.json",
+      "validation": {
+        "status": "passed",
+        "evidence": "Full migration-staging and strict acceptance validation passed with 0 errors and 0 blocking warnings. Two non-blocking warnings record shared-workspace delegation isolation and the absence of a target-local checker. Recursive delegation is automatic when beneficial, primary-dispatched, and bounded to depth two."
+      },
+      "recorded_at": "2026-09-06T17:25:40+03:00"
+    }
+  ]
+}

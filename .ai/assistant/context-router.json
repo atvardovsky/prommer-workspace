@@ -1,0 +1,496 @@
+{
+  "schema_version": 11,
+  "router_kind": "target-context-router",
+  "human_reference": ".ai/assistant/context-profiles.md",
+  "preloaded_context": [
+    "AGENTS.md"
+  ],
+  "bootstrap_context": [
+    ".ai/assistant/bootstrap-index.json"
+  ],
+  "context_budgets": {
+    "bootstrap": {
+      "max_files": 2,
+      "max_words": 900,
+      "soft_max_words": 850
+    },
+    "first_use": {
+      "max_files": 2,
+      "max_words": 900,
+      "includes": [
+        "host-preloaded instructions",
+        "bootstrap index"
+      ]
+    },
+    "profile_default": {
+      "max_files": 12,
+      "max_total_words": 8000,
+      "max_portable_words": 5200,
+      "reserved_target_words": 2800
+    },
+    "on_exceed": "load required safety and owner evidence, record expansion reason, measured context, and intentionally omitted context"
+  },
+  "context_receipt": {
+    "required_for": [
+      "budget exceeded",
+      "multiple project areas",
+      "cross-boundary work"
+    ],
+    "fields": [
+      "selected profiles",
+      "selected intent overlays",
+      "task classification",
+      "task decomposition id and implementation levels",
+      "selected task scale overlay",
+      "selected project areas",
+      "selected project knowledge and routing stage",
+      "measurement state",
+      "traversed context index chain",
+      "selected context item IDs and digests",
+      "resolved semantic term IDs and versions",
+      "context packet digest",
+      "stable prefix and dynamic tail digests",
+      "selected assistant provider cache capability",
+      "observed cache read or unavailable telemetry",
+      "semantic fallback or dictionary expansion",
+      "loaded files and reasons",
+      "approximate context volume",
+      "observed evidence source",
+      "token or cost claim classification",
+      "hidden client context limitation",
+      "expansion triggers",
+      "intentionally omitted context",
+      "residual risk"
+    ]
+  },
+  "recursive_context": {
+    "schema_version": 1,
+    "contour_indexes": {
+      "framework": ".ai/framework/context-index.json",
+      "project": ".ai/project/context-index.json",
+      "assistant": ".ai/assistant/context-index.json"
+    },
+    "max_depth": 8,
+    "selection_order": [
+      "task profile and operation",
+      "workspace mode and project area",
+      "fact path symbol contract and dependency selectors",
+      "risk conflict and failed-validation expansion"
+    ],
+    "on_failure": "stop compact interpretation, load the named canonical owner when safe, and report index drift; never load the complete contour by default"
+  },
+  "semantic_codebook": {
+    "schema_version": 2,
+    "index": ".ai/framework/semantics/index.json",
+    "framework_namespace": "alatyr:*",
+    "project_namespace": "project:*",
+    "preload_terms": [
+      "alatyr:current-scope-authorization@1",
+      "alatyr:canonical-owner@1",
+      "alatyr:risk-by-fact@1",
+      "alatyr:protected-change@1",
+      "alatyr:logical-integrity@1",
+      "alatyr:bounded-context-expansion@1"
+    ],
+    "conditional_loading": "load only terms explicitly referenced by selected context items, then resolve their acyclic dependency closure once; legacy schema version 1 indexes retain shard-selector compatibility during migration",
+    "fallback": "load the referenced canonical owner and do not infer a missing stale conflicting cyclic or unsupported compact term"
+  },
+  "context_packet": {
+    "schema_version": 3,
+    "template": ".ai/assistant/templates/context-packet.json",
+    "receipt_required_for": [
+      "budget exceeded",
+      "multiple project areas",
+      "cross-boundary work",
+      "semantic codebook fallback",
+      "material or protected change",
+      "token or cost claim"
+    ]
+  },
+  "cache_aware_delivery": {
+    "schema_version": 1,
+    "provider_capability_index": ".ai/assistant/assistant-capabilities.json",
+    "stable_prefix_order": [
+      "host-preloaded assistant instructions",
+      ".ai/assistant/bootstrap-index.json",
+      "resolved semantic preload definitions",
+      "selected stable framework and project policy"
+    ],
+    "dynamic_tail_order": [
+      "selected canonical owner evidence",
+      "current task operation and changed facts",
+      "volatile revisions hashes timestamps and runtime evidence"
+    ],
+    "provider_controls": "use only when the selected assistant capability record has current evidence that the client exposes them",
+    "telemetry_policy": "claim cache hits or exact savings only from observed host or provider usage fields",
+    "cache_hit_required": false,
+    "context_window_reduction": false,
+    "fallback": "bounded-context-routing"
+  },
+  "task_classification": {
+    "schema_version": 1,
+    "classification_order": [
+      "protected-or-sensitive",
+      "large-or-resumable",
+      "small-task",
+      "standard-task"
+    ],
+    "default_class": "standard-task",
+    "ambiguity_behavior": "stay read-only, select the smallest plausible class, and ask for the missing fact before edits",
+    "classes": {
+      "small-task": {
+        "use_when": [
+          "one base profile is sufficient",
+          "one local surface or directly linked neighbor set is affected",
+          "no accepted semantic or logical fact changes",
+          "no approval safety data architecture public contract or live-external boundary is crossed",
+          "focused validation can prove the result"
+        ],
+        "task_scale_overlay": "small-task",
+        "pre_change_preview": "skip with short reason unless a trigger fires",
+        "evidence": "compact small-task evidence"
+      },
+      "standard-task": {
+        "use_when": [
+          "one base profile is selected but semantic or validation reasoning is needed",
+          "scope remains within one project area or owner set",
+          "work does not need separate workstreams"
+        ],
+        "task_scale_overlay": null,
+        "pre_change_preview": "risk-gated"
+      },
+      "large-or-resumable": {
+        "use_when": [
+          "multiple profiles project areas workstreams or approval checkpoints are needed",
+          "the selected context exceeds the profile budget",
+          "the user explicitly asks for phased or resumable work"
+        ],
+        "task_scale_overlay": "large-or-resumable",
+        "pre_change_preview": "required before edits"
+      },
+      "protected-or-sensitive": {
+        "use_when": [
+          "approval safety security credential permission destructive spend production or live-external boundary may apply",
+          "current user authorization or approval scope is unclear"
+        ],
+        "task_scale_overlay": null,
+        "pre_change_preview": "required before edits"
+      }
+    },
+    "expansion_triggers": [
+      "semantic or logical fact changes",
+      "source-of-truth owner is missing disputed or contradicted",
+      "approval safety security data architecture public contract or live-external boundary appears",
+      "multiple project areas profiles workstreams or changed-fact owners are required",
+      "focused validation fails or cannot prove the changed contract",
+      "user asks for broad audit large-task orchestration change package or debug evidence"
+    ]
+  },
+  "task_decomposition": {
+    "schema_version": 1,
+    "policy": ".ai/assistant/task-decomposition.json",
+    "plan_template": ".ai/assistant/templates/task-decomposition.md",
+    "load_after": [
+      "task classification",
+      "operation routing",
+      "profile and area selection",
+      "changed-fact risk authorization and support-delta signals"
+    ],
+    "use_when": [
+      "non-trivial request",
+      "standard large protected or delegated task",
+      "small-task one-node evidence cannot prove enough"
+    ],
+    "conditional_context": [
+      {
+        "path": ".ai/framework/task-decomposition.md",
+        "when": "task splitting implementation levels dependency ordering executor selection or policy repair is ambiguous"
+      }
+    ],
+    "small_task_behavior": "one local task may be recorded from the entry packet without loading the full policy",
+    "executor_selection": "primary first; worker only through enabled delegation policy and selected capability record"
+  },
+  "agent_entry_packet": {
+    "schema_version": 3,
+    "path": ".ai/assistant/entry-packet.json",
+    "load_when": "bootstrap recovery adapter audit or routing conflict",
+    "purpose": "lazy recovery route containing installation state, decomposition cues, routing source pointers, authorization boundaries, and delta-first support review entry points",
+    "load_human_references_when": [
+      "ambiguity",
+      "conflict",
+      "adapter repair",
+      "human rationale requested"
+    ]
+  },
+  "operation_routing": {
+    "index": ".ai/assistant/operation-index.json",
+    "catalog": ".ai/assistant/operation-catalog.json",
+    "fallback_operation": "help",
+    "health_operation": "adapter-health",
+    "single_entry_alias": "Alatyr",
+    "load_index_when": [
+      "exact operation ID or request alias",
+      "clear operation handoff"
+    ],
+    "load_catalog_when": [
+      "bare Alatyr entry",
+      "ambiguity",
+      "operation or adapter repair"
+    ],
+    "automatic_when": "single enabled sufficient match",
+    "preview_policy": "risk-gated"
+  },
+  "workspace_mode_routing": {
+    "required_module": "workspace-modes",
+    "selection_order": [
+      "explicit accepted mode",
+      "single unambiguous accepted evidence match",
+      "accepted default whose conditions apply"
+    ],
+    "ambiguity_behavior": "ask-user-and-remain-read-only",
+    "no_match_behavior": "root-read-only"
+  },
+  "project_knowledge_routing": {
+    "descriptor": ".ai/assistant/context/project-knowledge-routing.json",
+    "initial_after": "task profile and project-area selection",
+    "refined_after": "changed facts paths symbols dependencies contracts or issue lineage become known",
+    "profile_only_match_allowed": false
+  },
+  "migration_routing": {
+    "assessment_required_before_changes": true,
+    "descriptor": ".ai/assistant/context/migration-routing.json"
+  },
+  "intent_overlays": {
+    "architecture-request": {
+      "use_when": [
+        "architecture inventory explanation pattern discussion comparison review or documentation request"
+      ],
+      "operation_candidates": [
+        "architecture-assistance"
+      ],
+      "required_module": "architecture-knowledge",
+      "descriptor": ".ai/assistant/context/intents/architecture-request.json"
+    },
+    "failure-analysis-request": {
+      "use_when": [
+        "failure analysis",
+        "failure autopsy",
+        "root cause",
+        "pipeline failure"
+      ],
+      "operation_candidates": [
+        "failure-analysis"
+      ],
+      "required_context": [
+        ".ai/assistant/flows/failure-analysis.flow.md",
+        ".ai/project/delivery-policy.md",
+        ".ai/project/privacy-policy.md"
+      ]
+    },
+    "implementation-request": {
+      "use_when": [
+        "build working code",
+        "implement workflow",
+        "ship an end-to-end slice"
+      ],
+      "operation_candidates": [
+        "product-change"
+      ],
+      "required_context": [
+        ".ai/project/product-context.md",
+        ".ai/project/delivery-policy.md",
+        ".ai/project/privacy-policy.md"
+      ]
+    }
+  },
+  "task_scale_overlays": {
+    "small-task": {
+      "use_when": [
+        "classified small-task"
+      ],
+      "descriptor": ".ai/assistant/context/task-scales/small-task.json"
+    },
+    "delegated-execution": {
+      "use_when": [
+        "the user explicitly requests subagents delegation or parallel agent work"
+      ],
+      "descriptor": ".ai/assistant/context/task-scales/delegated-execution.json"
+    },
+    "engineering-evidence": {
+      "use_when": [
+        "material task finalization or explicit engineering-evidence request"
+      ],
+      "descriptor": ".ai/assistant/context/task-scales/engineering-evidence.json"
+    },
+    "debug-mode": {
+      "use_when": [
+        "explicit current-task or current-session Debug Mode activation",
+        "status checkpoint finalization disablement or comparison for selected debug evidence"
+      ],
+      "descriptor": ".ai/assistant/context/task-scales/debug-mode.json"
+    }
+  },
+  "area_overlays": {
+    "prommer-public-site": {
+      "use_when": [
+        "prommer.net",
+        "public website",
+        "personal brand",
+        "Ask AI Tom",
+        "Tech and AI content"
+      ],
+      "required_context": [
+        ".ai/project/product-context.md",
+        ".ai/project/privacy-policy.md",
+        ".ai/project/delivery-policy.md"
+      ],
+      "expand_when": [
+        "a concrete implementation brief or codebase is supplied",
+        "external publication analytics email social or paid API is proposed",
+        "runtime provider credentials deployment or submission requirements appear"
+      ]
+    }
+  },
+  "cost_scenarios": {},
+  "routing_order": [
+    "docs-local",
+    "code-local",
+    "business-change",
+    "architecture-change",
+    "data-change",
+    "security-sensitive",
+    "ai-infrastructure",
+    "framework-upgrade"
+  ],
+  "profile_index": {
+    "docs-local": {
+      "use_when": [
+        "local wording",
+        "README or documentation text",
+        "non-semantic documentation change"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/docs-local.json",
+      "operation_candidates": [
+        "documentation-sync",
+        "drift-review",
+        "logical-integrity-review",
+        "project-knowledge"
+      ]
+    },
+    "code-local": {
+      "use_when": [
+        "implementation change",
+        "test change",
+        "no accepted behavior change",
+        "review comments or defect fixes"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/code-local.json",
+      "operation_candidates": [
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "drift-review",
+        "failure-analysis",
+        "product-change"
+      ]
+    },
+    "business-change": {
+      "use_when": [
+        "accepted behavior change",
+        "domain rule change",
+        "product policy change",
+        "workflow or public contract change"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/business-change.json",
+      "operation_candidates": [
+        "create-project-blueprint",
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge"
+      ]
+    },
+    "architecture-change": {
+      "use_when": [
+        "module boundary change",
+        "dependency direction change",
+        "runtime topology change",
+        "public API or cross-component contract change"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/architecture-change.json",
+      "operation_candidates": [
+        "create-project-blueprint",
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "failure-analysis"
+      ]
+    },
+    "data-change": {
+      "use_when": [
+        "schema change",
+        "persistence change",
+        "migration or backfill",
+        "data ownership or retention change"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/data-change.json",
+      "operation_candidates": [
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "drift-review"
+      ]
+    },
+    "security-sensitive": {
+      "use_when": [
+        "secrets or credentials",
+        "permissions or authentication",
+        "network or external services",
+        "destructive actions",
+        "production or spend boundary"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/security-sensitive.json",
+      "operation_candidates": [
+        "product-change",
+        "logical-integrity-review",
+        "engineering-evidence",
+        "project-knowledge",
+        "skill-adaptation",
+        "failure-analysis",
+        "drift-review"
+      ]
+    },
+    "ai-infrastructure": {
+      "use_when": [
+        "AI infrastructure inventory, recommendation, or item improvement",
+        "prompt or skill change",
+        "assistant wrapper or bridge change",
+        "MCP or tool config change",
+        "checker gate flow or template change",
+        "third-party assistant infrastructure review"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/ai-infrastructure.json",
+      "operation_candidates": [
+        "ai-infrastructure-inventory",
+        "ai-infrastructure-recommendation",
+        "skill-adaptation"
+      ]
+    },
+    "framework-upgrade": {
+      "use_when": [
+        "installing Alatyr",
+        "updating Alatyr Core",
+        "adapter recheck",
+        "adapter maturity review",
+        "framework drift repair"
+      ],
+      "descriptor": ".ai/assistant/context/profiles/framework-upgrade.json",
+      "operation_candidates": [
+        "adapter-health",
+        "drift-review"
+      ]
+    }
+  }
+}

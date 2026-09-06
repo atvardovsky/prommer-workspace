@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "index_kind": "target-operation-index",
+  "catalog": ".ai/assistant/operation-catalog.json",
+  "aliases": {
+    "Alatyr": "help",
+    "Alatyr help": "help",
+    "Alatyr status": "adapter-health",
+    "Alatyr doctor": "adapter-health",
+    "create blueprint": "create-project-blueprint",
+    "repair blueprint": "create-project-blueprint",
+    "recheck blueprint": "create-project-blueprint",
+    "change business rule": "product-change",
+    "product change": "product-change",
+    "Alatyr architecture": "architecture-assistance",
+    "Alatyr architecture inventory": "architecture-assistance",
+    "explain architecture": "architecture-assistance",
+    "discuss architecture pattern": "architecture-assistance",
+    "compare architecture options": "architecture-assistance",
+    "review architecture": "architecture-assistance",
+    "document architecture": "architecture-assistance",
+    "failure autopsy": "failure-analysis",
+    "failure analysis": "failure-analysis",
+    "root cause analysis": "failure-analysis",
+    "Alatyr evidence": "engineering-evidence",
+    "Alatyr capture evidence": "engineering-evidence",
+    "Alatyr explain decision": "engineering-evidence",
+    "Alatyr knowledge": "project-knowledge",
+    "Alatyr remember this": "project-knowledge",
+    "Alatyr record guidance": "project-knowledge",
+    "Alatyr what do we know": "project-knowledge",
+    "Alatyr revalidate knowledge": "project-knowledge",
+    "Enable Alatyr Debug Mode": "debug-mode",
+    "Alatyr debug": "debug-mode",
+    "Alatyr debug status": "debug-mode",
+    "Alatyr debug checkpoint": "debug-mode",
+    "Alatyr debug summary": "debug-mode",
+    "Disable Alatyr Debug Mode": "debug-mode",
+    "Alatyr compare debug": "debug-mode",
+    "check integrity": "logical-integrity-review",
+    "logical integrity review": "logical-integrity-review",
+    "Alatyr impact": "logical-integrity-review",
+    "Alatyr support diff": "logical-integrity-review",
+    "Alatyr change cost": "logical-integrity-review",
+    "alatyr-ai-inventory": "ai-infrastructure-inventory",
+    "alatyr-suggest-ai": "ai-infrastructure-recommendation",
+    "alatyr-improve-ai": "ai-infrastructure-recommendation",
+    "Alatyr suggest extensions": "ai-infrastructure-recommendation",
+    "alatyr-adaptation": "skill-adaptation",
+    "alatyr-add-ai": "skill-adaptation",
+    "review drift": "drift-review",
+    "find stale Alatyr facts": "drift-review",
+    "sync documentation": "documentation-sync",
+    "sync diagrams": "documentation-sync",
+    "document code": "documentation-sync",
+    "propose comment style": "documentation-sync",
+    "generate code docs": "documentation-sync",
+    "review code documentation": "documentation-sync"
+  },
+  "operations": {
+    "help": [
+      "core-profile",
+      ".ai/assistant/flows/operation-routing.flow.md",
+      "read-only"
+    ],
+    "adapter-health": [
+      "core-profile",
+      ".ai/assistant/flows/adapter-health.flow.md",
+      "read-only"
+    ],
+    "create-project-blueprint": [
+      "blueprint-change",
+      ".ai/assistant/flows/project-blueprint-creation.flow.md",
+      "read-only",
+      "docs-only",
+      "full-with-approval"
+    ],
+    "product-change": [
+      "blueprint-change",
+      ".ai/assistant/flows/blueprint-driven-change.flow.md",
+      "read-only",
+      "docs-only",
+      "code-and-tests",
+      "full-with-approval"
+    ],
+    "architecture-assistance": [
+      "architecture-knowledge",
+      ".ai/assistant/flows/architecture-assistance.flow.md",
+      "read-only",
+      "docs-only",
+      "full-with-approval"
+    ],
+    "failure-analysis": [
+      "core-profile",
+      ".ai/assistant/flows/failure-analysis.flow.md",
+      "read-only",
+      "docs-only"
+    ],
+    "engineering-evidence": [
+      "core-profile",
+      ".ai/assistant/flows/engineering-evidence-capture.flow.md",
+      "read-only",
+      "docs-only",
+      "adapter-only",
+      "code-and-tests",
+      "full-with-approval"
+    ],
+    "project-knowledge": [
+      "core-profile",
+      ".ai/assistant/flows/project-knowledge.flow.md",
+      "read-only",
+      "docs-only",
+      "adapter-only",
+      "code-and-tests",
+      "full-with-approval"
+    ],
+    "debug-mode": [
+      "debug-mode",
+      ".ai/assistant/flows/debug-mode.flow.md",
+      "read-only",
+      "adapter-only"
+    ],
+    "logical-integrity-review": [
+      "core-profile",
+      ".ai/assistant/flows/logical-integrity-review.flow.md",
+      "read-only",
+      "docs-only",
+      "adapter-only",
+      "code-and-tests",
+      "full-with-approval"
+    ],
+    "ai-infrastructure-inventory": [
+      "ai-infrastructure",
+      ".ai/assistant/flows/ai-infrastructure-inventory.flow.md",
+      "read-only"
+    ],
+    "ai-infrastructure-recommendation": [
+      "ai-infrastructure",
+      ".ai/assistant/flows/ai-infrastructure-recommendation.flow.md",
+      "read-only"
+    ],
+    "skill-adaptation": [
+      "ai-infrastructure",
+      ".ai/assistant/flows/skill-adaptation.flow.md",
+      "read-only",
+      "adapter-only",
+      "full-with-approval"
+    ],
+    "drift-review": [
+      "core-profile",
+      ".ai/assistant/flows/logical-integrity-review.flow.md",
+      "read-only",
+      "docs-only",
+      "adapter-only",
+      "code-and-tests",
+      "full-with-approval"
+    ],
+    "documentation-sync": [
+      "core-profile",
+      ".ai/assistant/flows/documentation-sync.flow.md",
+      "read-only",
+      "docs-only",
+      "adapter-only",
+      "code-and-tests",
+      "full-with-approval"
+    ]
+  }
+}
