@@ -17,9 +17,9 @@ owner:
   responsible_team: "repository maintainers"
   technical_owner: "primary repository maintainer"
   backup_owner: "backup repository maintainer"
-  last_review_date: "2026-09-03"
+  last_review_date: "2026-09-08"
   review_cadence: "when a new implementation brief arrives and on every Alatyr framework update"
-  codeowners: "not used; this fresh target has no file-owner metadata"
+  codeowners: "CODEOWNERS"
   review_triggers:
     - "a new implementation brief, product source, or validation policy is added"
     - "Alatyr framework, adapter schema, or template version changes"
@@ -105,10 +105,14 @@ modules:
   blocked: []
 validation:
   commands:
-    - name: "manual target review"
-      command: "manual-review: inspect changed files and report that automated project validation is unavailable"
+    - name: "product checks"
+      command: "npm run check"
       required_for:
-        - "all task profiles until project validation is added"
+        - "all product-code and documentation changes"
+    - name: "TypeScript build"
+      command: "npm run build"
+      required_for:
+        - "all product-code changes"
 ai_infrastructure:
   router: ".ai/assistant/ai-infrastructure-router.json"
   inventory: ".ai/assistant/templates/ai-infrastructure-inventory.md"
@@ -199,16 +203,14 @@ policies:
   source_access: ".ai/assistant/policies/ai-infrastructure-source-access.md"
   prompt_injection: ".ai/assistant/policies/prompt-injection.md"
 known_gaps:
-  - "The target contains no implementation brief, product source, package metadata, tests, CI, or project validation commands."
   - "Named human owner identities are not available; repository-maintainer roles are used."
-  - "The workspace exposes no usable Git revision, so installation evidence cannot be revision-bound until the repository has a commit."
   - "Codex loading is configured through AGENTS.md but has not been independently observed in a later session."
-  - "Runtime, input/output contract, provider requirements, delivery format, and deployment expectations are not established."
+  - "Production deployment, model selection, live-provider verification, LinkedIn publication, CI, and persistent approval expectations are not established."
   - "Optional modules other than AI infrastructure, architecture knowledge, blueprint change, Debug Mode, effectiveness metrics, installed operations, multi-assistant bridges, and subagent delegation remain deferred until target evidence justifies them."
 local_deviations:
   - "The core support profile uses the complete framework pack so project knowledge, development-pattern evidence, Debug Mode, and their required dependencies are available."
   - "Diagram routing is disabled. Portable framework diagram guidance remains installed as inert complete-pack documentation."
   - "Structured records are permitted only under the project retention policy; non-product contextual metadata, raw prompts, transcripts, timing, drafts, private reasoning, and credentials remain prohibited."
   - "Delegation uses the shared Codex workspace with packet-level disjoint-write enforcement; the primary assistant retains decisions, approvals, integration, and final convergence."
-  - "Architecture knowledge is enabled with an empty concrete-pattern catalog; only neutral selection principles are established until repository evidence and a maintainer decision identify a solution architecture."
+  - "Architecture knowledge records the accepted modular POC boundary; production deployment and authenticated LinkedIn publication remain unknown."
   - "AlatyrCore source validation tools are not vendored into the target."

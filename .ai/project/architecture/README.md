@@ -1,7 +1,7 @@
 # Project Architecture Knowledge
 
-Use this project-contour index to discuss and eventually record the workspace
-architecture without treating an unknown implementation as established fact.
+This index records the accepted architecture of the current LinkedIn
+content-workflow POC and keeps production unknowns explicit.
 
 Machine-readable catalog: `.ai/project/architecture/catalog.json`
 Source-of-truth registry: `.ai/project/source-of-truth-registry.md`
@@ -14,8 +14,8 @@ Canonical architecture sources: this file and `.ai/project/source-of-truth-regis
 Decision-record sources: `.ai/project/architecture/catalog.json` and future project-owned records linked from it
 Diagram sources: none; diagram routing is disabled
 Validation or fitness checks: Alatyr structural validation plus review against future repository evidence and project validation commands
-Last reviewed: 2026-09-03
-Evidence revision: no Git revision is available; evidence is bound to the current validated workspace files
+Last reviewed: 2026-09-08
+Evidence revision: working tree validated on 2026-09-08; commit was outside the authorized implementation phase
 
 ## Status Meanings
 
@@ -32,14 +32,27 @@ Implementation frequency, age, or recency does not make a pattern accepted.
 
 ## Architecture Areas
 
-No architecture areas are currently established. Add an area only after the
-requirements or repository supply a real boundary, owner, and evidence source.
+### LinkedIn content workflow
+
+The accepted POC area converts one public prommer.net article into a reviewed
+LinkedIn draft and local artifacts. It owns source extraction, evidence-backed
+handoffs, provider-neutral generation and review, a maximum of one revision,
+and the human publication boundary. It does not own LinkedIn posting,
+deployment, analytics, or production approval storage.
 
 ## Architecture Patterns And Items
 
-No concrete pattern is currently selected. In particular, do not infer a
-runtime agent topology, application style, model provider, framework,
-database, retrieval system, queue, cloud platform, or deployment topology.
+- `PROMMER-ARCH-001` — accepted modular ports-and-adapters boundary. Domain and
+  application code own contracts; infrastructure implements article, model,
+  and filesystem adapters. Dependencies point inward.
+- `PROMMER-ARCH-002` — accepted explicit orchestration. The controller owns
+  agent order, typed handoffs, and a maximum of one reviewer-requested revision.
+- `PROMMER-ARCH-003` — accepted human publication gate. Local artifact export
+  is allowed; live LinkedIn publication is not part of the POC.
+
+The root `README.md` contains the GitHub-rendered component, sequence, and
+provider diagrams. `src/domain/contracts.ts`, `src/application`, and the test
+suite are executable evidence for these patterns.
 
 ## Architecture Selection Principles
 
@@ -82,10 +95,11 @@ pattern is implemented or preferred.
 
 ## Known Gaps And Contradictions
 
-- The implementation requirements, codebase, runtime, dependency graph, data
-  boundaries, validation commands, and deployment topology are unavailable.
-- There are no known contradictions because there is no concrete architecture
-  evidence yet.
+- Production deployment, model selection, observability, persistence, and
+  authenticated LinkedIn integration are not selected.
+- Live provider behavior is protocol-mapped but is not exercised by automated
+  validation because credentials and paid calls are intentionally excluded.
+- There are no known contradictions in the implemented POC boundary.
 
 ## Maintenance Triggers
 

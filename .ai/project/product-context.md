@@ -28,12 +28,23 @@ identity and related public interests.
 - Preserve graceful behavior when an AI provider or external integration is
   unavailable.
 
+## Current POC Behavior
+
+- The current product slice prepares a LinkedIn draft from one public
+  prommer.net article.
+- A source analyst creates evidence-backed claims, a writer generates the
+  draft, and an independent reviewer either approves it or requests one bounded
+  revision.
+- OpenAI and Anthropic are supported behind a provider-neutral structured-output
+  contract; an offline deterministic simulator supports credential-free demos.
+- The workflow exports Markdown and JSON for human review. It never posts to
+  LinkedIn.
+
 ## Current Unknowns
 
-The implementation brief, codebase, runtime, inputs and outputs, provider
-requirements, credentials, submission format, and deployment expectations are
-not established. Inspect newly supplied materials before selecting a stack or
-changing project behavior.
+Deployment expectations, production model selection, voice calibration,
+LinkedIn OAuth and publication requirements, analytics, persistent approvals,
+and production observability remain unestablished.
 
 ## Public Sources
 

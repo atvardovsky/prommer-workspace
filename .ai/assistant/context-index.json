@@ -85,7 +85,7 @@
         "ALATYR-INTEGRITY-001"
       ],
       "estimated_words": 329,
-      "content_digest": "sha256:a7e04350b2033272527facc2ca0f139c19573bae806767b6ff578f3e99c96a3e"
+      "content_digest": "sha256:7b17605b236f3181cf7ebcb398e0d9d6b0f18bc2ef25f2209a3afaa4bc464429"
     },
     {
       "id": "assistant.content.bridge-capability-matrix-md",
@@ -224,7 +224,7 @@
         "ALATYR-CONTEXT-001"
       ],
       "estimated_words": 300,
-      "content_digest": "sha256:8798253130c5a0ed57bd04dfc22090377bab24e9168724a3d38479955541fe3b"
+      "content_digest": "sha256:511c0cf211a33728fe09e7639b329e19e1b6b5bade0be395a81177b36123a62d"
     },
     {
       "id": "assistant.content.help-md",

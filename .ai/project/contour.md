@@ -1,9 +1,9 @@
 # Project Contour
 
 This contour describes the prommer.net workspace. Public product positioning
-is recorded, while the implementation brief, codebase, package metadata,
-tests, CI, and deployment contract remain unavailable. The items below define
-ownership categories to populate from future repository evidence.
+and a runnable LinkedIn content-workflow POC are recorded. The codebase now has
+package metadata, runtime contracts, tests, and local validation commands;
+production deployment and external-publication contracts remain unavailable.
 
 ## Owns
 
@@ -64,7 +64,7 @@ ownership categories to populate from future repository evidence.
 
 Current target source-of-truth files:
 
-- `.ai/project/contour.md` for the explicit empty-target baseline
+- `.ai/project/contour.md` for the current target baseline
 - `.ai/project/source-of-truth-registry.md`
 - `.ai/project/product-context.md`
 - `.ai/project/delivery-policy.md`

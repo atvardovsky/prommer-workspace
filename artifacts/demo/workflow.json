@@ -1,0 +1,64 @@
+{
+  "status": "approved",
+  "sourceBrief": {
+    "title": "AI Is the New OS",
+    "canonicalUrl": "https://prommer.net/en/tech/ai-is-the-new-os/",
+    "summary": "AI is becoming an operating layer for modern organizations.",
+    "claims": [
+      {
+        "id": "claim-1",
+        "statement": "AI is becoming an operating layer for modern organizations.",
+        "evidence": "AI is becoming an operating layer for modern organizations."
+      },
+      {
+        "id": "claim-2",
+        "statement": "The advantage comes from redesigning workflows around people and agents, not from adding a chatbot to an unchanged process.",
+        "evidence": "The advantage comes from redesigning workflows around people and agents, not from adding a chatbot to an unchanged process."
+      },
+      {
+        "id": "claim-3",
+        "statement": "Leaders should begin with one bounded workflow, explicit quality gates, and a human decision at the consequential boundary.",
+        "evidence": "Leaders should begin with one bounded workflow, explicit quality gates, and a human decision at the consequential boundary."
+      }
+    ]
+  },
+  "draft": {
+    "text": "AI Is the New OS\n\nAI is becoming an operating layer for modern organizations.\n\n• AI is becoming an operating layer for modern organizations.\n• The advantage comes from redesigning workflows around people and agents, not from adding a chatbot to an unchanged process.\n• Leaders should begin with one bounded workflow, explicit quality gates, and a human decision at the consequential boundary.\n\nWhat workflow would you redesign first?\n\nhttps://prommer.net/en/tech/ai-is-the-new-os/",
+    "sourceUrl": "https://prommer.net/en/tech/ai-is-the-new-os/",
+    "hashtags": [
+      "AgenticAI",
+      "AIOperations"
+    ],
+    "referencedClaimIds": [
+      "claim-1",
+      "claim-2",
+      "claim-3"
+    ]
+  },
+  "review": {
+    "approved": true,
+    "issues": [],
+    "revisionInstructions": []
+  },
+  "revisionCount": 0,
+  "trace": [
+    {
+      "step": "source-analysis",
+      "attempt": 1,
+      "status": "completed",
+      "summary": "Grounded 3 claims from AI Is the New OS."
+    },
+    {
+      "step": "linkedin-writing",
+      "attempt": 1,
+      "status": "completed",
+      "summary": "Created the initial LinkedIn draft."
+    },
+    {
+      "step": "editorial-review",
+      "attempt": 1,
+      "status": "approved",
+      "summary": "Reviewer approved the initial draft."
+    }
+  ]
+}

@@ -14,12 +14,88 @@
     ".ai/project/architecture/catalog.json",
     ".ai/project/architecture/README.md"
   ],
-  "last_reviewed": "2026-09-03",
-  "evidence_revision": "no Git revision is available; evidence is bound to the current validated workspace files",
-  "areas": [],
-  "patterns": [],
+  "last_reviewed": "2026-09-08",
+  "evidence_revision": "working tree validated on 2026-09-08; commit was outside the authorized implementation phase",
+  "areas": [
+    {
+      "id": "linkedin-content-workflow",
+      "name": "LinkedIn content workflow POC",
+      "status": "accepted",
+      "owner": "repository maintainers",
+      "detail": ".ai/project/architecture/README.md",
+      "evidence": [
+        "src/application/workflow/linkedin-workflow.ts",
+        "tests/workflow.test.ts",
+        "README.md"
+      ],
+      "pattern_ids": [
+        "PROMMER-ARCH-001",
+        "PROMMER-ARCH-002",
+        "PROMMER-ARCH-003"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "PROMMER-ARCH-001",
+      "name": "Modular ports and adapters",
+      "kind": "boundary",
+      "status": "accepted",
+      "scope": ["linkedin-content-workflow"],
+      "problem": "Keep agents independent of AI vendors, network retrieval, and artifact storage.",
+      "decision_owner": "repository maintainers",
+      "decision_record": ".ai/project/architecture/README.md#architecture-patterns-and-items",
+      "detail": ".ai/project/architecture/README.md",
+      "evidence": [
+        "src/application/ports/ai-provider.ts",
+        "src/infrastructure/providers/openai-provider.ts",
+        "src/infrastructure/providers/anthropic-provider.ts"
+      ],
+      "validation": ["npm run check", "npm run build"],
+      "related_pattern_ids": ["PROMMER-ARCH-002"],
+      "last_verified_revision": "working tree validated 2026-09-08"
+    },
+    {
+      "id": "PROMMER-ARCH-002",
+      "name": "Explicit bounded agent orchestration",
+      "kind": "runtime",
+      "status": "accepted",
+      "scope": ["linkedin-content-workflow"],
+      "problem": "Make agent handoffs, quality checks, and retry termination deterministic and inspectable.",
+      "decision_owner": "repository maintainers",
+      "decision_record": ".ai/project/architecture/README.md#architecture-patterns-and-items",
+      "detail": ".ai/project/architecture/README.md",
+      "evidence": [
+        "src/application/workflow/linkedin-workflow.ts",
+        "src/domain/contracts.ts",
+        "tests/workflow.test.ts"
+      ],
+      "validation": ["npm run check", "npm run build"],
+      "related_pattern_ids": ["PROMMER-ARCH-001", "PROMMER-ARCH-003"],
+      "last_verified_revision": "working tree validated 2026-09-08"
+    },
+    {
+      "id": "PROMMER-ARCH-003",
+      "name": "Human publication gate",
+      "kind": "security",
+      "status": "accepted",
+      "scope": ["linkedin-content-workflow"],
+      "problem": "Prevent generated content from causing an unreviewed live social-media side effect.",
+      "decision_owner": "repository maintainers",
+      "decision_record": ".ai/project/architecture/README.md#architecture-patterns-and-items",
+      "detail": ".ai/project/product-context.md",
+      "evidence": [
+        "src/infrastructure/publishing/filesystem-artifact-publisher.ts",
+        "tests/filesystem-publisher.test.ts",
+        "README.md"
+      ],
+      "validation": ["npm run check", "npm run build"],
+      "related_pattern_ids": ["PROMMER-ARCH-002"],
+      "last_verified_revision": "working tree validated 2026-09-08"
+    }
+  ],
   "known_gaps": [
-    "The implementation requirements, codebase, runtime, dependency graph, data boundaries, validation commands, and deployment topology are not established.",
-    "No concrete architecture area, pattern, or solution decision is selected."
+    "Production deployment, model selection, observability, persistence, and authenticated LinkedIn integration are not established.",
+    "Live provider requests are not part of automated validation because credentials and paid calls are excluded."
   ]
 }

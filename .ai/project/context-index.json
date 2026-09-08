@@ -32,7 +32,7 @@
         "ALATYR-CONTEXT-001"
       ],
       "estimated_words": 529,
-      "content_digest": "sha256:83feb177c4745db8abb2e324a3e33a654adea2162ba8ca1baf0326df3a4491f4"
+      "content_digest": "sha256:be260d385304192c58cd17e2e88e4a284771b3ec09d5547186bcff650bca3e6a"
     },
     {
       "id": "project.content.delivery-policy-md",
@@ -122,8 +122,8 @@
       "owner_refs": [
         "ALATYR-CONTEXT-001"
       ],
-      "estimated_words": 215,
-      "content_digest": "sha256:82f17e2fc73aa8a3331e67de2a31f11f780321beb3b68a8c7516179ecf2cca26"
+      "estimated_words": 279,
+      "content_digest": "sha256:181404596db024fd586721f563dda7951935d9d5c307a2dbed2b47200f5f13b6"
     },
     {
       "id": "project.content.source-of-truth-registry-md",
@@ -146,8 +146,8 @@
       "owner_refs": [
         "ALATYR-CONTEXT-001"
       ],
-      "estimated_words": 562,
-      "content_digest": "sha256:6e9736adc9e587b41b4b35f3051fd797436ec6d8bc80c1e42d4bc974b2918582"
+      "estimated_words": 604,
+      "content_digest": "sha256:e527833a04d80539ad3b112ac4098a5e7ec900c9d870e389f69618bf40aff39c"
     },
     {
       "id": "project.content.support-policy-json",
@@ -185,7 +185,7 @@
       "semantic_refs": [],
       "owner_refs": [],
       "estimated_words": 130,
-      "content_digest": "sha256:3cdc8adf44ec7df6431cdb9a7b009b44391635ddc3556918b49ef57693248dc2"
+      "content_digest": "sha256:19cf880df1b8edbcbab7ed20b40d2d27590f901bdce059870f93e152d98139df"
     },
     {
       "id": "project.section.debug",

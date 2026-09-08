@@ -1,16 +1,16 @@
 # Source Of Truth Registry
 
-This registry records the current fact ownership state for the prommer.net workspace.
-The target contains no product implementation yet, so absent owners are
-explicit gaps rather than inferred facts.
+This registry records the current fact ownership state for the prommer.net
+workspace. The repository contains a runnable LinkedIn content-workflow POC;
+production and external-publication facts remain explicit gaps.
 
 ## Baseline Registry Entries
 
 ### Fact Type: `product behavior`
 
-Canonical owner: `.ai/project/product-context.md` for public positioning and
-audience facts. Concrete application behavior remains unestablished and needs
-a supplied specification or code/test contract plus maintainer review.
+Canonical owner: `.ai/project/product-context.md` for public positioning,
+audience, scope, and human-publication boundary. `src/domain/contracts.ts` and
+the application tests own executable behavior at agent handoffs.
 
 ### Fact Type: `business rule`
 
@@ -19,17 +19,17 @@ require an identified decision owner before acceptance.
 
 ### Fact Type: `architecture decision`
 
-Canonical owner: `.ai/project/architecture/README.md` for architecture
-selection policy and `.ai/project/architecture/catalog.json` for routed
-decision records. No concrete solution decision or diagram exists. Proposals
-remain proposed until repository evidence, maintainer acceptance, and any
-required approval are recorded.
+Canonical owner: `.ai/project/architecture/README.md` for architecture intent
+and `.ai/project/architecture/catalog.json` for routed decision records. The
+root `README.md` owns GitHub-rendered operational diagrams derived from those
+decisions.
 
 ### Fact Type: `architecture pattern`
 
 Canonical owner: `.ai/project/architecture/catalog.json`, with detail routed to
-the project-owned source named by each catalog item. The catalog currently has
-no concrete patterns. Implementation frequency must not be treated as intent.
+the project-owned source named by each catalog item. Accepted POC patterns are
+modular ports and adapters, explicit bounded orchestration, and a human
+publication gate.
 
 ### Fact Type: `data model`
 
@@ -39,8 +39,9 @@ facts.
 
 ### Fact Type: `dependency public contract and target use`
 
-Canonical owner: not established because there is no package manifest or
-lockfile. The optional dependency-knowledge module is disabled.
+Canonical owner: `package.json` for declared dependencies and scripts;
+`package-lock.json` owns exact resolved dependency versions. The optional
+dependency-knowledge module remains disabled.
 
 ### Fact Type: `workspace identity and development mode relationship`
 
@@ -49,15 +50,18 @@ workspace modes are defined; the optional workspace-modes module is disabled.
 
 ### Fact Type: `validation command`
 
-Canonical owner: `.ai/alatyr.yaml` and `.ai/project/delivery-policy.md`. Only
-manual target review is currently available. No product build, test, lint, or
-CI command exists.
+Canonical owner: `package.json` for product commands and `.ai/alatyr.yaml` for
+the routed validation set. `npm run check` validates formatting, types, and
+tests; `npm run build` validates the distributable TypeScript build. CI remains
+unestablished.
 
 ### Fact Type: `security policy`
 
-Canonical owner: not established. Security-sensitive work is blocked until a
-target owner, policy, credential boundary, approval rule, and validation are
-recorded.
+Canonical owner: `.ai/project/privacy-policy.md` for retained information and
+`.ai/project/product-context.md` for the external-publication boundary. Provider
+credentials are accepted only by the composition-root factory and must never
+enter source, traces, or artifacts. Broader production security policy remains
+unestablished.
 
 ### Fact Type: `assistant operation`
 
@@ -92,8 +96,9 @@ prommer.net-specific fit are required once implementation begins.
 
 ### Fact Type: `code documentation profile`
 
-Canonical owner: not established. The optional code-documentation module is
-disabled.
+Canonical owner: root `README.md` for public POC documentation and source TSDoc
+for exported contracts, classes, and functions. The optional code-documentation
+module remains disabled.
 
 ### Fact Type: `project vocabulary`
 
@@ -102,8 +107,10 @@ disabled.
 
 ### Fact Type: `test strategy and test-first policy`
 
-Canonical owner: not established. No tests, commands, fixtures, CI gates, or
-accepted TDD policy exist. The optional test-first module is disabled.
+Canonical owner: `tests/**/*.test.ts` for executable behavioral expectations
+and `package.json` for validation commands. Contract-first TDD is required for
+this POC and its RED/GREEN evidence is summarized in `README.md`; the optional
+test-first module remains disabled and CI policy remains unestablished.
 
 ### Fact Type: `team policy`
 

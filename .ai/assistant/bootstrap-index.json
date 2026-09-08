@@ -228,11 +228,9 @@
     "subagent-delegation"
   ],
   "known_gaps": [
-    "The target contains no implementation brief, product source, package metadata, tests, CI, or project validation commands.",
     "Named human owner identities are not available; repository-maintainer roles are used.",
-    "The workspace exposes no usable Git revision, so installation evidence cannot be revision-bound until the repository has a commit.",
     "Codex loading is configured through AGENTS.md but has not been independently observed in a later session.",
-    "Runtime, input/output contract, provider requirements, delivery format, and deployment expectations are not established.",
+    "Production deployment, model selection, live-provider verification, LinkedIn publication, CI, and persistent approval expectations are not established.",
     "Optional modules other than AI infrastructure, architecture knowledge, blueprint change, Debug Mode, effectiveness metrics, installed operations, multi-assistant bridges, and subagent delegation remain deferred until target evidence justifies them."
   ],
   "expansion_policy": "load required safety and owner evidence, record expansion reason, measured context, and intentionally omitted context"
