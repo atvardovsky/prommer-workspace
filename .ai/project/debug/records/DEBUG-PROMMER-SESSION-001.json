@@ -3,7 +3,7 @@
   "record_kind": "alatyr-debug-session",
   "evidence_classification": "non-canonical-observability",
   "debug_id": "DEBUG-PROMMER-SESSION-001",
-  "status": "active",
+  "status": "completed",
   "authority": "non-canonical",
   "owner": "repository maintainers",
   "task": {
@@ -17,10 +17,10 @@
   "activation": {
     "enabled_by": "explicit-user-request",
     "request_reference": "current-user-debug-activation",
-    "enabled_at": {"value": null, "evidence_kind": "unknown"},
+    "enabled_at": {"value": "2026-09-06T17:32:21+03:00", "evidence_kind": "observed"},
     "initial_revision": "d3ba73af6a558c8cce4643ea7f1eff5bce135dd0",
     "expires_on": "session-completion",
-    "ended_by": "active"
+    "ended_by": "session-completion"
   },
   "continuation": {
     "kind": "initial",
@@ -28,105 +28,331 @@
     "reason": "This activation starts a new logical Debug scope."
   },
   "timing": {
-    "started_at": {"value": null, "evidence_kind": "unknown"},
-    "completed_at": {"value": null, "evidence_kind": "unknown"},
-    "elapsed_seconds": {"value": null, "evidence_kind": "unknown"},
+    "started_at": {"value": "2026-09-06T17:32:21+03:00", "evidence_kind": "observed"},
+    "completed_at": {"value": "2026-09-08T13:55:53+03:00", "evidence_kind": "observed"},
+    "elapsed_seconds": {"value": 159812, "evidence_kind": "observed"},
     "active_work_seconds": {"value": null, "evidence_kind": "unknown"}
   },
   "capture_quality": {
-    "event_coverage": "unknown",
-    "missing_intervals": [],
-    "observer_effect": "unknown",
+    "event_coverage": "partial",
+    "missing_intervals": ["Routine implementation details between normalized checkpoints were intentionally omitted."],
+    "observer_effect": "negligible",
     "estimated_overhead_seconds": {"value": null, "evidence_kind": "unknown"}
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": "DEBUG-PROMMER-EVENT-001",
+      "sequence": 1,
+      "occurred_at": {"value": "2026-09-08T13:40:00+03:00", "evidence_kind": "observed"},
+      "actor_role": "executor",
+      "actor_identity": {"actor_id": "codex-primary", "identity_kind": "pseudonymous"},
+      "actor_provenance": {
+        "evidence_kind": "declared",
+        "provider": "OpenAI",
+        "product": "Codex",
+        "model": null,
+        "runtime": "Codex desktop",
+        "evidence": ["Current repository execution environment"]
+      },
+      "causal_class": "independent-within-scope",
+      "intervention_kind": "not-applicable",
+      "correction_disposition": "not-applicable",
+      "related_guidance_ids": [],
+      "correction_evidence": [],
+      "contribution_kind": "implementation",
+      "category": "implementation-revision",
+      "summary": "Implemented the modular provider-neutral LinkedIn content workflow.",
+      "material_effect": "Established typed agent handoffs, bounded review, provider adapters, artifact export, and an offline demonstration path.",
+      "evidence": ["74ba928b66ab8d573c015b51e689c38e2ebd166d"],
+      "caused_by_event_ids": [],
+      "architectural_supervision": false,
+      "architectural_impacts": [],
+      "decision_effect": "none",
+      "dependency_expansion": false,
+      "validation_expansion": false,
+      "post_review_rework": false,
+      "hypothesis_outcome": "not-applicable"
+    },
+    {
+      "event_id": "DEBUG-PROMMER-EVENT-002",
+      "sequence": 2,
+      "occurred_at": {"value": "2026-09-08T13:47:48+03:00", "evidence_kind": "observed"},
+      "actor_role": "automation",
+      "actor_identity": {"actor_id": "local-validation", "identity_kind": "service"},
+      "actor_provenance": {
+        "evidence_kind": "observed",
+        "provider": null,
+        "product": "npm",
+        "model": null,
+        "runtime": "local validation",
+        "evidence": ["npm run check and npm run build output"]
+      },
+      "causal_class": "derived-from-executor",
+      "intervention_kind": "not-applicable",
+      "correction_disposition": "not-applicable",
+      "related_guidance_ids": [],
+      "correction_evidence": [],
+      "contribution_kind": "validation",
+      "category": "validation",
+      "summary": "Validated formatting, types, tests, build, artifact generation, and Alatyr consistency.",
+      "material_effect": "Established a reproducible local validation result before publication.",
+      "evidence": ["npm run check", "npm run build", "Alatyr full adapter validation"],
+      "caused_by_event_ids": ["DEBUG-PROMMER-EVENT-001"],
+      "architectural_supervision": false,
+      "architectural_impacts": [],
+      "decision_effect": "none",
+      "dependency_expansion": false,
+      "validation_expansion": false,
+      "post_review_rework": false,
+      "hypothesis_outcome": "not-applicable"
+    },
+    {
+      "event_id": "DEBUG-PROMMER-EVENT-003",
+      "sequence": 3,
+      "occurred_at": {"value": "2026-09-08T13:48:30+03:00", "evidence_kind": "observed"},
+      "actor_role": "executor",
+      "actor_identity": {"actor_id": "codex-primary", "identity_kind": "pseudonymous"},
+      "actor_provenance": {
+        "evidence_kind": "declared",
+        "provider": "OpenAI",
+        "product": "Codex",
+        "model": null,
+        "runtime": "Codex desktop",
+        "evidence": ["Current repository execution environment"]
+      },
+      "causal_class": "independent-within-scope",
+      "intervention_kind": "not-applicable",
+      "correction_disposition": "not-applicable",
+      "related_guidance_ids": [],
+      "correction_evidence": [],
+      "contribution_kind": "finding",
+      "category": "invariant",
+      "summary": "A live source check exposed cross-host canonical metadata.",
+      "material_effect": "The initially extracted source URL could point away from the operator-selected prommer.net article.",
+      "evidence": ["tests/article-source.test.ts", "src/infrastructure/article/html-extractor.ts"],
+      "caused_by_event_ids": [],
+      "architectural_supervision": false,
+      "architectural_impacts": [],
+      "decision_effect": "none",
+      "dependency_expansion": false,
+      "validation_expansion": false,
+      "post_review_rework": false,
+      "hypothesis_outcome": "not-applicable"
+    },
+    {
+      "event_id": "DEBUG-PROMMER-EVENT-004",
+      "sequence": 4,
+      "occurred_at": {"value": "2026-09-08T13:49:00+03:00", "evidence_kind": "observed"},
+      "actor_role": "executor",
+      "actor_identity": {"actor_id": "codex-primary", "identity_kind": "pseudonymous"},
+      "actor_provenance": {
+        "evidence_kind": "declared",
+        "provider": "OpenAI",
+        "product": "Codex",
+        "model": null,
+        "runtime": "Codex desktop",
+        "evidence": ["Current repository execution environment"]
+      },
+      "causal_class": "derived-from-executor",
+      "intervention_kind": "not-applicable",
+      "correction_disposition": "not-applicable",
+      "related_guidance_ids": [],
+      "correction_evidence": [],
+      "contribution_kind": "implementation",
+      "category": "implementation-revision",
+      "summary": "Constrained canonical metadata to the requested source origin.",
+      "material_effect": "The workflow now retains the prommer.net URL when a republished article canonicalizes elsewhere.",
+      "evidence": ["src/infrastructure/article/html-extractor.ts"],
+      "caused_by_event_ids": ["DEBUG-PROMMER-EVENT-003"],
+      "architectural_supervision": false,
+      "architectural_impacts": [],
+      "decision_effect": "none",
+      "dependency_expansion": false,
+      "validation_expansion": false,
+      "post_review_rework": false,
+      "hypothesis_outcome": "not-applicable"
+    },
+    {
+      "event_id": "DEBUG-PROMMER-EVENT-005",
+      "sequence": 5,
+      "occurred_at": {"value": "2026-09-08T13:50:16+03:00", "evidence_kind": "observed"},
+      "actor_role": "automation",
+      "actor_identity": {"actor_id": "local-validation", "identity_kind": "service"},
+      "actor_provenance": {
+        "evidence_kind": "observed",
+        "provider": null,
+        "product": "Vitest",
+        "model": null,
+        "runtime": "local validation",
+        "evidence": ["npm run check output"]
+      },
+      "causal_class": "derived-from-executor",
+      "intervention_kind": "not-applicable",
+      "correction_disposition": "not-applicable",
+      "related_guidance_ids": [],
+      "correction_evidence": [],
+      "contribution_kind": "validation",
+      "category": "regression-scenario",
+      "summary": "Added and passed a regression scenario for cross-host canonical metadata.",
+      "material_effect": "The source-origin invariant is now executable and protected against recurrence.",
+      "evidence": ["tests/article-source.test.ts", "npm run check: 17 tests passed"],
+      "caused_by_event_ids": ["DEBUG-PROMMER-EVENT-004"],
+      "architectural_supervision": false,
+      "architectural_impacts": [],
+      "decision_effect": "none",
+      "dependency_expansion": false,
+      "validation_expansion": true,
+      "post_review_rework": false,
+      "hypothesis_outcome": "not-applicable"
+    }
+  ],
   "metrics": {
-    "human_interventions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "human_architectural_interventions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "executor_independent_findings": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "executor_derived_findings_after_human": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "executor_independent_dependency_checks": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "human_requested_dependency_checks": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "executor_derived_dependency_expansions_after_human": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "hypotheses_tested": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "hypotheses_rejected": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "implementation_revisions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "implementation_corrections_after_human": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "validation_expansions": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "regression_scenarios_added": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "maintainer_corrections": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "post_review_rework": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "new_guidance_candidates": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "known_guidance_routing_failures": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "known_guidance_compliance_failures": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "task_local_corrections": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "scope_changes": {"value": null, "evidence_kind": "unavailable", "event_ids": []},
-    "validation_requests": {"value": null, "evidence_kind": "unavailable", "event_ids": []}
+    "human_interventions": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "human_architectural_interventions": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "executor_independent_findings": {"value": 1, "evidence_kind": "event-derived", "event_ids": ["DEBUG-PROMMER-EVENT-003"]},
+    "executor_derived_findings_after_human": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "executor_independent_dependency_checks": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "human_requested_dependency_checks": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "executor_derived_dependency_expansions_after_human": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "hypotheses_tested": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "hypotheses_rejected": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "implementation_revisions": {"value": 2, "evidence_kind": "event-derived", "event_ids": ["DEBUG-PROMMER-EVENT-001", "DEBUG-PROMMER-EVENT-004"]},
+    "implementation_corrections_after_human": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "validation_expansions": {"value": 1, "evidence_kind": "event-derived", "event_ids": ["DEBUG-PROMMER-EVENT-005"]},
+    "regression_scenarios_added": {"value": 1, "evidence_kind": "event-derived", "event_ids": ["DEBUG-PROMMER-EVENT-005"]},
+    "maintainer_corrections": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "post_review_rework": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "new_guidance_candidates": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "known_guidance_routing_failures": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "known_guidance_compliance_failures": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "task_local_corrections": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "scope_changes": {"value": 0, "evidence_kind": "event-derived", "event_ids": []},
+    "validation_requests": {"value": 0, "evidence_kind": "event-derived", "event_ids": []}
   },
   "final_result": {
-    "summary": "Debug capture is active; no engineering result has been finalized.",
+    "summary": "The provider-neutral LinkedIn workflow was implemented, validated, committed, and published; a live-source canonical-link defect was corrected and regression-tested.",
     "repository_binding": {
-      "kind": "unverified",
-      "binding_state": "provisional",
+      "kind": "commit",
+      "binding_state": "final",
       "base_revision": "d3ba73af6a558c8cce4643ea7f1eff5bce135dd0",
-      "result_revision": "d3ba73af6a558c8cce4643ea7f1eff5bce135dd0",
+      "result_revision": "74ba928b66ab8d573c015b51e689c38e2ebd166d",
       "review_reference": "not-applicable",
       "selected_paths": [],
       "snapshot_sha256": "not-applicable",
       "prior_bindings": []
     },
-    "implementation_surfaces": [],
-    "validation": {"results": [], "skipped": []},
+    "implementation_surfaces": [
+      "README.md",
+      "package.json",
+      "src/application/workflow/linkedin-workflow.ts",
+      "src/application/ports/ai-provider.ts",
+      "src/infrastructure/providers/openai-provider.ts",
+      "src/infrastructure/providers/anthropic-provider.ts",
+      "src/infrastructure/article/html-extractor.ts",
+      "tests/workflow.test.ts",
+      "tests/providers.test.ts",
+      "tests/article-source.test.ts"
+    ],
+    "validation": {
+      "results": [
+        {
+          "claim": "Formatting, strict types, and 17 offline tests pass.",
+          "evidence_class": "locally-observed",
+          "source": "npm run check output",
+          "observed_at": {"value": "2026-09-08T13:50:16+03:00", "evidence_kind": "observed"},
+          "revision": "74ba928b66ab8d573c015b51e689c38e2ebd166d",
+          "limitations": ["Provider HTTP calls are mocked in automated tests."]
+        },
+        {
+          "claim": "The TypeScript production build and offline artifact demo pass.",
+          "evidence_class": "locally-observed",
+          "source": "npm run build and npm run demo output",
+          "observed_at": {"value": "2026-09-08T13:50:20+03:00", "evidence_kind": "observed"},
+          "revision": "74ba928b66ab8d573c015b51e689c38e2ebd166d",
+          "limitations": []
+        },
+        {
+          "claim": "A live prommer.net article is extracted while retaining the selected prommer.net source URL.",
+          "evidence_class": "locally-observed",
+          "source": "local live-source CLI validation output",
+          "observed_at": {"value": "2026-09-08T13:48:53+03:00", "evidence_kind": "observed"},
+          "revision": "74ba928b66ab8d573c015b51e689c38e2ebd166d",
+          "limitations": ["The live run used the deterministic provider rather than a paid model provider."]
+        },
+        {
+          "claim": "The installed Alatyr adapter is structurally current with zero errors.",
+          "evidence_class": "tool-verified",
+          "source": "Alatyr full adapter validation output",
+          "observed_at": {"value": "2026-09-08T13:51:00+03:00", "evidence_kind": "observed"},
+          "revision": "74ba928b66ab8d573c015b51e689c38e2ebd166d",
+          "limitations": ["Three non-blocking environment and lifecycle warnings remained before Debug finalization."]
+        }
+      ],
+      "skipped": ["Live OpenAI and Anthropic requests were skipped because credentials and paid calls were outside validation scope."]
+    },
     "claim_validation": {
-      "fidelity": "unavailable",
-      "claims": [],
-      "evidence": [],
-      "limitation": "The active session has not reached a final validation claim."
+      "fidelity": "representative",
+      "claims": [
+        "The offline workflow executes source analysis, writing, independent review, and local artifact export.",
+        "Cross-host canonical metadata cannot replace the selected prommer.net source URL."
+      ],
+      "evidence": [
+        "npm run check: 17 tests passed",
+        "npm run build and npm run demo passed",
+        "live-source CLI validation retained https://prommer.net/en/tech/ai-is-the-new-os/"
+      ],
+      "limitation": "Automated protocol tests do not prove live model quality or provider-account configuration."
     },
     "lifecycle_coverage": {
-      "completion_scope": "active",
-      "covered_phases": [],
-      "omitted_phases": ["analysis", "implementation", "validation", "finalization"],
+      "completion_scope": "full-task-complete",
+      "covered_phases": ["analysis", "implementation", "validation", "finalization"],
+      "omitted_phases": [],
       "continuation_expected": false,
-      "next_phase": "analysis",
-      "reason": "The active Debug scope has not finalized lifecycle coverage."
+      "next_phase": "not-applicable",
+      "reason": "The authorized implementation, commit, publication, and Debug finalization phases are complete."
     },
     "repository_lifecycle": {
-      "state": "active",
-      "completed_transitions": [],
-      "last_verified_revision": "d3ba73af6a558c8cce4643ea7f1eff5bce135dd0",
-      "last_verified_at": {"value": null, "evidence_kind": "unknown"},
-      "commit_evidence": [],
-      "publish_evidence": [],
-      "finalization_evidence": [],
-      "next_permitted_action": "Continue the separately authorized workspace task or finalize this Debug record before leaving scope."
+      "state": "finalized",
+      "completed_transitions": ["analysis", "implementation", "validation", "commit", "publish", "finalization"],
+      "last_verified_revision": "74ba928b66ab8d573c015b51e689c38e2ebd166d",
+      "last_verified_at": {"value": "2026-09-08T13:55:53+03:00", "evidence_kind": "observed"},
+      "commit_evidence": ["74ba928b66ab8d573c015b51e689c38e2ebd166d"],
+      "publish_evidence": ["origin/main resolved to 74ba928b66ab8d573c015b51e689c38e2ebd166d"],
+      "finalization_evidence": [".ai/project/debug/records/DEBUG-PROMMER-SESSION-001.json"],
+      "next_permitted_action": "Open a new explicitly authorized Debug scope for later engineering work."
     },
     "engineering_evidence_ids": [],
     "engineering_evidence_decision": {
-      "status": "pending",
-      "event_links": [],
+      "status": "skipped",
+      "event_links": [
+        {"event_id": "DEBUG-PROMMER-EVENT-001", "role": "implementation"},
+        {"event_id": "DEBUG-PROMMER-EVENT-002", "role": "validation"},
+        {"event_id": "DEBUG-PROMMER-EVENT-003", "role": "finding"},
+        {"event_id": "DEBUG-PROMMER-EVENT-004", "role": "implementation"},
+        {"event_id": "DEBUG-PROMMER-EVENT-005", "role": "validation"}
+      ],
       "materiality_evaluations": [
-        {"kind": "undocumented-invariant", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "rejected-hypothesis", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "non-obvious-dependency", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "cross-area-impact", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "broad-regression-matrix", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "compatibility-or-public-contract", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "reviewer-correction", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "direction-change", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "expensive-to-reconstruct", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."},
-        {"kind": "unresolved-authority-or-contract", "outcome": "unknown", "event_ids": [], "evidence": [], "reason": "Assess before completion."}
+        {"kind": "undocumented-invariant", "outcome": "not-applicable", "event_ids": [], "evidence": ["The discovered source-origin behavior is directly protected by tests/article-source.test.ts."], "reason": "No separate durable record is required beyond the executable contract."},
+        {"kind": "rejected-hypothesis", "outcome": "not-applicable", "event_ids": [], "evidence": [], "reason": "No formal hypothesis was rejected."},
+        {"kind": "non-obvious-dependency", "outcome": "not-applicable", "event_ids": [], "evidence": ["HTML canonical metadata behavior is localized and regression-tested."], "reason": "The dependency does not require a separate durable evidence record."},
+        {"kind": "cross-area-impact", "outcome": "not-applicable", "event_ids": [], "evidence": [], "reason": "The correction remained inside the article extraction boundary."},
+        {"kind": "broad-regression-matrix", "outcome": "not-applicable", "event_ids": [], "evidence": [], "reason": "One focused regression scenario was sufficient."},
+        {"kind": "compatibility-or-public-contract", "outcome": "not-applicable", "event_ids": [], "evidence": ["Provider contracts and adapters are already canonical implementation surfaces."], "reason": "No additional evidence record is needed."},
+        {"kind": "reviewer-correction", "outcome": "not-applicable", "event_ids": [], "evidence": [], "reason": "No external reviewer correction occurred."},
+        {"kind": "direction-change", "outcome": "not-applicable", "event_ids": [], "evidence": [], "reason": "The accepted architecture direction did not change."},
+        {"kind": "expensive-to-reconstruct", "outcome": "not-applicable", "event_ids": [], "evidence": [], "reason": "The implementation, tests, README, and architecture catalog preserve the result."},
+        {"kind": "unresolved-authority-or-contract", "outcome": "not-applicable", "event_ids": [], "evidence": [], "reason": "Implementation, commit, and publish authorization were explicit."}
       ],
       "knowledge_preserved_by": [],
-      "reason": "Durable engineering evidence is assessed when the Debug session is finalized.",
-      "next_safe_action": "Complete the evidence decision before marking this record completed."
+      "reason": "The normalized findings are sufficiently preserved by executable contracts, tests, documentation, and the accepted architecture catalog.",
+      "next_safe_action": "No additional engineering-evidence record is required for this scope."
     },
     "project_knowledge_candidates": [],
     "upstream_projection": {
-      "kind": "unknown",
-      "included_debug_files": false,
-      "projected_paths": [],
-      "evidence": []
+      "kind": "same-repository",
+      "included_debug_files": true,
+      "projected_paths": ["README.md", "package.json", "src", "tests", "artifacts/demo"],
+      "evidence": ["origin/main contains 74ba928b66ab8d573c015b51e689c38e2ebd166d"]
     }
   },
   "publication": {
@@ -150,7 +376,8 @@
     "redactions": ["Timing metadata omitted under the workspace privacy policy."]
   },
   "residual_uncertainty": [
-    "Capture coverage remains unknown until material engineering work occurs in this session."
+    "Live OpenAI and Anthropic behavior remains unverified without provider credentials.",
+    "Debug event coverage is intentionally partial and cannot reconstruct routine implementation details."
   ],
   "limitations": [
     "Debug evidence cannot prove event completeness, attribution correctness, or engineering quality."

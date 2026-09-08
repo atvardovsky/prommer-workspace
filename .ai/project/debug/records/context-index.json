@@ -35,8 +35,8 @@
       "owner_refs": [
         "ALATYR-CONTEXT-001"
       ],
-      "estimated_words": 628,
-      "content_digest": "sha256:6e30e6823f4b668e3dd435a6c60bd8c387538ea9125e6b04ce490495aafbedae"
+      "estimated_words": 1464,
+      "content_digest": "sha256:80eaa6c0a73bf1be078a2cef3ba151166503620972ce295dfcc7bc3a75dee5da"
     },
     {
       "id": "project.content.debug-records-readme-md",

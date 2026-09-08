@@ -12,56 +12,13 @@
     "target_manifest_digest": "sha256:5779c55f4a04798f58852f125418726439d19c5a189ac24bfd6676a2339e55c6",
     "target_worktree_state": "dirty",
     "target_dirty_paths": [
-      ".ai/alatyr.yaml",
-      ".ai/assistant/bootstrap-index.json",
       ".ai/assistant/bootstrap-integrity.json",
-      ".ai/assistant/context-index.json",
       ".ai/assistant/entry-packet.json",
-      ".ai/project/architecture/README.md",
-      ".ai/project/architecture/catalog.json",
-      ".ai/project/architecture/context-index.json",
       ".ai/project/context-index.json",
-      ".ai/project/contour.md",
-      ".ai/project/product-context.md",
-      ".ai/project/source-of-truth-registry.md",
-      ".ai/support-state.json",
-      ".env.example",
-      ".gitignore",
-      "README.md",
-      "artifacts/demo/workflow.json",
-      "artifacts/demo/workflow.md",
-      "package-lock.json",
-      "package.json",
-      "src/application/agents/editorial-reviewer.ts",
-      "src/application/agents/linkedin-writer.ts",
-      "src/application/agents/source-analyst.ts",
-      "src/application/ports/ai-provider.ts",
-      "src/application/ports/article-source.ts",
-      "src/application/workflow/linkedin-workflow.ts",
-      "src/cli.ts",
-      "src/domain/contracts.ts",
-      "src/domain/errors.ts",
-      "src/index.ts",
-      "src/infrastructure/article/fixture-article-source.ts",
-      "src/infrastructure/article/html-extractor.ts",
-      "src/infrastructure/article/http-article-source.ts",
-      "src/infrastructure/providers/anthropic-provider.ts",
-      "src/infrastructure/providers/deterministic-provider.ts",
-      "src/infrastructure/providers/openai-provider.ts",
-      "src/infrastructure/providers/provider-factory.ts",
-      "src/infrastructure/providers/provider-utils.ts",
-      "src/infrastructure/publishing/filesystem-artifact-publisher.ts",
-      "src/prompts/editorial-reviewer.ts",
-      "src/prompts/linkedin-writer.ts",
-      "tests/agents.test.ts",
-      "tests/article-source.test.ts",
-      "tests/cli.test.ts",
-      "tests/contracts.test.ts",
-      "tests/filesystem-publisher.test.ts",
-      "tests/fixtures/article.html",
-      "tests/helpers.ts",
-      "tests/providers.test.ts",
-      "tests/workflow.test.ts"
+      ".ai/project/debug/context-index.json",
+      ".ai/project/debug/index.json",
+      ".ai/project/debug/records/DEBUG-PROMMER-SESSION-001.json",
+      ".ai/project/debug/records/context-index.json"
     ],
     "framework_version": "0.1.0-alpha.58",
     "adapter_schema_version": "48",
@@ -69,7 +26,7 @@
   },
   "policy": ".ai/project/support-policy.json",
   "policy_digest": "sha256:df4deae31521bcb7f2e9c74e4e5fc3ed5fea5da5fd5c38303531c1da5b69057b",
-  "source_revision": "cb420278d413c4e32d90bfe1f767e0229682f275",
+  "source_revision": "74ba928b66ab8d573c015b51e689c38e2ebd166d",
   "groups": [
     {
       "id": "adapter-root",
@@ -79,7 +36,7 @@
     {
       "id": "assistant",
       "file_count": 127,
-      "digest": "sha256:c33bac4d043f63e387c3fcd24598b71d3a65f26c150c5c97266e7a3d2142f939"
+      "digest": "sha256:006eed802211631fd194539febc63c41d2ac9253ec1abe84af4649dab5940f22"
     },
     {
       "id": "entrypoints",
@@ -94,7 +51,7 @@
     {
       "id": "project",
       "file_count": 29,
-      "digest": "sha256:3e25e4faed1a8047ec2326e54dab6483b7c1cde1b1678b24510227f7619431cb"
+      "digest": "sha256:c57b8bb30c0e186d48155fc149abda9889dadf865b6316fc37b4ea7efab88435"
     }
   ],
   "files": [
@@ -212,8 +169,8 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "assistant",
-      "digest": "sha256:027f5847fa66342eb9f06a5b8b0221a3c128e2bb65e82a35a3485687f22db6e2",
-      "canonical_size": 8337
+      "digest": "sha256:0d90a01efe3c8c4a812e485d1797bdae1c4c7e82af98722b36a70a81bf9ecadf",
+      "canonical_size": 6398
     },
     {
       "path": ".ai/assistant/bridge-capability-matrix.md",
@@ -473,8 +430,8 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "assistant",
-      "digest": "sha256:c91f234f5ec937d68a5e3cf1574d864902cc04eba284f450f2f8de7eb38390ab",
-      "canonical_size": 8330
+      "digest": "sha256:3539c954c75fd5efb127d49a107f49ed54f7b1e7278cece3d1a3d01b9548602e",
+      "canonical_size": 6439
     },
     {
       "path": ".ai/assistant/flows/adapter-health.flow.md",
@@ -1904,7 +1861,7 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:e686b2b03d172acb6fb0d0cac9a2bae7458d8ec740f957290d1a9beb19e25d8f",
+      "digest": "sha256:bdb01ad23434ddf8957f9321fa57ab0619375fcb6fd162e81c7d3bd1f8f31989",
       "canonical_size": 6381
     },
     {
@@ -1931,7 +1888,7 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:c3195b1555c2cf48337b22aa5232a93abfe3a47db7d4eb6ad8dc51983e63c6b5",
+      "digest": "sha256:e3fcfa53e52581f66a7f4377e58f2288723957e6057496fe68318b8c11c9d5bb",
       "canonical_size": 1991
     },
     {
@@ -1940,8 +1897,8 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:9f725e8ff480fc4163496a90c943c314bbecc8064c658335c9e1f5c225c2db30",
-      "canonical_size": 2770
+      "digest": "sha256:d566cf8d7964fc8f028b99328129899759ab883d6027683cd13a4055d97b64ec",
+      "canonical_size": 2924
     },
     {
       "path": ".ai/project/debug/records/DEBUG-PROMMER-SESSION-001.json",
@@ -1949,8 +1906,8 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:6e30e6823f4b668e3dd435a6c60bd8c387538ea9125e6b04ce490495aafbedae",
-      "canonical_size": 8238
+      "digest": "sha256:80eaa6c0a73bf1be078a2cef3ba151166503620972ce295dfcc7bc3a75dee5da",
+      "canonical_size": 20220
     },
     {
       "path": ".ai/project/debug/records/README.md",
@@ -1967,8 +1924,8 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:6557468f0c3093dbca21ae0c0d703a3a12df7d51df522036aa283409dcaaadb9",
-      "canonical_size": 1764
+      "digest": "sha256:a6cd9272cee8d0802c0dceb29d9d0c4df394070770bcffcf94efbc1e15cf39bf",
+      "canonical_size": 1765
     },
     {
       "path": ".ai/project/delivery-policy.md",
@@ -2151,5 +2108,5 @@
       "canonical_size": 1378
     }
   ],
-  "root_digest": "sha256:d5794af0de076231892a87d6b8574079a962460b2944888ef8c45da878cbff4e"
+  "root_digest": "sha256:2254dc282faeb20219e16077ca00f3aef133ba671ac4450dc8f83d577c79aef4"
 }
