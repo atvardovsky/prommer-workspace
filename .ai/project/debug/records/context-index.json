@@ -13,6 +13,32 @@
   },
   "entries": [
     {
+      "id": "project.content.debug-records-debug-prommer-session-001-json",
+      "kind": "content",
+      "path": "debug/records/DEBUG-PROMMER-SESSION-001.json",
+      "summary": "Debug Prommer Session 001",
+      "selectors": {
+        "path_terms": [
+          "debug",
+          "records",
+          "prommer",
+          "session",
+          "001"
+        ],
+        "rule_ids": [
+          "ALATYR-CONTEXT-001"
+        ]
+      },
+      "semantic_refs": [
+        "alatyr:bounded-context-expansion@1"
+      ],
+      "owner_refs": [
+        "ALATYR-CONTEXT-001"
+      ],
+      "estimated_words": 628,
+      "content_digest": "sha256:6e30e6823f4b668e3dd435a6c60bd8c387538ea9125e6b04ce490495aafbedae"
+    },
+    {
       "id": "project.content.debug-records-readme-md",
       "kind": "content",
       "path": "debug/records/README.md",

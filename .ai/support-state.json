@@ -12,7 +12,11 @@
     "target_manifest_digest": "sha256:defdcbd73165b91ec97a14b8fdb9f24768837b20896dfb0134fb7457f297d3db",
     "target_worktree_state": "dirty",
     "target_dirty_paths": [
-      "<git-state-unavailable>"
+      ".ai/project/context-index.json",
+      ".ai/project/debug/context-index.json",
+      ".ai/project/debug/index.json",
+      ".ai/project/debug/records/context-index.json",
+      ".ai/project/debug/records/DEBUG-PROMMER-SESSION-001.json"
     ],
     "framework_version": "0.1.0-alpha.58",
     "adapter_schema_version": "48",
@@ -20,7 +24,7 @@
   },
   "policy": ".ai/project/support-policy.json",
   "policy_digest": "sha256:df4deae31521bcb7f2e9c74e4e5fc3ed5fea5da5fd5c38303531c1da5b69057b",
-  "source_revision": "unavailable",
+  "source_revision": "d3ba73af6a558c8cce4643ea7f1eff5bce135dd0",
   "groups": [
     {
       "id": "adapter-root",
@@ -44,8 +48,8 @@
     },
     {
       "id": "project",
-      "file_count": 28,
-      "digest": "sha256:0f618841354bc23972832da9438e9134f80307211a55de94662b52888cfe3ebd"
+      "file_count": 29,
+      "digest": "sha256:0885f45307a16b96f1b4b968f2a24798683aa0462014084406cfee67a3d244f2"
     }
   ],
   "files": [
@@ -1855,7 +1859,7 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:1deb07e425d7ab1f27edbc779cef50591d50013f7b5f43ad13826e64472878e8",
+      "digest": "sha256:30b4a337821da0cc3b687fa913887f00fa38b5d8356bad35f0cdb9845c498278",
       "canonical_size": 6381
     },
     {
@@ -1882,8 +1886,8 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:4934a11d858bcebec8657f9c33fab80921a6b4dc1d558147cde30971d80b7d2d",
-      "canonical_size": 1989
+      "digest": "sha256:c3195b1555c2cf48337b22aa5232a93abfe3a47db7d4eb6ad8dc51983e63c6b5",
+      "canonical_size": 1991
     },
     {
       "path": ".ai/project/debug/index.json",
@@ -1891,8 +1895,17 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:9dc0a80d0ee377f5cdb17fffcb8085cc2d04c5bbaa720f3c83b83ff6f95a0c9d",
-      "canonical_size": 539
+      "digest": "sha256:9f725e8ff480fc4163496a90c943c314bbecc8064c658335c9e1f5c225c2db30",
+      "canonical_size": 2770
+    },
+    {
+      "path": ".ai/project/debug/records/DEBUG-PROMMER-SESSION-001.json",
+      "kind": "file",
+      "classification": "exact-contract",
+      "classification_id": "adapter-support",
+      "group": "project",
+      "digest": "sha256:6e30e6823f4b668e3dd435a6c60bd8c387538ea9125e6b04ce490495aafbedae",
+      "canonical_size": 8238
     },
     {
       "path": ".ai/project/debug/records/README.md",
@@ -1909,8 +1922,8 @@
       "classification": "exact-contract",
       "classification_id": "adapter-support",
       "group": "project",
-      "digest": "sha256:adffee152f53d67abd1d8b463dee644ea6c606bb988c181fa34231a576cb91b5",
-      "canonical_size": 1049
+      "digest": "sha256:6557468f0c3093dbca21ae0c0d703a3a12df7d51df522036aa283409dcaaadb9",
+      "canonical_size": 1764
     },
     {
       "path": ".ai/project/delivery-policy.md",
@@ -2093,5 +2106,5 @@
       "canonical_size": 1378
     }
   ],
-  "root_digest": "sha256:a0e6ba19a602544eda6c0c3ef72663f5c41f86f2f2a228c06ae4eca0f0e1e721"
+  "root_digest": "sha256:6afe4c20225f84ce383d49d89dd2b2ebb530da5d24187c8682271952231347f2"
 }

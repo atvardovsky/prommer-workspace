@@ -8,5 +8,59 @@
   "retention_policy": "retain finalized records until superseded or removed by a maintainer",
   "redaction_policy": "exclude prompts transcripts timing details drafts private reasoning credentials and non-product contextual metadata",
   "external_patch_policy": "exclude-from-external-patch",
-  "records": []
+  "records": [
+    {
+      "debug_id": "DEBUG-PROMMER-SESSION-001",
+      "status": "active",
+      "record": ".ai/project/debug/records/DEBUG-PROMMER-SESSION-001.json",
+      "task_references": ["prommer-workspace-session"],
+      "scope_kind": "session",
+      "scope_id": "PROMMER-WORKSPACE-SESSION-001",
+      "task_class": "workspace-development-session",
+      "repository_binding_kind": "unverified",
+      "record_schema_version": 6,
+      "repository_binding_state": "provisional",
+      "engineering_evidence_status": "pending",
+      "continuation_kind": "initial",
+      "continued_from_debug_id": "not-applicable",
+      "claim_validation_fidelity": "unavailable",
+      "lifecycle_completion_scope": "active",
+      "covered_phases": [],
+      "continuation_expected": false,
+      "knowledge_candidate_ids": [],
+      "repository_lifecycle_state": "active",
+      "validation_evidence_classes": [],
+      "result_revision": "d3ba73af6a558c8cce4643ea7f1eff5bce135dd0",
+      "event_coverage": "unknown",
+      "observer_effect": "unknown",
+      "elapsed_seconds": null,
+      "elapsed_evidence_kind": "unknown",
+      "metrics": {
+        "human_interventions": null,
+        "human_architectural_interventions": null,
+        "executor_independent_findings": null,
+        "executor_derived_findings_after_human": null,
+        "executor_independent_dependency_checks": null,
+        "human_requested_dependency_checks": null,
+        "executor_derived_dependency_expansions_after_human": null,
+        "hypotheses_tested": null,
+        "hypotheses_rejected": null,
+        "implementation_revisions": null,
+        "implementation_corrections_after_human": null,
+        "validation_expansions": null,
+        "regression_scenarios_added": null,
+        "maintainer_corrections": null,
+        "post_review_rework": null,
+        "new_guidance_candidates": null,
+        "known_guidance_routing_failures": null,
+        "known_guidance_compliance_failures": null,
+        "task_local_corrections": null,
+        "scope_changes": null,
+        "validation_requests": null
+      },
+      "residual_uncertainty": [
+        "Capture coverage remains unknown until material engineering work occurs in this session."
+      ]
+    }
+  ]
 }
